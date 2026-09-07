@@ -1,0 +1,51 @@
+name: Daily AI Brief Pipeline
+
+on:
+  schedule:
+    # Runs daily at 05:00 UTC (10:30 AM IST)
+    - cron: '0 5 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write # Needed to commit and push updated data/used_stories_log.json back to repo
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run Daily Content Repurposer Pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+          OPENROUTER_MODEL_SHAPE: "nvidia/nemotron-3-super-120b-a12b:free"
+        run: |
+          python run_daily_brief.py
+
+      - name: Commit and Push Updated Story Log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -f data/used_stories_log.json ]; then
+            git add data/used_stories_log.json
+            if ! git diff-index --quiet HEAD --; then
+              git commit -m "chore(data): update used stories log [skip ci]"
+              git push
+            else
+              echo "No changes in used_stories_log.json to commit."
+            fi
+          fi

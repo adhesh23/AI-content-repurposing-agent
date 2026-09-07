@@ -1,4 +1,4 @@
-﻿# Secrets and config
+# Secrets and config
 .env
 .env.*
 publish_config.json
@@ -26,5 +26,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Local backups from store-and-publish
+# Local backups from store-and-publish & usage stats
 data/*_all_segments.json
+data/openrouter_usage.json
+

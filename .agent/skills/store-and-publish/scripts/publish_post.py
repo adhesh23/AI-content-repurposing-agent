@@ -30,7 +30,7 @@ def load_config() -> Dict[str, Any]:
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     return {
-        "webhook_url": os.getenv("PUBLISH_WEBHOOK_URL", ""),
+        "webhook_url": os.getenv("MAKE_WEBHOOK_URL") or os.getenv("PUBLISH_WEBHOOK_URL", ""),
         "timeout_seconds": 15,
         "local_output_dir": "output"
     }
@@ -205,7 +205,7 @@ def store_and_publish_post(
 ) -> Dict[str, Any]:
     """Single-segment publishing: builds individual payload, writes {date}_{segment}.json, POSTs once."""
     config = load_config()
-    webhook_url = os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
+    webhook_url = os.getenv("MAKE_WEBHOOK_URL") or os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
     timeout = config.get("timeout_seconds", 15)
     output_dir = config.get("local_output_dir", "output")
 
@@ -235,7 +235,7 @@ def store_and_publish_batch(
 ) -> Dict[str, Any]:
     """Daily-batch publishing: combines all segments, writes {date}_all_segments.json, sends ONE webhook POST."""
     config = load_config()
-    webhook_url = os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
+    webhook_url = os.getenv("MAKE_WEBHOOK_URL") or os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
     timeout = config.get("timeout_seconds", 15)
     output_dir = config.get("local_output_dir", "output")
 

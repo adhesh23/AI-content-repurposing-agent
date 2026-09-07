@@ -44,32 +44,37 @@ The agent executes a 5-step modular pipeline:
 
 ## 4. Skills Specification
 
-| Skill Name | Purpose | Model Recommendation | Rationale |
+| Skill Name | Purpose | Model Recommendation (OpenRouter Free Tier) | Rationale |
 | :--- | :--- | :--- | :--- |
-| `fetch-trending-ai-news` | Curates 3–4 high-impact, trending AI stories of the day | **Gemini 3 Flash** or **Gemini 3.1 Pro** | Fast retrieval and high-throughput web scraping/search; does not require complex creative reasoning. |
-| `extract-insights` | Synthesizes key takeaways, founder angle, and technical context | **Gemini 3.1 Pro** | Strong analytical summarization and signal-to-noise differentiation. |
-| `apply-post-pattern` | Selects optimal framework (contrarian take, breakdown, teardown, lesson) and hook structure | **Gemini 3.1 Pro** | Pattern matching and strategic alignment with audience psychology. |
-| `shape-narrative` | Writes final, authentic, publish-ready LinkedIn posts with high-converting hooks | **Claude Sonnet 4.6** | Critical tier: Highest creative fidelity, precise instruction-following, nuanced voice modulation, and superior hook craftsmanship. |
-| `store-and-publish` | Persists generated posts, metadata, and handles distribution/drafting | **Gemini 3 Flash** or **Gemini 3.1 Pro** | Deterministic I/O, file storage, and API/queue delivery. |
+| `fetch-trending-ai-news` | Curates 3–4 high-impact, trending AI stories of the day | Deterministic Algolia / RSS engine (`google/gemma-4-26b-a4b-it:free` if needed) | Fast retrieval and high-throughput web scraping/search; does not require complex creative reasoning. |
+| `extract-insights` | Synthesizes key takeaways, founder angle, and technical context | **`google/gemma-4-31b-it:free`** (or `nvidia/nemotron-3-super-120b-a12b:free`) | Strong analytical summarization and signal-to-noise differentiation under strict anti-hallucination constraints. |
+| `apply-post-pattern` | Selects optimal framework (contrarian take, breakdown, teardown, lesson) and hook structure | Deterministic pattern engine (`google/gemma-4-26b-a4b-it:free` if needed) | Pattern matching and strategic alignment with audience psychology. |
+| `shape-narrative` | Writes final, authentic, publish-ready LinkedIn posts with high-converting hooks | **`google/gemma-4-31b-it:free`** (or `nvidia/nemotron-3-super-120b-a12b:free`) | High creative fidelity, precise instruction-following, nuanced voice modulation, and superior hook craftsmanship at $0 API cost. |
+| `store-and-publish` | Persists generated posts, metadata, and handles distribution/drafting | Deterministic I/O | Deterministic I/O, local JSON backup, and webhook delivery. |
 
 ---
 
-## 5. Model Routing Strategy
+## 5. Model Routing Strategy (OpenRouter $0 Cost Free Tier)
+
+All LLM requests route through OpenRouter's unified endpoint (`https://openrouter.ai/api/v1/chat/completions`) using a single API key (`OPENROUTER_API_KEY`), backed by automatic retry with exponential backoff on HTTP 429 rate limits and daily request counter tracking.
+
+Models are dynamically configurable per-skill via environment variables:
 
 * **Tier 1 (High Reasoning & Creative Fidelity):**
   * **Skill:** `shape-narrative`
-  * **Model:** **Claude Sonnet 4.6**
-  * **Constraint:** Output quality, tone nuance, natural rhythm, and hook potency take precedence over speed or token costs.
+  * **Environment Variable:** `OPENROUTER_MODEL_SHAPE`
+  * **Default Model:** `google/gemma-4-31b-it:free` (Alternatives: `nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/free`)
+  * **Constraint:** Output quality, tone nuance, natural rhythm, and hook potency take precedence.
 
 * **Tier 2 (Analytical & Analytical Synthesis):**
-  * **Skills:** `extract-insights`, `apply-post-pattern`
-  * **Model:** **Gemini 3.1 Pro** (Default)
-  * **Constraint:** High contextual reasoning and accurate synthesis of technical AI details into actionable founder insights.
+  * **Skills:** `extract-insights`
+  * **Environment Variable:** `OPENROUTER_MODEL_EXTRACT`
+  * **Default Model:** `google/gemma-4-31b-it:free` (Alternative: `google/gemma-4-26b-a4b-it:free`)
+  * **Constraint:** Contextual reasoning, factual fidelity, and strict adherence to zero-hallucination constraints.
 
-* **Tier 3 (Operational & Retrieval):**
-  * **Skills:** `fetch-trending-ai-news`, `store-and-publish`
-  * **Model:** **Gemini 3 Flash** (or Gemini 3.1 Pro)
-  * **Constraint:** Optimized for rapid latency, cost-efficiency, and straightforward data handling.
+* **Tier 3 (Operational & Retrieval / Deterministic):**
+  * **Skills:** `fetch-trending-ai-news`, `apply-post-pattern`, `store-and-publish`
+  * **Default:** Handled by deterministic Python engines (Algolia/RSS queries, pattern registry, and JSON I/O). Optional classification model overrides supported via `OPENROUTER_MODEL_FETCH` and `OPENROUTER_MODEL_PATTERN`.
 
 ---
 
@@ -104,5 +109,5 @@ The agent executes a 5-step modular pipeline:
 ---
 
 ## 9. Workflow References & Commands
-* **Primary Pipeline Sequence:** Defined in `.agent/workflows/daily-ai-brief.md`.
+* **Primary Pipeline Sequence:** Executed via `python run_daily_brief.py` (orchestrated daily via GitHub Actions in `.github/workflows/daily_brief.yml`).
 * **Individual Post Regeneration:** Individual posts can be re-run by specifying the post index or topic ID directly to `shape-narrative` without re-scraping news or interrupting the rest of the batch.

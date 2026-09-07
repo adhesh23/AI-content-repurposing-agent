@@ -68,7 +68,8 @@ For each winning story, the skill must extract:
 
 ## 5. Execution Reference
 
-Run programmatic extraction:
+Run programmatic extraction (optionally passing `--use-llm` to synthesize facts and angles via OpenRouter free tier `google/gemma-4-31b-it:free`):
 ```bash
-python .agent/skills/extract-insights/scripts/extract_insights.py --url "<url>" --segment "<segment>" --reported-date "YYYY-MM-DD"
+python .agent/skills/extract-insights/scripts/extract_insights.py --url "<url>" --segment "<segment>" --reported-date "YYYY-MM-DD" [--use-llm]
 ```
+

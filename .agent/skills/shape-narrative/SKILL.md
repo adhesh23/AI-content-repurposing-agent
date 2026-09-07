@@ -15,9 +15,9 @@ This skill constitutes Step 4 (the critical drafting tier) of the autonomous Con
 
 > [!IMPORTANT]
 > **Model Routing Rule:**
-> As specified in `AGENTS.md`, this skill strictly runs on **Claude Sonnet 4.6**. 
+> As specified in `AGENTS.md`, this skill runs on **OpenRouter's free-tier models** via `https://openrouter.ai/api/v1/chat/completions` (default: `google/gemma-4-31b-it:free`, configurable via `OPENROUTER_MODEL_SHAPE`).
 > 
-> Hook craftsmanship, tone nuance, natural cadence, and strict adherence to negative constraints (avoiding corporate and AI clichés) take precedence over generation speed or token costs.
+> Hook craftsmanship, tone nuance, natural cadence, and strict adherence to negative constraints (avoiding corporate and AI clichés) take precedence over generation speed.
 
 ---
 
@@ -97,4 +97,10 @@ The prompt assembly logic is located in:
 python .agent/skills/shape-narrative/scripts/build_prompt_payload.py
 ```
 
-When running the full sequence in `.agent/workflows/daily-ai-brief.md`, the pipeline passes the assembled prompt payload directly to Claude Sonnet 4.6.
+The generation script using OpenRouter free tier models is located in:
+```bash
+python .agent/skills/shape-narrative/scripts/generate_narrative.py --segment "Deep Tech"
+```
+
+When running the full pipeline, `run_daily_brief.py` handles the end-to-end execution.
+
