@@ -1,0 +1,82 @@
+{
+  "hook_types": [
+    {
+      "id": "subvert-the-expected",
+      "name": "Subvert-the-expected",
+      "description": "Names the expected reaction, then refuses it.",
+      "best_for_events": ["funding_round"],
+      "example": "We just closed a $12M oversubscribed seed round. The obvious thing to do today is post a thank-you note. Instead...",
+      "char_limit": 210
+    },
+    {
+      "id": "contrarian-claim",
+      "name": "Contrarian claim",
+      "description": "Challenges a common belief or industry hype head-on.",
+      "best_for_events": ["product_launch", "strategic_pivot", "research_breakthrough", "acquisition"],
+      "example": "If you're banking your entire product launch on a 1 million view viral moment, you've already lost.",
+      "char_limit": 210
+    },
+    {
+      "id": "vulnerability-pain-confession",
+      "name": "Vulnerability/pain confession",
+      "description": "Leads with honest operational difficulty rather than synthetic triumph.",
+      "best_for_events": ["product_launch"],
+      "example": "This was my fourth product launch. It doesn't get easier.",
+      "char_limit": 210
+    },
+    {
+      "id": "reframe",
+      "name": "Reframe",
+      "description": "Constructed around a sharp 'not X, it's Y' paradigm shift.",
+      "best_for_events": ["strategic_pivot", "research_breakthrough"],
+      "example": "The pivot isn't the detour. It's the point.",
+      "char_limit": 210
+    },
+    {
+      "id": "stakes-opener",
+      "name": "Stakes-opener",
+      "description": "Bold declarative claim paired immediately with an operator credibility marker.",
+      "best_for_events": ["strategic_pivot", "partnership", "acquisition"],
+      "example": "Pivoting shamelessly is a rare founder advantage. I've been doing it for 6 years.",
+      "char_limit": 210
+    }
+  ],
+  "close_types": [
+    {
+      "id": "declarative-stakes-close",
+      "name": "Declarative/stakes close",
+      "description": "A definitive, high-conviction closing stance. Reads as a genuine opinion piece with zero explicit ask.",
+      "default": true,
+      "examples": [
+        "Choose hard. You'll get a better result.",
+        "Everyone else will keep trying to scale outdated systems in a market that already moved on."
+      ]
+    },
+    {
+      "id": "engagement-bait-question",
+      "name": "Engagement-bait question",
+      "description": "Explicitly invites comments; reserved strictly for open-ended industry debates.",
+      "default": false,
+      "examples": [
+        "Curious—what's the hardest pivot you've had to make?"
+      ]
+    }
+  ],
+  "middle_formats": [
+    {
+      "id": "bulleted_takeaways",
+      "name": "Bulleted Takeaways",
+      "description": "2-3 crisp, high-signal takeaway bullets bridging the hook to the close."
+    },
+    {
+      "id": "contrast_breakdown",
+      "name": "Contrast Breakdown",
+      "description": "Sharp wrong-way vs. right-way or expectation vs. production reality contrast."
+    },
+    {
+      "id": "prose_reflection",
+      "name": "Prose Reflection",
+      "description": "1-3 tight paragraphs of operator reflection without rigid templating."
+    }
+  ]
+}

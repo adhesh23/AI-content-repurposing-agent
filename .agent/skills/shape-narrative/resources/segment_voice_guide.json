@@ -1,0 +1,82 @@
+{
+  "SaaS (B2B)": {
+    "voice_profile": "Strategic, ROI-literate, grounded operator.",
+    "core_vocabulary": [
+      "unit economics",
+      "roadmap reprioritization",
+      "ARR / NRR impact",
+      "developer bandwidth",
+      "build vs buy",
+      "procurement & security",
+      "deployment friction",
+      "margin expansion"
+    ],
+    "framing_style": "How this technology impacts operational overhead, budget allocation, and quarterly engineering commitments.",
+    "anti_patterns": [
+      "Vague hand-wavy claims about 'the future of work'",
+      "Ignoring integration and switching costs",
+      "Generic productivity platitudes"
+    ],
+    "sample_hook_style": "If your team is budgeting 3 quarters of engineering to build [X], yesterday's release just made that line item obsolete."
+  },
+  "SaaS (D2C) / Consumer tech": {
+    "voice_profile": "User-empathetic, growth-obsessed, product designer mindset.",
+    "core_vocabulary": [
+      "time-to-value",
+      "onboarding friction",
+      "habit loop",
+      "cognitive load",
+      "organic retention",
+      "user delight",
+      "viral coefficient",
+      "interaction cost"
+    ],
+    "framing_style": "How consumer habits, expectations, and attention spans shift when interface latency or capability changes.",
+    "anti_patterns": [
+      "Overly academic backend specs that ignore the user interface",
+      "Corporate enterprise jargon like 'synergies' or 'stakeholders'",
+      "Boring feature laundry lists"
+    ],
+    "sample_hook_style": "Users don't care that your model has 70 billion parameters—they care that answering their question still took 5 seconds of loading animation."
+  },
+  "Deep Tech": {
+    "voice_profile": "First-principles systems engineer, scientifically rigorous, zero hype.",
+    "core_vocabulary": [
+      "memory bandwidth",
+      "latency bounds",
+      "FLOP utilization",
+      "quantization error",
+      "distributed cache coherency",
+      "kernel optimization",
+      "hardware architecture",
+      "empirical benchmarks"
+    ],
+    "framing_style": "Deconstructing PR headlines to uncover physical limits, architectural tradeoffs, and fundamental bottlenecks.",
+    "anti_patterns": [
+      "Buzzwords like 'groundbreaking', 'mind-blowing', or 'game-changer'",
+      "Taking company marketing benchmarks at face value",
+      "Superficial glossing over mathematical or systems reality"
+    ],
+    "sample_hook_style": "The benchmark chart in yesterday's paper looks incredible until you check the batch size and memory allocation."
+  },
+  "AI-native": {
+    "voice_profile": "High-velocity builder, hands-on practitioner, shipping in public.",
+    "core_vocabulary": [
+      "shipped this morning",
+      "eval suite",
+      "agent loops",
+      "prompt caching",
+      "tool calling latency",
+      "synthetic data generation",
+      "iteration velocity",
+      "production edge cases"
+    ],
+    "framing_style": "Direct dispatches from the code editor and terminal, sharing what broke and what worked in production within hours of release.",
+    "anti_patterns": [
+      "Speculative philosophical essays without code or implementation backing",
+      "Waiting weeks for 'best practices' to emerge",
+      "Theoretical pontification"
+    ],
+    "sample_hook_style": "Spun up a quick pipeline with [New Model] at 7 AM. Two hours in, here are the 3 real quirks nobody mentioned in the docs:"
+  }
+}

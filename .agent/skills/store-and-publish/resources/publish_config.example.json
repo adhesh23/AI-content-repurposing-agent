@@ -1,0 +1,6 @@
+﻿{
+  "webhook_url": "REPLACE_WITH_MAKE_WEBHOOK_URL",
+  "timeout_seconds": 15,
+  "retry_attempts": 3,
+  "local_output_dir": "output"
+}

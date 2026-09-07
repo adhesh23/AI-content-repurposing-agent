@@ -1,0 +1,30 @@
+[
+  {
+    "segment_id": "deep_tech",
+    "name": "Deep Tech",
+    "target_profile": "Founders building foundation models, AI infrastructure, custom architectures, GPU compute, and inference systems.",
+    "hn_query": "LLM infrastructure OR GPU OR \"open weights\" OR vLLM OR fine-tuning OR \"transformer architecture\"",
+    "google_news_query": "\"AI infrastructure\" OR \"open source AI\" OR \"GPU cluster\" OR \"LLM inference\" OR \"deep tech AI\""
+  },
+  {
+    "segment_id": "saas_b2b",
+    "name": "SaaS (B2B)",
+    "target_profile": "Founders building B2B software, enterprise AI workflows, automated operations, and production software systems.",
+    "hn_query": "\"enterprise AI\" OR \"B2B SaaS\" OR \"AI workflow\" OR \"RAG\" OR \"AI security\"",
+    "google_news_query": "\"enterprise AI\" OR \"B2B SaaS AI\" OR \"generative AI enterprise\" OR \"AI productivity\""
+  },
+  {
+    "segment_id": "saas_d2c",
+    "name": "SaaS (D2C)",
+    "target_profile": "Founders creating consumer-facing digital products, micro-apps, creator tools, and direct-to-consumer software.",
+    "hn_query": "\"consumer AI\" OR \"AI app\" OR \"creator tool\" OR \"subscription\"",
+    "google_news_query": "consumer AI OR \"AI app\" OR \"AI creator\""
+  },
+  {
+    "segment_id": "ai_native_consumer",
+    "name": "AI-native / Consumer Tech",
+    "target_profile": "Founders creating autonomous agent systems, novel interactive multimodal AI interfaces, and fast-moving AI-native products.",
+    "hn_query": "\"AI agents\" OR \"autonomous agents\" OR \"multimodal AI\" OR \"voice AI\"",
+    "google_news_query": "\"AI agents\" OR \"autonomous agents\" OR \"AI-native\" OR \"multimodal generative AI\""
+  }
+]

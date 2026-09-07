@@ -1,0 +1,30 @@
+﻿# Secrets and config
+.env
+.env.*
+publish_config.json
+**/publish_config.json
+*apikey*
+*api_key*
+
+# Output directory and test artifacts
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Antigravity local state
+.gemini/
+.agent/scratch/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local backups from store-and-publish
+data/*_all_segments.json
