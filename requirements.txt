@@ -1,0 +1,5 @@
+# Autonomous AI Content Repurposer Agent Dependencies
+# The core pipeline is built on Python 3.10+ standard libraries (urllib, json, email, xml, re, datetime)
+# Common utility dependencies:
+requests>=2.31.0
+python-dateutil>=2.8.2
