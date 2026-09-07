@@ -12,6 +12,10 @@ permissions:
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+      OPENROUTER_MODEL_SHAPE: "nvidia/nemotron-3-super-120b-a12b:free"
 
     steps:
       - name: Checkout Repository
@@ -27,6 +31,19 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Verify Environment Secrets
+        run: |
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::OPENROUTER_API_KEY secret is not set in GitHub repository settings!"
+            exit 1
+          fi
+          echo "OPENROUTER_API_KEY is present (prefix: ${OPENROUTER_API_KEY:0:10}...)"
+          if [ -n "$MAKE_WEBHOOK_URL" ]; then
+            echo "MAKE_WEBHOOK_URL is configured."
+          else
+            echo "MAKE_WEBHOOK_URL is not set (will save local backups only)."
+          fi
 
       - name: Run Daily Content Repurposer Pipeline
         env:
