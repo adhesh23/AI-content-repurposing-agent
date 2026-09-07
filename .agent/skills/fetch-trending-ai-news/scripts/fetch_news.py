@@ -937,6 +937,23 @@ def fetch_all_trending_ai_news(
         "skipped_segments": skipped_segments
     }
 
+def run_daily_fetch(
+    config_path: str = CONFIG_PATH,
+    target_segment: Optional[str] = None,
+    log_path: Optional[str] = None,
+    record_history: bool = True,
+    current_date: Optional[str] = None
+) -> Dict[str, Any]:
+    """Convenience alias for fetch_all_trending_ai_news used by daily orchestrators."""
+    return fetch_all_trending_ai_news(
+        config_path=config_path,
+        target_segment=target_segment,
+        log_path=log_path,
+        record_history=record_history
+    )
+
+log_used_stories = append_used_story
+
 if __name__ == "__main__":
     out_file = None
     target_seg = None

@@ -122,6 +122,14 @@ def get_daily_usage_count(date_str: Optional[str] = None) -> int:
     except Exception:
         return 0
 
+FALLBACK_FREE_MODELS = [
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "google/gemma-4-31b-it:free",
+    "minimax/minimax-m2.7:free",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "openrouter/free"
+]
+
 def call_openrouter(
     messages: List[Dict[str, str]],
     model: Optional[str] = None,
@@ -138,70 +146,83 @@ def call_openrouter(
             "Please set OPENROUTER_API_KEY with your OpenRouter API key."
         )
 
-    selected_model = model or resolve_model_for_skill(skill_name)
+    primary_model = model or resolve_model_for_skill(skill_name)
+    models_to_try = [primary_model] + [m for m in FALLBACK_FREE_MODELS if m != primary_model]
 
-    payload = {
-        "model": selected_model,
-        "messages": messages,
-        "temperature": temperature,
-        "max_tokens": max_tokens
-    }
-    
-    data_bytes = json.dumps(payload).encode("utf-8")
-    
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "https://github.com/adhesh23/AI-content-repurposing-agent",
-        "X-Title": "AI Content Repurposer Agent",
-        "User-Agent": "AIContentRepurposer/1.0"
-    }
+    last_error = None
+    for current_model in models_to_try:
+        payload = {
+            "model": current_model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens
+        }
+        data_bytes = json.dumps(payload).encode("utf-8")
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://github.com/adhesh23/AI-content-repurposing-agent",
+            "X-Title": "AI Content Repurposer Agent",
+            "User-Agent": "AIContentRepurposer/1.0"
+        }
 
-    attempt = 0
-    while attempt <= max_retries:
-        req = urllib.request.Request(OPENROUTER_ENDPOINT, data=data_bytes, headers=headers, method="POST")
-        try:
-            with urllib.request.urlopen(req, timeout=45) as response:
-                resp_text = response.read().decode("utf-8", errors="replace")
-                resp_json = json.loads(resp_text)
-                
-                track_usage(selected_model, status="success")
-                
-                choices = resp_json.get("choices", [])
-                if not choices:
-                    raise ValueError(f"OpenRouter response contained no choices: {resp_text}")
+        attempt = 0
+        while attempt <= max_retries:
+            req = urllib.request.Request(OPENROUTER_ENDPOINT, data=data_bytes, headers=headers, method="POST")
+            try:
+                with urllib.request.urlopen(req, timeout=45) as response:
+                    resp_text = response.read().decode("utf-8", errors="replace")
+                    resp_json = json.loads(resp_text)
                     
-                content = choices[0].get("message", {}).get("content", "").strip()
-                return {
-                    "text": content,
-                    "model": resp_json.get("model", selected_model),
-                    "usage": resp_json.get("usage", {}),
-                    "raw_response": resp_json
-                }
-                
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                track_usage(selected_model, status="rate_limited")
-                attempt += 1
-                if attempt > max_retries:
-                    err_body = e.read().decode("utf-8", errors="replace")
-                    raise RuntimeError(
-                        f"OpenRouter rate limit (HTTP 429) exceeded after {max_retries} retries. "
-                        f"Details: {err_body}"
-                    )
-                backoff_time = initial_backoff * (2 ** (attempt - 1))
-                sys.stderr.write(
-                    f"[OpenRouter Rate Limit] Received 429 on attempt {attempt}/{max_retries}. "
-                    f"Backing off for {backoff_time:.1f}s before retry...\n"
-                )
-                time.sleep(backoff_time)
-                continue
-            else:
+                    track_usage(current_model, status="success")
+                    
+                    choices = resp_json.get("choices", [])
+                    if not choices:
+                        err_msg = resp_json.get("error", {}).get("message", "")
+                        raise ValueError(f"OpenRouter returned no choices: {err_msg or resp_text}")
+                        
+                    raw_content = choices[0].get("message", {}).get("content")
+                    content = (raw_content or "").strip()
+                    if not content and "error" in resp_json:
+                        raise ValueError(f"OpenRouter empty content error: {resp_json}")
+                        
+                    return {
+                        "text": content,
+                        "model": resp_json.get("model", current_model),
+                        "usage": resp_json.get("usage", {}),
+                        "raw_response": resp_json
+                    }
+                    
+            except urllib.error.HTTPError as e:
                 err_body = e.read().decode("utf-8", errors="replace")
-                track_usage(selected_model, status=f"error_{e.code}")
-                raise RuntimeError(f"OpenRouter HTTP Error {e.code}: {e.reason}. Response: {err_body}")
-        except Exception as e:
-            track_usage(selected_model, status="failed")
-            raise e
+                if e.code == 429:
+                    track_usage(current_model, status="rate_limited")
+                    attempt += 1
+                    if attempt > max_retries:
+                        sys.stderr.write(f"[OpenRouter 429] Model {current_model} exhausted retries. Trying fallback model...\n")
+                        last_error = RuntimeError(f"Rate limited on {current_model}: {err_body}")
+                        break
+                    backoff_time = initial_backoff * (2 ** (attempt - 1))
+                    sys.stderr.write(
+                        f"[OpenRouter Rate Limit] Received 429 on {current_model} (attempt {attempt}/{max_retries}). "
+                        f"Backing off for {backoff_time:.1f}s before retry...\n"
+                    )
+                    time.sleep(backoff_time)
+                    continue
+                elif e.code in (404, 502, 503):
+                    sys.stderr.write(f"[OpenRouter {e.code}] Model {current_model} returned {e.reason}. Trying next fallback model...\n")
+                    last_error = RuntimeError(f"HTTP {e.code} on {current_model}: {err_body}")
+                    break
+                else:
+                    track_usage(current_model, status=f"error_{e.code}")
+                    last_error = RuntimeError(f"OpenRouter HTTP Error {e.code}: {e.reason}. Response: {err_body}")
+                    break
+            except Exception as e:
+                sys.stderr.write(f"[OpenRouter Error] {e} on {current_model}. Trying next fallback model...\n")
+                track_usage(current_model, status="failed")
+                last_error = e
+                break
 
-    raise RuntimeError("Unexpected termination of retry loop in call_openrouter")
+    if last_error:
+        raise last_error
+    raise RuntimeError("Unexpected termination of model fallback loop in call_openrouter")

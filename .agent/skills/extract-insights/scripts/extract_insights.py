@@ -80,13 +80,13 @@ def extract_date_from_html(html_text: str, url: str) -> Optional[str]:
     """
     # 1. Meta tags
     meta_patterns = [
-        r'<meta[^>]+property=["']article:published_time["'][^>]+content=["']([^"']+)["']',
-        r'<meta[^>]+content=["']([^"']+)["'][^>]+property=["']article:published_time["']',
-        r'<meta[^>]+name=["']pubdate["'][^>]+content=["']([^"']+)["']',
-        r'<meta[^>]+name=["']publishdate["'][^>]+content=["']([^"']+)["']',
-        r'<meta[^>]+property=["']og:published_time["'][^>]+content=["']([^"']+)["']',
-        r'<meta[^>]+name=["']date["'][^>]+content=["']([^"']+)["']',
-        r'<time[^>]+datetime=["']([^"']+)["']'
+        r'<meta[^>]+property=["\']article:published_time["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']article:published_time["\']',
+        r'<meta[^>]+name=["\']pubdate["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+name=["\']publishdate["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+property=["\']og:published_time["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+name=["\']date["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<time[^>]+datetime=["\']([^"\']+)["\']'
     ]
     for pat in meta_patterns:
         m = re.search(pat, html_text, re.IGNORECASE)
@@ -97,9 +97,9 @@ def extract_date_from_html(html_text: str, url: str) -> Optional[str]:
                 return f"{d_match.group(1)}-{d_match.group(2)}-{d_match.group(3)}"
 
     # 2. JSON-LD datePublished
-    ld_matches = re.findall(r'<script[^>]+type=["']application/ld\+json["'][^>]*>(.*?)</script>', html_text, re.DOTALL | re.IGNORECASE)
+    ld_matches = re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html_text, re.DOTALL | re.IGNORECASE)
     for ld in ld_matches:
-        d_match = re.search(r'["']datePublished["']\s*:\s*["'](\d{4})[-/](\d{2})[-/](\d{2})', ld)
+        d_match = re.search(r'["\']datePublished["\']\s*:\s*["\'](\d{4})[-/](\d{2})[-/](\d{2})', ld)
         if d_match:
             return f"{d_match.group(1)}-{d_match.group(2)}-{d_match.group(3)}"
 
@@ -159,21 +159,18 @@ def distill_insights_with_llm(article_text: str, segment: str) -> Dict[str, Any]
     except ImportError:
         return {"key_facts": [], "notable_quote": None, "surprising_angle": None}
 
-    # Keep article text snippet within reasonable length for extraction
     truncated_text = article_text[:8000]
 
-    system_prompt = f"""You are a precise technical analyst distilling facts for startup founders in the {segment} sector.
-CRITICAL CONSTRAINT: You must extract information ONLY from the provided text. NEVER invent facts, names, or quotes.
-Return a valid JSON object with exactly these keys:
-- "key_facts": a list of 3 to 5 concrete verifiable details (numbers, metrics, architectural names, funding sums).
-- "notable_quote": a direct quote string with speaker name from the text, or null if none found.
-- "surprising_angle": one sentence highlighting the most non-obvious founder implication or hidden bottleneck."""
+    system_prompt = (
+        f"You are a precise technical analyst distilling facts for startup founders in the {segment} sector.\n"
+        "CRITICAL CONSTRAINT: You must extract information ONLY from the provided text. NEVER invent facts, names, or quotes.\n"
+        "Return a valid JSON object with exactly these keys:\n"
+        "- \"key_facts\": a list of 3 to 5 concrete verifiable details (numbers, metrics, architectural names, funding sums).\n"
+        "- \"notable_quote\": a direct quote string with speaker name from the text, or null if none found.\n"
+        "- \"surprising_angle\": one sentence highlighting the most non-obvious founder implication or hidden bottleneck."
+    )
 
-    user_prompt = f"Article Text:
-
-{truncated_text}
-
-Distill the insights in JSON format now:"
+    user_prompt = f"Article Text:\n\n{truncated_text}\n\nDistill the insights in JSON format now:"
 
     try:
         res = call_openrouter(
@@ -185,9 +182,7 @@ Distill the insights in JSON format now:"
             temperature=0.2,
             max_tokens=800
         )
-        # Parse JSON from response
         resp_text = res["text"].strip()
-        # Strip markdown fences if present
         if resp_text.startswith("```"):
             resp_text = re.sub(r'^```(?:json)?\s*', '', resp_text)
             resp_text = re.sub(r'\s*```$', '', resp_text)
@@ -199,8 +194,7 @@ Distill the insights in JSON format now:"
             "surprising_angle": parsed.get("surprising_angle")
         }
     except Exception as e:
-        sys.stderr.write(f"[distill_insights_with_llm error] {e}
-")
+        sys.stderr.write(f"[distill_insights_with_llm error] {e}\n")
         return {"key_facts": [], "notable_quote": None, "surprising_angle": None}
 
 def extract_insights(

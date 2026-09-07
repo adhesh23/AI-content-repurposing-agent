@@ -12,7 +12,7 @@ Enforces zero hallucinated engagement metrics.
 import json
 import os
 import sys
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 PATTERNS_PATH = os.path.join(os.path.dirname(__file__), "..", "resources", "patterns.json")
 
@@ -114,9 +114,10 @@ def select_post_blueprint(insight: Dict[str, Any], event_type: str, segment_tag:
         "tone": "Insightful, grounded, founder-to-founder."
     })
     
+    angle_str = str(insight.get("surprising_angle") or "")[:110]
     rationale = (
         f"Selected hook '{chosen_hook['name']}' ({chosen_hook_id}) because the event type is '{event_type}', "
-        f"and the surprising angle focuses on: {insight.get('surprising_angle', '')[:110]}... "
+        f"and the surprising angle focuses on: {angle_str}... "
         f"Paired with '{chosen_close['name']}' to reinforce an authentic, high-conviction opinion stance without synthetic engagement bait, "
         f"tailored to {segment_tag}'s emphasis on {framing['focus']}."
     )
@@ -136,8 +137,17 @@ def select_post_blueprint(insight: Dict[str, Any], event_type: str, segment_tag:
         "rationale": rationale
     }
 
-def select_pattern(insight: Dict[str, Any], segment_tag: str, event_type: str = "product_launch") -> Dict[str, Any]:
-    return select_post_blueprint(insight, event_type, segment_tag)
+def select_pattern(
+    insight: Optional[Dict[str, Any]] = None,
+    segment_tag: Optional[str] = None,
+    event_type: str = "product_launch",
+    **kwargs
+) -> Dict[str, Any]:
+    # Support both argument names (segment/segment_tag, insight/extracted_insights)
+    actual_insight = insight or kwargs.get("extracted_insights") or {}
+    actual_segment = segment_tag or kwargs.get("segment") or "Deep Tech"
+    actual_event = event_type or kwargs.get("event_type") or "product_launch"
+    return select_post_blueprint(actual_insight, actual_event, actual_segment)
 
 if __name__ == "__main__":
     sample_insight = {
