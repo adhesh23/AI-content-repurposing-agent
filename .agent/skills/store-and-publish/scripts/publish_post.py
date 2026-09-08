@@ -281,6 +281,23 @@ def store_and_publish_empty_run(
         "webhook_result": webhook_result
     }
 
+def publish_cached_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Re-sends an existing cached daily payload directly to webhook and saves local backup."""
+    config = load_config()
+    webhook_url = os.getenv("MAKE_WEBHOOK_URL") or os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
+    timeout = config.get("timeout_seconds", 15)
+    output_dir = config.get("local_output_dir", "output")
+
+    backup_path = save_local_backup(payload, output_dir, is_batch=True)
+    webhook_result = send_webhook(payload, webhook_url, timeout=timeout)
+
+    return {
+        "mode": payload.get("status") or "daily_batch",
+        "payload": payload,
+        "local_backup_path": backup_path,
+        "webhook_result": webhook_result
+    }
+
 def store_and_publish(
     data: Union[Dict[str, Any], List[Dict[str, Any]]],
     mode: Optional[str] = None,

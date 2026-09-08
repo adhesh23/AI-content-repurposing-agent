@@ -29,4 +29,5 @@ Thumbs.db
 # Local backups from store-and-publish & usage stats
 data/*_all_segments.json
 data/openrouter_usage.json
+data/daily_cache/
 
