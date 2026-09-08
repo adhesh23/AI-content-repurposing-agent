@@ -29,6 +29,28 @@ OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 DEFAULT_FREE_MODEL = "google/gemma-4-31b-it:free"
 USAGE_LOG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "data", "openrouter_usage.json"))
 
+def sanitize_api_key(key: Optional[str]) -> str:
+    """Thoroughly sanitize API key to prevent 401 'Missing Authentication header' errors.
+    
+    OpenRouter returns 'Missing Authentication header' when keys are wrapped with
+    quotes, brackets, redundant Bearer prefixes, or trailing/leading whitespace.
+    """
+    if not key:
+        return ""
+    val = str(key).strip()
+    changed = True
+    while changed:
+        old = val
+        val = val.strip()
+        if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+            val = val[1:-1].strip()
+        if val.startswith("<") and val.endswith(">"):
+            val = val[1:-1].strip()
+        if val.lower().startswith("bearer "):
+            val = val[7:].strip()
+        changed = (old != val)
+    return val.strip()
+
 def _load_dotenv_if_present():
     """Lightweight .env loader that populates os.environ without third-party dependencies."""
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
@@ -43,7 +65,7 @@ def _load_dotenv_if_present():
                         k, v = k.strip(), v.strip()
                         # Only set if not already in os.environ
                         if k and not os.environ.get(k):
-                            os.environ[k] = v.strip('"').strip("'")
+                            os.environ[k] = sanitize_api_key(v) if "KEY" in k or "TOKEN" in k else v.strip('"').strip("'")
         except Exception:
             pass
 
@@ -124,9 +146,9 @@ def get_daily_usage_count(date_str: Optional[str] = None) -> int:
 
 FALLBACK_FREE_MODELS = [
     "nvidia/nemotron-3-super-120b-a12b:free",
+    "nvidia/nemotron-3.5-lightning:free",
     "google/gemma-4-31b-it:free",
-    "minimax/minimax-m2.7:free",
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "google/gemma-4-26b-a4b-it:free",
     "openrouter/free"
 ]
 
@@ -139,12 +161,17 @@ def call_openrouter(
     max_retries: int = 3,
     initial_backoff: float = 2.0
 ) -> Dict[str, Any]:
-    api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    raw_api_key = os.environ.get("OPENROUTER_API_KEY", "")
+    api_key = sanitize_api_key(raw_api_key)
     if not api_key:
         raise ValueError(
-            "OPENROUTER_API_KEY environment variable is missing. "
+            "OPENROUTER_API_KEY environment variable is missing or empty. "
             "Please set OPENROUTER_API_KEY with your OpenRouter API key."
         )
+
+    # Diagnostic logging (masked for security)
+    masked_key = f"{api_key[:6]}...{api_key[-4:] if len(api_key) > 10 else ''} (length: {len(api_key)})"
+    sys.stderr.write(f"[OpenRouter] Authenticating with key {masked_key}\n")
 
     primary_model = model or resolve_model_for_skill(skill_name)
     models_to_try = [primary_model] + [m for m in FALLBACK_FREE_MODELS if m != primary_model]
