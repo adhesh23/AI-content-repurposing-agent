@@ -182,7 +182,8 @@ def call_openrouter(
             "model": current_model,
             "messages": messages,
             "temperature": temperature,
-            "max_tokens": max_tokens
+            "max_tokens": max_tokens,
+            "reasoning": {"effort": "none"}
         }
         data_bytes = json.dumps(payload).encode("utf-8")
         headers = {
@@ -240,6 +241,11 @@ def call_openrouter(
                     sys.stderr.write(f"[OpenRouter {e.code}] Model {current_model} returned {e.reason}. Trying next fallback model...\n")
                     last_error = RuntimeError(f"HTTP {e.code} on {current_model}: {err_body}")
                     break
+                elif e.code == 400 and "reasoning" in err_body.lower() and "reasoning" in payload:
+                    sys.stderr.write(f"[OpenRouter 400] Model {current_model} rejected reasoning param. Retrying without it...\n")
+                    payload.pop("reasoning", None)
+                    data_bytes = json.dumps(payload).encode("utf-8")
+                    continue
                 else:
                     track_usage(current_model, status=f"error_{e.code}")
                     last_error = RuntimeError(f"OpenRouter HTTP Error {e.code}: {e.reason}. Response: {err_body}")

@@ -25,12 +25,44 @@ from build_prompt_payload import build_prompt_payload
 def clean_generated_post(raw_text: str) -> str:
     """
     Cleans up any conversational filler, markdown quote fences,
-    or extraneous wrapper tags that LLMs sometimes output.
+    thinking/reasoning traces, or extraneous wrapper tags that LLMs output.
     Ensures pure copy-paste ready LinkedIn post text.
     """
-    text = raw_text.strip()
-    
-    # Strip markdown code blocks if the model wrapped the post in ```
+    text = (raw_text or "").strip()
+    if not text:
+        return ""
+
+    # 1. Strip XML-style thinking/reasoning tags (<think>, <thought>, <reasoning>)
+    text = re.sub(r"<(think|thought|reasoning)>[\s\S]*?</\1>", "", text, flags=re.IGNORECASE).strip()
+    if re.match(r"^<(think|thought|reasoning)>", text, flags=re.IGNORECASE):
+        close_match = re.search(r"</(think|thought|reasoning)>", text, flags=re.IGNORECASE)
+        if close_match:
+            text = text[close_match.end():].strip()
+        else:
+            raise ValueError("Model output truncated inside <think> tag with no final post content.")
+
+    # 2. Strip conversational thinking process blocks (e.g. Nemotron/DeepSeek plain-text reasoning)
+    thinking_header_match = re.match(r"^(?:Here'?s a thinking process|Thinking Process|Let's think step by step):", text, flags=re.IGNORECASE)
+    if thinking_header_match:
+        transition_patterns = [
+            r"\n\s*---\s*\n(?:\s*(?:Final Post|LinkedIn Post|Draft|Here is the post):?\s*\n)?",
+            r"\n(?:\*\*)?(?:Final Post|Publish-Ready Post|Final Output|LinkedIn Post|Final Draft)(?:\*\*)?:?\s*\n+",
+            r"\nHere(?:'s| is) the (?:complete |publish-ready |final )?LinkedIn post:?\s*\n+",
+            r"\n(?:Final|Final Output Generation):\s*(?:\([^)]*\))?[^\n]*\n+"
+        ]
+        extracted_post = None
+        for pattern in transition_patterns:
+            parts = re.split(pattern, text, maxsplit=1, flags=re.IGNORECASE)
+            if len(parts) > 1 and len(parts[1].strip()) > 50:
+                extracted_post = parts[1].strip()
+                break
+        
+        if extracted_post:
+            text = extracted_post
+        else:
+            raise ValueError("Model output contains only internal reasoning trace and no final post.")
+
+    # 3. Strip markdown code blocks if the model wrapped the post in ```
     if text.startswith("```"):
         lines = text.splitlines()
         if len(lines) >= 2 and lines[-1].strip().startswith("```"):
@@ -38,24 +70,29 @@ def clean_generated_post(raw_text: str) -> str:
         elif lines[0].startswith("```"):
             text = "\n".join(lines[1:]).strip()
 
-    # Strip intro prefixes like "Here is the LinkedIn post:" or "Here is the draft:"
+    # 4. Strip intro prefixes like "Here is the LinkedIn post:" or "Here is the draft:"
     intro_patterns = [
         r"^Here is the (complete |publish-ready )?LinkedIn post:?\s*",
         r"^Here's the (complete |publish-ready )?LinkedIn post:?\s*",
         r"^Here is your post:?\s*",
-        r"^Draft:?\s*"
+        r"^Draft:?\s*",
+        r"^(?:\*\*)?(?:Final Post|LinkedIn Post)(?:\*\*)?:?\s*"
     ]
     for p in intro_patterns:
         text = re.sub(p, "", text, flags=re.IGNORECASE).strip()
 
-    # Remove trailing metadata block if included by the model
-    # (e.g. "--- \nSegment: ..." or trailing "[Deep Tech]")
+    # 5. Remove trailing metadata block if included by the model
     meta_split = re.split(r'\n---\s*\n(?:Segment|Founder Segment|Pattern):', text, maxsplit=1, flags=re.IGNORECASE)
     if len(meta_split) > 1:
         text = meta_split[0].strip()
 
-    # Strip trailing bracketed segment tag like [DeepTech] or [SaaS (B2B)]
+    # 6. Strip trailing bracketed segment tag like [DeepTech] or [SaaS (B2B)]
     text = re.sub(r'\n\s*\[[A-Za-z0-9\s\(\)/_-]+\]\s*$', '', text).strip()
+
+    # 7. Strip trailing quotes or checkmarks if wrapped in them
+    if text.startswith('"') and text.endswith('"'):
+        text = text[1:-1].strip()
+    text = re.sub(r'[\u2705\u2713\u2714]+$', '', text).strip()
 
     return text
 
