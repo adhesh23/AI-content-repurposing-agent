@@ -121,5 +121,36 @@
       "raise",
       "surface"
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "segment": "Deep Tech",
+    "source_title": "Philippines unveils $34.4bn AI infrastructure plan - MLex",
+    "source_url": "https://www.mlex.com/mlex/articles/2522312/philippines-unveils-34-4bn-ai-infrastructure-plan",
+    "title_fingerprint": [
+      "4bn",
+      "infrastructure",
+      "philippines",
+      "plan",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "segment": "SaaS (B2B)",
+    "source_title": "Gaia raises $1.5M pre-seed led by SEEDRA Ventures for Saudi enterprise AI platform - FWDStart",
+    "source_url": "https://www.fwdstart.me/p/gaia-raises-1-5m-pre-seed-led-by-seedra-ventures-for-saudi-enterprise-ai-platform",
+    "title_fingerprint": [
+      "enterprise",
+      "gaia",
+      "led",
+      "platform",
+      "pre",
+      "raise",
+      "saudi",
+      "seed",
+      "seedra",
+      "ventures"
+    ]
   }
 ]
