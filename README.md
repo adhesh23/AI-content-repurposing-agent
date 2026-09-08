@@ -1,8 +1,20 @@
 # Autonomous AI Content Repurposer Agent
 
-An autonomous AI agent engineered to maintain and grow personal brand presence for founders on LinkedIn. It curates daily trending AI breakthroughs, extracts factual signal, selects proven post structures, and crafts publish-ready LinkedIn posts tailored to the AI and startup ecosystem.
+An autonomous AI agent that helps founders maintain a consistent LinkedIn presence. Every day, it scans trending AI news across Hacker News and Google News, filtering out noise, digests, and off-topic stories to find the one that actually fits each founder audience. 
 
-Runs entirely on **OpenRouter's $0 Free Tier** with zero hallucinated engagement metrics and zero corporate buzzwords.
+It pulls the real facts and angle straight from the source article, runs them through a library of proven founder post structures, and drafts an original, publish-ready LinkedIn post in a voice matched to that segment. 
+
+No generic AI tone, no buzzwords. The finished posts land in your inbox every morning, ready to review and post, with the entire pipeline running on free-tier infrastructure and zero manual input required to generate them. Runs autonomously every 24 hours.
+
+---
+
+## How It Works
+
+1. **Source (`fetch-trending-ai-news`):** Scans Hacker News (Algolia API) and Google News RSS daily. Pre-filters evergreen noise and digests, resolves real publisher URLs, and computes title fingerprints to deduplicate recurring stories.
+2. **Extract (`extract-insights`):** Verifies publication freshness (< 48 hours) and distills factual signal vs. noise directly from the source page under strict anti-hallucination constraints.
+3. **Pattern Check (`apply-post-pattern`):** Evaluates story event types (product launches, benchmark breakthroughs, acquisitions) against curated high-performing LinkedIn structures (*Contrarian claim*, *Vulnerability confession*, *Roadmap teardown*).
+4. **Shape Narrative (`shape-narrative`):** Crafts 100% complete, publish-ready LinkedIn posts with strong opening hooks, authentic founder voice modulation, and automatic thinking-trace stripping.
+5. **Publish & Store (`store-and-publish`):** Backs up batch payloads locally and delivers structured JSON to your Make/n8n webhook for automated email delivery.
 
 ---
 
