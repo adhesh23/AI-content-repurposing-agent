@@ -250,6 +250,37 @@ def store_and_publish_batch(
         "webhook_result": webhook_result
     }
 
+def store_and_publish_empty_run(
+    post_date: Optional[str] = None,
+    segments_checked: int = 4,
+    message: str = "No fresh, eligible AI news qualified in any segment today."
+) -> Dict[str, Any]:
+    """Fallback when no segment produced a qualifying story: sends fallback notification to webhook."""
+    config = load_config()
+    webhook_url = os.getenv("MAKE_WEBHOOK_URL") or os.getenv("PUBLISH_WEBHOOK_URL", config.get("webhook_url", ""))
+    timeout = config.get("timeout_seconds", 15)
+    output_dir = config.get("local_output_dir", "output")
+    
+    if not post_date:
+        post_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        
+    payload = {
+        "status": "no_eligible_stories",
+        "date": post_date,
+        "segments_checked": segments_checked,
+        "message": message
+    }
+    
+    backup_path = save_local_backup(payload, output_dir, is_batch=True)
+    webhook_result = send_webhook(payload, webhook_url, timeout=timeout)
+    
+    return {
+        "mode": "no_eligible_stories",
+        "payload": payload,
+        "local_backup_path": backup_path,
+        "webhook_result": webhook_result
+    }
+
 def store_and_publish(
     data: Union[Dict[str, Any], List[Dict[str, Any]]],
     mode: Optional[str] = None,

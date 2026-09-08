@@ -45,11 +45,72 @@ def load_used_stories(log_path: Optional[str] = None) -> List[Dict[str, Any]]:
             return []
     return []
 
-def get_recent_used_urls(log_path: Optional[str] = None, window_days: int = 14, current_date: Optional[str] = None) -> Tuple[set, int]:
-    """Returns set of normalized URLs used within the history window (default: 14 days)."""
+# Fix 4: Story-Identity Deduplication Constants
+FINGERPRINT_STOPWORDS = {
+    "the", "a", "an", "to", "for", "of", "in", "on", "and", "with", "at", 
+    "is", "are", "what", "it", "means", "from", "how", "why", "that", "this",
+    "news", "statistics", "more", "report", "tech", "consumer",
+    "billion", "million", "trillion", "dollar", "dollars", "usd"
+}
+
+FINGERPRINT_VERB_STEMS = {
+    "buys": "acquire", "bought": "acquire", "buy": "acquire",
+    "acquires": "acquire", "acquired": "acquire", "acquisition": "acquire",
+    "launches": "launch", "launched": "launch", "launching": "launch",
+    "unveils": "unveil", "unveiled": "unveil", "unveiling": "unveil",
+    "raises": "raise", "raised": "raise", "raising": "raise", "funding": "raise"
+}
+
+SIMILARITY_THRESHOLD = 0.50
+
+def clean_publisher_suffix(title: str) -> str:
+    """Strips trailing publisher suffix(es) like ' - Benzinga' or ' - News and Statistics - IndexBox'."""
+    cleaned = (title or "").strip()
+    while True:
+        sub = re.sub(r"\s+[-|–—]\s+[^\s–—|-].*$", "", cleaned)
+        if sub == cleaned or len(sub) < 5:
+            break
+        cleaned = sub.strip()
+    return cleaned
+
+def compute_title_fingerprint(title: str) -> frozenset:
+    """Extract significant words from a headline for story-identity deduplication (Fix 4)."""
+    if not title:
+        return frozenset()
+    cleaned = clean_publisher_suffix(title)
+    # Strip category / date range prefixes like "Consumer Tech (Aug 31-Sep 4):" or "Consumer Tech:"
+    cleaned = re.sub(r'^[A-Za-z\s\(\)\d\-\–—\.\:]+:\s*', '', cleaned)
+    # Split CamelCase and compound words: HuggingFace -> Hugging Face
+    cleaned = re.sub(r"([a-z])([A-Z])", r"\1 \2", cleaned)
+    cleaned = re.sub(r"\bhuggingface\b", "hugging face", cleaned, flags=re.IGNORECASE)
+    
+    words = re.findall(r"[a-z0-9]+", cleaned.lower())
+    significant = set()
+    for w in words:
+        if w in FINGERPRINT_STOPWORDS or len(w) <= 2:
+            continue
+        # Drop pure digit tokens or money amounts like 12b, 93b, 100m
+        if re.match(r'^\d+[bmk]?$', w):
+            continue
+        w = FINGERPRINT_VERB_STEMS.get(w, w)
+        significant.add(w)
+    return frozenset(significant)
+
+def fingerprint_similarity(a: frozenset, b: frozenset) -> float:
+    """Jaccard similarity between two title fingerprints."""
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+def get_recent_history_entries(
+    log_path: Optional[str] = None,
+    window_days: int = 14,
+    current_date: Optional[str] = None
+) -> Tuple[List[Dict[str, Any]], set, int]:
+    """Returns list of recent history entries with precomputed fingerprints, plus normalized URL set."""
     history = load_used_stories(log_path)
     if not history:
-        return set(), window_days
+        return [], set(), window_days
         
     now = datetime.now(timezone.utc)
     if current_date:
@@ -59,6 +120,7 @@ def get_recent_used_urls(log_path: Optional[str] = None, window_days: int = 14, 
             pass
             
     cutoff = now - timedelta(days=window_days)
+    recent_entries = []
     used_urls = set()
     for entry in history:
         entry_date_str = entry.get("date")
@@ -70,12 +132,27 @@ def get_recent_used_urls(log_path: Optional[str] = None, window_days: int = 14, 
                     include = False
             except Exception:
                 include = True
-        if include and entry.get("source_url"):
-            used_urls.add(entry["source_url"].strip().rstrip("/"))
-    return used_urls, window_days
+        if include:
+            if entry.get("source_url"):
+                used_urls.add(entry["source_url"].strip().rstrip("/"))
+            # Dynamically compute title fingerprint if missing
+            raw_fp = entry.get("title_fingerprint")
+            if raw_fp:
+                entry["title_fingerprint_set"] = frozenset(raw_fp)
+            else:
+                title = entry.get("source_title", "")
+                entry["title_fingerprint_set"] = compute_title_fingerprint(title)
+            recent_entries.append(entry)
+            
+    return recent_entries, used_urls, window_days
+
+def get_recent_used_urls(log_path: Optional[str] = None, window_days: int = 14, current_date: Optional[str] = None) -> Tuple[set, int]:
+    """Returns set of normalized URLs used within the history window (default: 14 days)."""
+    _, used_urls, days = get_recent_history_entries(log_path=log_path, window_days=window_days, current_date=current_date)
+    return used_urls, days
 
 def append_used_story(story_entry: Dict[str, Any], log_path: Optional[str] = None) -> None:
-    """Appends winning story to history log."""
+    """Appends winning story to history log, including title_fingerprint."""
     path = log_path or DEFAULT_LOG_PATH
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     history = load_used_stories(path)
@@ -83,6 +160,10 @@ def append_used_story(story_entry: Dict[str, Any], log_path: Optional[str] = Non
     
     url = story_entry.get("source_url", "").strip().rstrip("/")
     if url and url not in existing_urls:
+        if "title_fingerprint" not in story_entry:
+            title = story_entry.get("source_title", "")
+            fp = compute_title_fingerprint(title)
+            story_entry["title_fingerprint"] = sorted(list(fp))
         history.append(story_entry)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2)
@@ -572,7 +653,8 @@ def evaluate_segment_candidates(
     since_timestamp: int,
     recent_used_urls: Optional[set] = None,
     history_window_days: int = 14,
-    incoming_rerouted_candidates: Optional[List[Dict[str, Any]]] = None
+    incoming_rerouted_candidates: Optional[List[Dict[str, Any]]] = None,
+    recent_history_entries: Optional[List[Dict[str, Any]]] = None
 ) -> Tuple[Optional[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], Dict[str, int], bool, Dict[str, Any], List[Dict[str, Any]]]:
     """
     Executes the 5-step pipeline:
@@ -773,8 +855,10 @@ def evaluate_segment_candidates(
     eligible_candidates = [c for c in scored_candidates if c["score"] >= MIN_WINNER_SCORE_THRESHOLD]
     
     excluded_as_repeat = []
+    excluded_repeat_details = []
     winner_candidate = None
     used_url_set = recent_used_urls or set()
+    history_entries = recent_history_entries or []
     
     for cand in eligible_candidates:
         if cand["source"] == "google_news_rss" and not cand["url_resolved"]:
@@ -785,8 +869,45 @@ def evaluate_segment_candidates(
         norm_url = cand["url"].strip().rstrip("/")
         norm_redirect = (cand.get("google_news_redirect_url") or "").strip().rstrip("/")
         
+        # 1. Fast First Pass: Exact URL match
         if norm_url in used_url_set or (norm_redirect and norm_redirect in used_url_set):
             excluded_as_repeat.append(cand["url"])
+            rep_detail = {
+                "title": cand["title"],
+                "reason": "duplicate_by_exact_url",
+                "matched_url": norm_url
+            }
+            excluded_repeat_details.append(rep_detail)
+            filtered_out.append(rep_detail)
+            continue
+            
+        # 2. Fix 4: Story-Identity Fingerprint Similarity Match
+        cand_fp = compute_title_fingerprint(cand["title"])
+        matched_history_entry = None
+        highest_sim = 0.0
+        
+        for hist_entry in history_entries:
+            hist_fp = hist_entry.get("title_fingerprint_set")
+            if not hist_fp and hist_entry.get("source_title"):
+                hist_fp = compute_title_fingerprint(hist_entry["source_title"])
+            if not hist_fp:
+                continue
+            sim = fingerprint_similarity(cand_fp, hist_fp)
+            if sim >= SIMILARITY_THRESHOLD and sim > highest_sim:
+                highest_sim = sim
+                matched_history_entry = hist_entry
+                
+        if matched_history_entry:
+            excluded_as_repeat.append(cand["url"])
+            rep_detail = {
+                "title": cand["title"],
+                "reason": "duplicate_by_story_identity",
+                "matched_against": matched_history_entry.get("source_title"),
+                "matched_url": matched_history_entry.get("source_url"),
+                "similarity": round(highest_sim, 3)
+            }
+            excluded_repeat_details.append(rep_detail)
+            filtered_out.append(rep_detail)
             continue
             
         # Step 8 (Fix 3): Pre-publish safety assertion
@@ -803,6 +924,7 @@ def evaluate_segment_candidates(
         
     duplicate_check = {
         "excluded_as_repeat": excluded_as_repeat,
+        "excluded_repeat_details": excluded_repeat_details,
         "history_window_days": history_window_days
     }
     
@@ -843,7 +965,7 @@ def fetch_all_trending_ai_news(
 
     now = datetime.now(timezone.utc)
     since_timestamp = int((now - timedelta(hours=24)).timestamp())
-    recent_used_urls, _ = get_recent_used_urls(log_path, window_days=history_window_days)
+    recent_history_entries, recent_used_urls, _ = get_recent_history_entries(log_path, window_days=history_window_days)
     
     # Two-pass collection for multi-segment runs to handle cross-segment candidate re-routing:
     # Pass 1: Run each segment, collect candidates to re-route
@@ -852,7 +974,8 @@ def fetch_all_trending_ai_news(
     
     for segment in segments:
         winner, candidates, filtered_out, counts, fallback_used, dup_check, to_reroute = evaluate_segment_candidates(
-            segment, since_timestamp, recent_used_urls=recent_used_urls, history_window_days=history_window_days
+            segment, since_timestamp, recent_used_urls=recent_used_urls, history_window_days=history_window_days,
+            recent_history_entries=recent_history_entries
         )
         first_pass_results[segment["segment_id"]] = {
             "winner": winner,
@@ -879,7 +1002,8 @@ def fetch_all_trending_ai_news(
             # Re-evaluate with incoming re-routed candidates
             winner, candidates, filtered_out, counts, fallback_used, dup_check, _ = evaluate_segment_candidates(
                 segment, since_timestamp, recent_used_urls=recent_used_urls, history_window_days=history_window_days,
-                incoming_rerouted_candidates=incoming
+                incoming_rerouted_candidates=incoming,
+                recent_history_entries=recent_history_entries
             )
             # Combine initial filtered_out with any new ones
             combined_filtered_out = first_pass_results[s_id]["filtered_out"] + [
@@ -906,14 +1030,21 @@ def fetch_all_trending_ai_news(
         if winner:
             selected_stories.append(winner)
             if record_history and winner.get("story"):
-                append_used_story({
+                w_story = winner["story"]
+                w_title = w_story.get("title", "")
+                w_fp = sorted(list(compute_title_fingerprint(w_title)))
+                history_entry = {
                     "date": now.strftime("%Y-%m-%d"),
                     "segment": winner.get("segment_name"),
-                    "source_title": winner["story"].get("title"),
-                    "source_url": winner["story"].get("url")
-                }, log_path=log_path)
-                if winner["story"].get("url"):
-                    recent_used_urls.add(winner["story"]["url"].strip().rstrip("/"))
+                    "source_title": w_title,
+                    "source_url": w_story.get("url"),
+                    "title_fingerprint": w_fp
+                }
+                append_used_story(history_entry, log_path=log_path)
+                if w_story.get("url"):
+                    recent_used_urls.add(w_story["url"].strip().rstrip("/"))
+                history_entry["title_fingerprint_set"] = frozenset(w_fp)
+                recent_history_entries.append(history_entry)
         else:
             skipped_segments.append({
                 "segment_id": segment.get("segment_id"),

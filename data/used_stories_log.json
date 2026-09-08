@@ -3,54 +3,123 @@
     "date": "2026-09-05",
     "segment": "Deep Tech",
     "source_title": "LG Uplus Unveils Modular AI Data Center Model to Cut Construction Time - \uc870\uc120\uc77c\ubcf4",
-    "source_url": "https://www.chosun.com/english/industry-en/2026/09/06/QYUPBDLY45CLJM3QV436YJ5KEI/"
+    "source_url": "https://www.chosun.com/english/industry-en/2026/09/06/QYUPBDLY45CLJM3QV436YJ5KEI/",
+    "title_fingerprint": [
+      "center",
+      "construction",
+      "cut",
+      "data",
+      "model",
+      "modular",
+      "time",
+      "unveil",
+      "uplus"
+    ]
   },
   {
     "date": "2026-09-05",
     "segment": "SaaS (B2B)",
     "source_title": "SEOPulse Announced the Launch of Enterprise AI Visibility Platform - MarTech Cube",
-    "source_url": "https://www.martechcube.com/seopulse-announced-the-launch-of-enterprise-ai-visibility-platform/"
+    "source_url": "https://www.martechcube.com/seopulse-announced-the-launch-of-enterprise-ai-visibility-platform/",
+    "title_fingerprint": [
+      "announced",
+      "enterprise",
+      "launch",
+      "platform",
+      "seopulse",
+      "visibility"
+    ]
   },
   {
     "date": "2026-09-06",
     "segment": "Deep Tech",
     "source_title": "Congress advances new bill to give US edge in open-source AI race with China - The Star",
-    "source_url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/06/congress-advances-new-bill-to-give-us-edge-in-open-source-ai-race-with-china"
+    "source_url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/06/congress-advances-new-bill-to-give-us-edge-in-open-source-ai-race-with-china",
+    "title_fingerprint": [
+      "advances",
+      "bill",
+      "china",
+      "congress",
+      "edge",
+      "give",
+      "new",
+      "open",
+      "race",
+      "source"
+    ]
   },
   {
     "date": "2026-09-06",
     "segment": "SaaS (B2B)",
     "source_title": "Voyager Capital targets Series A enterprise AI enablers - AsianInvestor",
-    "source_url": "https://www.asianinvestor.net/article/voyager-capital-targets-series-a-enterprise-ai-enablers/508287"
+    "source_url": "https://www.asianinvestor.net/article/voyager-capital-targets-series-a-enterprise-ai-enablers/508287",
+    "title_fingerprint": [
+      "capital",
+      "enablers",
+      "enterprise",
+      "series",
+      "targets",
+      "voyager"
+    ]
   },
   {
     "date": "2026-09-06",
     "segment": "SaaS (D2C)",
-    "source_title": "Consumer Tech (Aug 31-Sep 4): NVIDIA Buys World's Largest Open AI Developer, Trump Claims Total Control O - Benzinga",
-    "source_url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more"
+    "source_title": "Consumer Tech: NVIDIA Buys Hugging Face for $12.93B",
+    "source_url": "https://www.benzinga.com/markets/tech/26/09/61644590/consumer-tech-aug-31-sep-4-nvidia-buys-worlds-largest-open-ai-developer-trump-claims-total-control-on-hormuz-more",
+    "title_fingerprint": [
+      "acquire",
+      "face",
+      "hugging",
+      "nvidia"
+    ]
   },
   {
     "date": "2026-09-06",
     "segment": "AI-native / Consumer Tech",
     "source_title": "AI Agents Hack German Wiki, Share Info Like Human Team - \uc870\uc120\uc77c\ubcf4",
-    "source_url": "https://www.chosun.com/english/industry-en/2026/09/07/GGUVOEDC3ZFBFJZZWTBCHPY7FY/"
-  },
-  {
-    "date": "2026-09-08",
-    "segment": "Deep Tech",
-    "source_title": "Nvidia Acquires HuggingFace for $12.9B: What It Means for Open-Source AI - News and Statistics - IndexBox",
-    "source_url": "https://www.indexbox.io/blog/nvidia-completes-129b-acquisition-of-huggingface/"
+    "source_url": "https://www.chosun.com/english/industry-en/2026/09/07/GGUVOEDC3ZFBFJZZWTBCHPY7FY/",
+    "title_fingerprint": [
+      "agents",
+      "german",
+      "hack",
+      "human",
+      "info",
+      "like",
+      "share",
+      "team",
+      "wiki"
+    ]
   },
   {
     "date": "2026-09-08",
     "segment": "SaaS (B2B)",
     "source_title": "Voicing AI Launches Knowledge Mesh, a Context Layer for Enterprise AI Agents. - EIN News",
-    "source_url": "https://www.einnews.com/pr_news/940351883/voicing-ai-launches-knowledge-mesh-a-context-layer-for-enterprise-ai-agents"
+    "source_url": "https://www.einnews.com/pr_news/940351883/voicing-ai-launches-knowledge-mesh-a-context-layer-for-enterprise-ai-agents",
+    "title_fingerprint": [
+      "agents",
+      "context",
+      "enterprise",
+      "knowledge",
+      "launch",
+      "layer",
+      "mesh",
+      "voicing"
+    ]
   },
   {
     "date": "2026-09-08",
     "segment": "AI-native / Consumer Tech",
     "source_title": "Neo Raises $100M As AI Agents Become The New Attack Surface - Forbes",
-    "source_url": "https://www.forbes.com/sites/boazsobrado/2026/09/07/neos-100-million-bet-that-ai-agents-are-the-new-attack-surface/"
+    "source_url": "https://www.forbes.com/sites/boazsobrado/2026/09/07/neos-100-million-bet-that-ai-agents-are-the-new-attack-surface/",
+    "title_fingerprint": [
+      "agents",
+      "attack",
+      "become",
+      "neo",
+      "new",
+      "raise",
+      "surface"
+    ]
   }
 ]

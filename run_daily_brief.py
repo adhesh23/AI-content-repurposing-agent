@@ -30,7 +30,7 @@ from fetch_news import run_daily_fetch, log_used_stories
 from extract_insights import extract_insights
 from select_pattern import select_pattern
 from generate_narrative import generate_narrative
-from publish_post import store_and_publish_batch
+from publish_post import store_and_publish_batch, store_and_publish_empty_run
 
 def run_pipeline(dry_run: bool = False, date_str: str = None, use_mock_stories: str = None):
     print("=" * 60)
@@ -46,12 +46,22 @@ def run_pipeline(dry_run: bool = False, date_str: str = None, use_mock_stories: 
         print("[Step 1] Fetching trending stories from HN Algolia & Google News RSS...")
         fetch_result = run_daily_fetch(current_date=date_str)
 
+    today_date = date_str or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     stories = fetch_result.get("stories", [])
     if not stories:
-        print("No stories retrieved. Exiting pipeline.")
+        print("[Notice] No qualifying stories retrieved across any segment today.")
+        if dry_run:
+            print("[Dry Run] Skipping remote webhook delivery for zero stories.")
+        else:
+            print("[Step 5] Sending 'no_eligible_stories' notification to webhook...")
+            pub_res = store_and_publish_empty_run(post_date=today_date, segments_checked=4)
+            print(f"Webhook Result: {pub_res.get('webhook_result', {}).get('status')}")
+            print(f"Backup Saved: {pub_res.get('local_backup_path')}")
+        print("\n" + "=" * 60)
+        print("PIPELINE EXECUTION COMPLETED (ZERO STORIES QUALIFIED)")
+        print("=" * 60)
         return
 
-    today_date = date_str or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     final_posts: List[Dict[str, Any]] = []
 
     for story_item in stories:
@@ -118,7 +128,17 @@ def run_pipeline(dry_run: bool = False, date_str: str = None, use_mock_stories: 
 
     # 5. STORE AND PUBLISH
     print(f"\n[Step 5] Publishing batch of {len(final_posts)} posts...")
-    if dry_run:
+    if len(final_posts) == 0:
+        print("[Notice] Zero posts were generated from candidate stories today.")
+        if dry_run:
+            print("[Dry Run] Skipping remote webhook delivery for zero posts.")
+        else:
+            print("Sending 'no_eligible_stories' notification to webhook...")
+            pub_res = store_and_publish_empty_run(post_date=today_date, segments_checked=4)
+            print(f"Mode: {pub_res.get('mode')}")
+            print(f"Webhook Result: {pub_res.get('webhook_result', {}).get('status')}")
+            print(f"Backup Saved: {pub_res.get('local_backup_path')}")
+    elif dry_run:
         print("[Dry Run] Skipping remote webhook delivery. Posts generated:")
         for p in final_posts:
             print(f"\n[{p['segment']}] Hook: {p['hook']}")
