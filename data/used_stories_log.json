@@ -152,5 +152,35 @@
       "seedra",
       "ventures"
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "segment": "Deep Tech",
+    "source_title": "Philippines unveils AI infrastructure plan to forge niche as regional hub - Nikkei Asia",
+    "source_url": "https://asia.nikkei.com/business/technology/artificial-intelligence/philippines-unveils-ai-infrastructure-plan-to-forge-niche-as-regional-hub",
+    "title_fingerprint": [
+      "forge",
+      "hub",
+      "infrastructure",
+      "niche",
+      "philippines",
+      "plan",
+      "regional",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-09-08",
+    "segment": "SaaS (B2B)",
+    "source_title": "Ajelix Invests In AI Infrastructure and Launches Enterprise AI Platform - einnews.com",
+    "source_url": "https://www.einnews.com/pr_news/932774947/ajelix-invests-in-ai-infrastructure-and-launches-enterprise-ai-platform",
+    "title_fingerprint": [
+      "ajelix",
+      "enterprise",
+      "infrastructure",
+      "invests",
+      "launch",
+      "platform"
+    ]
   }
 ]
