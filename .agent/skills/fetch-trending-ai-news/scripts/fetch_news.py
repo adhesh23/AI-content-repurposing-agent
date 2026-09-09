@@ -447,37 +447,48 @@ def classify_event_type(title: str, snippet: str) -> str:
     """
     text = f"{title} {snippet}".lower()
     
-    # 1. Ineligible checks
+    # 1. Ineligible checks (Strict exclusions - never qualified)
     if re.search(r'\b(probe|investigation|regulators?|eu ai act|doj|ftc|sec|subpoena|antitrust|banned|compliance mandate|fined?)\b', text):
         return "regulatory_move"
     if re.search(r'\b(backlash|criticism|criticized|scandal|outrage|slammed|sparks debate)\b', text):
         return "controversy"
     if re.search(r'\b(fails?|failed|failure|shuts? down|shut down|bankruptcy|collapses?|flops?|abandoned|ceases operations)\b', text):
         return "notable_failure"
+    if re.search(r'\b(stocks? (?:rally|rallies|climb[s]?|surges?|plunges?|drops?|jump[s]?|gain[s]?)|shares (?:climb[s]?|surge[s]?|rise[s]?|fall[s]?|gain[s]?|jump[s]?)|undervalued|wall st|nasdaq|dow jones|market cap|analyst rating|price target|buy or sell|holds? potential|contracts? boost .*? stocks)\b', text):
+        return "market_or_stock_movement"
+    if re.search(r'\b(market (?:projected|size|valued at|expected to reach)|spending could top|forecast to reach|hit \$[\d\.]+\s*(?:billion|trillion)|cagr|inflation revives)\b', text):
+        return "market_forecast"
+    if re.search(r'\b(webcast|webinar|conference preview|survey:\s*|survey finds|op-ed|opinion:)\b', text):
+        return "survey_or_webinar"
         
     # 2. Eligible checks
-    # Funding round
+    # Funding round (unchanged)
     if re.search(r'\b(raise[sd]?|secures? funding|funding round|series [a-g]|seed round|valuation of|invests? in|funding from|\$[\d\.]+\s*(?:million|billion|m|b))\b', text):
         return "funding_round"
         
-    # Acquisition
+    # Acquisition (unchanged)
     if re.search(r'\b(acquires?|acquired|acquisition|buys|buyout|takeover|merger)\b', text):
         return "acquisition"
         
-    # Partnership / Major contract
-    if re.search(r'\b(partners? with|partnered|partnership|teams? up|collaborates? with|collaboration with|integrates? with|integration with|joint deployment|alliance|contract)\b', text):
+    # Partnership / Vendor Selection / Integration Deal (expanded)
+    if (re.search(r'\b(partners? with|partnered|partnership|teams? up|collaborates? with|collaboration with|integrates? with|integration with|joint deployment|alliance|contract)\b', text) or
+        re.search(r'\b(?:selects?|selected|chooses?|chose|adopts?|adopted|taps?|tapped)\b.*?\b(?:as|for)\b.*?\b(?:provider|platform|partner|solution|infrastructure|engine|vendor|system)\b', text) or
+        re.search(r'\b(?:moves into|deepens?|unveils?|announces?)\b.*?\b(?:integration with|integration)\b', text) or
+        re.search(r'\b(?:multi-year|strategic|enterprise)\s+(?:deal|contract|partnership|alliance)\b', text)):
         return "partnership"
         
-    # Strategic pivot
-    if re.search(r'\b(pivots? to|pivoted|pivot|shifts? from|restructures?|new strategy|rebrands?|transitions? to)\b', text):
+    # Strategic pivot (clarified boundary for confirmed corporate shift)
+    if re.search(r'\b(pivots? to|pivoted to|pivots? beyond|pivot beyond|shifts? from|shifts? focus to|restructures?|rebrands?|transitions? to|turns its .*? into)\b', text):
         return "strategic_pivot"
         
-    # Research breakthrough
+    # Research breakthrough (unchanged)
     if re.search(r'\b(breakthrough|new model|state of the art|sota|benchmark|outperforms?|beats|novel architecture|paper|open-?weights?|open-?sources?|novel approach)\b', text):
         return "research_breakthrough"
 
-    # Product launch
-    if re.search(r'\b(launches|launched|launch|unveils|unveiled|releases|released|release|announces|debuts|debuted|rolls out|introduces|introduced|ships|shipped|v\d+[\.\d]*)\b', text):
+    # Product launch / Feature additions & capability updates (expanded)
+    if (re.search(r'\b(launches|launched|launch|unveils|unveiled|releases|released|release|announces|debuts|debuted|rolls out|introduces|introduced|ships|shipped|v\d+[\.\d]*)\b', text) or
+        re.search(r'\b(adds?|added|adding)\b.*?\b(?:features?|capabilities?|tools?|support|functionality|agents?)\b', text) or
+        re.search(r'\b(expands?|expanded)\b.*?\bwith\b.*?\b(?:cpu|gpu|chip|model|agent|feature|platform|api|tool|assistant|system|product)\b', text)):
         return "product_launch"
 
     return "other"
@@ -606,9 +617,9 @@ def fetch_hn_raw_stories(query: str, since_timestamp: int) -> List[Dict[str, Any
         sys.stderr.write(f"HN API query failed for '{query}': {e}\n")
     return raw_stories
 
-def fetch_google_news_raw_stories(query: str) -> List[Dict[str, Any]]:
-    """Query Google News RSS for stories in the last 24 hours."""
-    encoded_query = urllib.parse.quote(f"{query} when:24h")
+def fetch_google_news_raw_stories(query: str, time_window: str = "72h") -> List[Dict[str, Any]]:
+    """Query Google News RSS for stories in the specified time window (default: 72h)."""
+    encoded_query = urllib.parse.quote(f"{query} when:{time_window}")
     url = f"{GOOGLE_NEWS_RSS_BASE}?q={encoded_query}&hl=en-US&gl=US&ceid=US:en"
     headers = {"User-Agent": "AutonomousContentRepurposer/1.0"}
     
@@ -657,279 +668,326 @@ def evaluate_segment_candidates(
     recent_history_entries: Optional[List[Dict[str, Any]]] = None
 ) -> Tuple[Optional[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], Dict[str, int], bool, Dict[str, Any], List[Dict[str, Any]]]:
     """
-    Executes the 5-step pipeline:
-      1. Pre-filters evergreen/guide, controversy/legal, and stale (>48h) pieces.
-      2. Fix 1: Digest/roundup filter. Re-sources from dedicated coverage if possible; otherwise rejects.
-      3. Classifies surviving candidates by event type.
-      4. Fix 2: Audience-fit check. Verifies best_fit_segment == segment_id.
-         If mismatch, rejects from current segment with reason: "segment_mismatch" and marks for re-routing.
-      5. Ranks candidates primarily by event-eligibility and segment relevance, using recency as tiebreaker.
-      6. Applies duplicate check against recent story history (14-day window).
-      7. Applies fallback rule if no eligible event type candidate exists.
+    Executes the candidate evaluation pipeline:
+      1. Multi-query sourcing from HN Algolia and Google News RSS, with raw candidate de-duplication.
+      2. Primary 48h freshness window evaluation: pre-filters evergreen, controversy, legal, and digest formats.
+      3. Classifies surviving candidates by event type (eligible: funding_round, acquisition, partnership, product_launch, strategic_pivot, research_breakthrough).
+      4. Audience-fit check (Fix 2). Mismatches routed to target segments.
+      5. Scoring & ranking.
+      6. Duplicate check (exact URL + Fix 4 story-identity fingerprint similarity threshold >= 0.50).
+      7. Part 3 Fallback Freshness Extension (72h): Evaluated only if primary 48h window produces zero eligible winners.
     Returns (winner, scored_candidates, filtered_out, counts_returned, fallback_used, duplicate_check, candidates_to_reroute).
     """
     segment_id = segment.get("segment_id", "")
-    hn_query = segment.get("hn_query", "")
-    gn_query = segment.get("google_news_query", "")
+    hn_queries = segment.get("hn_queries") or ([segment.get("hn_query")] if segment.get("hn_query") else [])
+    gn_queries = segment.get("google_news_queries") or ([segment.get("google_news_query")] if segment.get("google_news_query") else [])
     
-    raw_hn = fetch_hn_raw_stories(hn_query, since_timestamp) if hn_query else []
-    raw_gn = fetch_google_news_raw_stories(gn_query) if gn_query else []
-    
+    # Query HN Algolia across all query variants and de-duplicate raw results
+    raw_hn = []
+    seen_hn_urls = set()
+    for q in hn_queries:
+        if not q:
+            continue
+        for item in fetch_hn_raw_stories(q, since_timestamp):
+            norm = (item.get("url") or "").strip().rstrip("/")
+            if norm and norm not in seen_hn_urls:
+                seen_hn_urls.add(norm)
+                raw_hn.append(item)
+            elif not norm:
+                raw_hn.append(item)
+                
+    # Query Google News RSS across all query variants and de-duplicate raw results
+    raw_gn = []
+    seen_gn_urls = set()
+    for q in gn_queries:
+        if not q:
+            continue
+        for item in fetch_google_news_raw_stories(q, time_window="72h"):
+            norm = (item.get("url") or "").strip().rstrip("/")
+            if norm and norm not in seen_gn_urls:
+                seen_gn_urls.add(norm)
+                raw_gn.append(item)
+            elif not norm:
+                raw_gn.append(item)
+                
     counts_returned = {
         "hn_algolia": len(raw_hn),
         "google_news_rss": len(raw_gn)
     }
     
-    all_raw = raw_hn + raw_gn
-    
+    # Combine and de-duplicate raw candidate pool before classification
+    all_raw = []
+    seen_all_urls = set()
+    for item in raw_hn + raw_gn:
+        norm = (item.get("url") or "").strip().rstrip("/")
+        if norm and norm not in seen_all_urls:
+            seen_all_urls.add(norm)
+            all_raw.append(item)
+        elif not norm:
+            all_raw.append(item)
+            
     # Append any candidates re-routed into this segment from other segments
     if incoming_rerouted_candidates:
-        all_raw.extend(incoming_rerouted_candidates)
-        
-    surviving_candidates = []
-    filtered_out = []
-    candidates_to_reroute = []
-    
-    # Step 1: Pre-filter rejection & freshness gate (reject >48 hours old)
-    for item in all_raw:
-        if item.get("hours_old", 0.0) > 48.0:
-            filtered_out.append({
-                "title": item["title"],
-                "reason": "stale_exceeds_48h"
-            })
-            continue
+        for item in incoming_rerouted_candidates:
+            norm = (item.get("url") or "").strip().rstrip("/")
+            if norm and norm not in seen_all_urls:
+                seen_all_urls.add(norm)
+                all_raw.append(item)
+            elif not norm:
+                all_raw.append(item)
 
-        is_filtered, reason = prefilter_candidate(item["title"], item["snippet"])
-        if is_filtered:
-            filtered_out.append({
-                "title": item["title"],
-                "reason": reason
-            })
-            continue
-            
-        # Step 2 (Fix 1): Digest / Roundup Filter
-        is_digest, digest_reason = detect_digest_format(item["title"], item.get("url", ""), item["snippet"])
-        resolved_from_digest = None
+    def _evaluate_candidate_batch(candidate_pool: List[Dict[str, Any]], is_extended: bool = False):
+        batch_surviving = []
+        batch_filtered_out = []
+        batch_to_reroute = []
         
-        if is_digest:
-            # Attempt to re-source a dedicated single-topic replacement
-            replacement, resourced_ok = resurce_digest_candidate(item, query_hint=segment.get("name", ""))
-            if resourced_ok and replacement:
-                resolved_from_digest = {
-                    "original_url": item["url"],
-                    "replacement_url": replacement["url"]
-                }
-                item = dict(replacement)
-                item["digest_format"] = True
-                item["resolved_from_digest"] = resolved_from_digest
-            else:
-                filtered_out.append({
+        for item in candidate_pool:
+            is_filtered, reason = prefilter_candidate(item["title"], item["snippet"])
+            if is_filtered:
+                batch_filtered_out.append({
                     "title": item["title"],
-                    "reason": "digest_only_no_dedicated_source"
+                    "reason": reason
                 })
                 continue
-        else:
-            item["digest_format"] = False
-            item["resolved_from_digest"] = None
-            
-        surviving_candidates.append(item)
-            
-    # Step 3 (Fix 3): Event-type classification & Pass 1 hard filter
-    # Step 4 (Fix 2): Audience-fit check
-    # Step 5 (Fix 3): Event-type Pass 2 check (for incoming re-routed candidates)
-    eligible_for_scoring = []
-    for item in surviving_candidates:
-        is_rerouted = item.get("already_rerouted", False)
-        event_type = classify_event_type(item["title"], item["snippet"])
-        item["event_type"] = event_type
-        
-        # Hard Filter: Event type MUST be in ELIGIBLE_EVENT_TYPES
-        if event_type not in ELIGIBLE_EVENT_TYPES:
-            if is_rerouted:
-                filtered_out.append({
-                    "title": item["title"],
-                    "reason": "event_type_ineligible_post_routing"
-                })
-            else:
-                filtered_out.append({
-                    "title": item["title"],
-                    "reason": "event_type_ineligible"
-                })
-            continue
-
-        # Audit gate passes
-        gate_passes = list(item.get("event_type_gate_passes", []))
-        if is_rerouted:
-            # Re-routed candidate passing pass 2
-            if 1 not in gate_passes:
-                gate_passes.append(1)
-            if 2 not in gate_passes:
-                gate_passes.append(2)
-        else:
-            # Native candidate passing pass 1
-            if 1 not in gate_passes:
-                gate_passes.append(1)
-        item["event_type_gate_passes"] = gate_passes
-        
-        # Audience fit check
-        best_fit_id, fit_confidence = classify_best_fit_segment(item["title"], item["snippet"])
-        target_name = AUDIENCE_PROFILES.get(best_fit_id, {}).get("name", best_fit_id)
-        segment_match = (best_fit_id == segment_id)
-        
-        item["best_fit_segment"] = target_name
-        item["segment_match"] = segment_match
-        
-        if not segment_match and not is_rerouted:
-            # Record in filtered_out of current segment
-            filtered_out.append({
-                "title": item["title"],
-                "reason": "segment_mismatch",
-                "redirected_to": target_name
-            })
-            # Prepare to re-route to best-fit segment
-            item_for_reroute = dict(item)
-            item_for_reroute["already_rerouted"] = True
-            candidates_to_reroute.append({
-                "target_segment_id": best_fit_id,
-                "candidate": item_for_reroute
-            })
-            continue
-            
-        eligible_for_scoring.append(item)
-        
-    # Step 6: Scoring & Ranking (Only ELIGIBLE_EVENT_TYPES can ever reach this stage)
-    scored_candidates = []
-    for item in eligible_for_scoring:
-        event_type = item["event_type"]
-        relevance_score = calculate_segment_relevance(segment_id, item["title"], item["snippet"])
-        hours_old = item["hours_old"]
-        
-        # Recency tiebreaker: max 1.0 point, higher for fresher stories
-        recency_tiebreaker = round(max(0.0, 24.0 - hours_old) / 24.0, 3)
-        
-        # Community engagement bonus for HN
-        hn_bonus = 0.0
-        if item["source"] == "hn_algolia":
-            points = item.get("points") or 0
-            comments = item.get("num_comments") or 0
-            hn_bonus = round(min(2.0, (points + comments) * 0.02), 2)
-            
-        final_score = round(100.0 + (relevance_score * 10.0) + hn_bonus + recency_tiebreaker, 2)
-            
-        candidate_entry = {
-            "source": item["source"],
-            "title": item["title"],
-            "url": item["url"],
-            "url_resolved": item.get("url_resolved", False),
-            "google_news_redirect_url": item.get("google_news_redirect_url"),
-            "hn_item_url": item.get("hn_item_url"),
-            "published_at": item["published_at"],
-            "points": item.get("points"),
-            "num_comments": item.get("num_comments"),
-            "event_type": event_type,
-            "event_type_gate_passes": item.get("event_type_gate_passes", [1]),
-            "digest_format": item.get("digest_format", False),
-            "resolved_from_digest": item.get("resolved_from_digest"),
-            "best_fit_segment": item.get("best_fit_segment", segment.get("name")),
-            "segment_match": item.get("segment_match", True),
-            "segment_relevance_score": relevance_score,
-            "score": final_score,
-            "fallback_used": False,
-            "score_components": {
-                "source": item["source"],
-                "event_type": event_type,
-                "is_eligible_event": True,
-                "segment_relevance_score": relevance_score,
-                "recency_tiebreaker": recency_tiebreaker,
-                "hn_bonus": hn_bonus,
-                "formula_used": "100.0 (if eligible) + (segment_relevance * 10.0) + recency_tiebreaker + hn_bonus"
-            },
-            "snippet": item["snippet"]
-        }
-        scored_candidates.append(candidate_entry)
-        
-    # Sort descending by score
-    scored_candidates.sort(key=lambda c: c["score"], reverse=True)
-    
-    # Step 7: Winner Selection with Duplicate History Exclusion
-    eligible_candidates = [c for c in scored_candidates if c["score"] >= MIN_WINNER_SCORE_THRESHOLD]
-    
-    excluded_as_repeat = []
-    excluded_repeat_details = []
-    winner_candidate = None
-    used_url_set = recent_used_urls or set()
-    history_entries = recent_history_entries or []
-    
-    for cand in eligible_candidates:
-        if cand["source"] == "google_news_rss" and not cand["url_resolved"]:
-            resolved_url, is_resolved = resolve_google_news_url(cand["url"])
-            cand["url"] = resolved_url
-            cand["url_resolved"] = is_resolved
-            
-        norm_url = cand["url"].strip().rstrip("/")
-        norm_redirect = (cand.get("google_news_redirect_url") or "").strip().rstrip("/")
-        
-        # 1. Fast First Pass: Exact URL match
-        if norm_url in used_url_set or (norm_redirect and norm_redirect in used_url_set):
-            excluded_as_repeat.append(cand["url"])
-            rep_detail = {
-                "title": cand["title"],
-                "reason": "duplicate_by_exact_url",
-                "matched_url": norm_url
-            }
-            excluded_repeat_details.append(rep_detail)
-            filtered_out.append(rep_detail)
-            continue
-            
-        # 2. Fix 4: Story-Identity Fingerprint Similarity Match
-        cand_fp = compute_title_fingerprint(cand["title"])
-        matched_history_entry = None
-        highest_sim = 0.0
-        
-        for hist_entry in history_entries:
-            hist_fp = hist_entry.get("title_fingerprint_set")
-            if not hist_fp and hist_entry.get("source_title"):
-                hist_fp = compute_title_fingerprint(hist_entry["source_title"])
-            if not hist_fp:
-                continue
-            sim = fingerprint_similarity(cand_fp, hist_fp)
-            if sim >= SIMILARITY_THRESHOLD and sim > highest_sim:
-                highest_sim = sim
-                matched_history_entry = hist_entry
                 
-        if matched_history_entry:
-            excluded_as_repeat.append(cand["url"])
-            rep_detail = {
-                "title": cand["title"],
-                "reason": "duplicate_by_story_identity",
-                "matched_against": matched_history_entry.get("source_title"),
-                "matched_url": matched_history_entry.get("source_url"),
-                "similarity": round(highest_sim, 3)
-            }
-            excluded_repeat_details.append(rep_detail)
-            filtered_out.append(rep_detail)
-            continue
+            # Step 2 (Fix 1): Digest / Roundup Filter
+            is_digest, digest_reason = detect_digest_format(item["title"], item.get("url", ""), item["snippet"])
+            resolved_from_digest = None
+            if is_digest:
+                replacement, resourced_ok = resurce_digest_candidate(item, query_hint=segment.get("name", ""))
+                if resourced_ok and replacement:
+                    resolved_from_digest = {
+                        "original_url": item["url"],
+                        "replacement_url": replacement["url"]
+                    }
+                    item = dict(replacement)
+                    item["digest_format"] = True
+                    item["resolved_from_digest"] = resolved_from_digest
+                else:
+                    batch_filtered_out.append({
+                        "title": item["title"],
+                        "reason": "digest_only_no_dedicated_source"
+                    })
+                    continue
+            else:
+                item["digest_format"] = False
+                item["resolved_from_digest"] = None
+                
+            batch_surviving.append(item)
             
-        # Step 8 (Fix 3): Pre-publish safety assertion
-        if cand.get("event_type") not in ELIGIBLE_EVENT_TYPES:
-            filtered_out.append({
-                "title": cand["title"],
-                "reason": "event_type_ineligible_final_check"
-            })
-            continue
-
-        winner_candidate = cand
-        winner_candidate["fallback_used"] = False
-        break
+        # Event-type classification & Audience-fit check
+        eligible_for_scoring = []
+        for item in batch_surviving:
+            is_rerouted = item.get("already_rerouted", False)
+            event_type = classify_event_type(item["title"], item["snippet"])
+            item["event_type"] = event_type
+            
+            if event_type not in ELIGIBLE_EVENT_TYPES:
+                if is_rerouted:
+                    batch_filtered_out.append({
+                        "title": item["title"],
+                        "reason": "event_type_ineligible_post_routing"
+                    })
+                else:
+                    batch_filtered_out.append({
+                        "title": item["title"],
+                        "reason": "event_type_ineligible"
+                    })
+                continue
+                
+            gate_passes = list(item.get("event_type_gate_passes", []))
+            if is_rerouted:
+                if 1 not in gate_passes:
+                    gate_passes.append(1)
+                if 2 not in gate_passes:
+                    gate_passes.append(2)
+            else:
+                if 1 not in gate_passes:
+                    gate_passes.append(1)
+            item["event_type_gate_passes"] = gate_passes
+            
+            best_fit_id, fit_confidence = classify_best_fit_segment(item["title"], item["snippet"])
+            target_name = AUDIENCE_PROFILES.get(best_fit_id, {}).get("name", best_fit_id)
+            segment_match = (best_fit_id == segment_id)
+            item["best_fit_segment"] = target_name
+            item["segment_match"] = segment_match
+            
+            if not segment_match and not is_rerouted:
+                batch_filtered_out.append({
+                    "title": item["title"],
+                    "reason": "segment_mismatch",
+                    "redirected_to": target_name
+                })
+                item_for_reroute = dict(item)
+                item_for_reroute["already_rerouted"] = True
+                batch_to_reroute.append({
+                    "target_segment_id": best_fit_id,
+                    "candidate": item_for_reroute
+                })
+                continue
+                
+            eligible_for_scoring.append(item)
+            
+        # Scoring & Ranking
+        scored_candidates = []
+        for item in eligible_for_scoring:
+            event_type = item["event_type"]
+            relevance_score = calculate_segment_relevance(segment_id, item["title"], item["snippet"])
+            hours_old = item["hours_old"]
+            recency_tiebreaker = round(max(0.0, 24.0 - hours_old) / 24.0, 3)
+            hn_bonus = 0.0
+            if item["source"] == "hn_algolia":
+                points = item.get("points") or 0
+                comments = item.get("num_comments") or 0
+                hn_bonus = round(min(2.0, (points + comments) * 0.02), 2)
+            final_score = round(100.0 + (relevance_score * 10.0) + hn_bonus + recency_tiebreaker, 2)
+            
+            candidate_entry = {
+                "source": item["source"],
+                "title": item["title"],
+                "url": item["url"],
+                "url_resolved": item.get("url_resolved", False),
+                "google_news_redirect_url": item.get("google_news_redirect_url"),
+                "hn_item_url": item.get("hn_item_url"),
+                "published_at": item["published_at"],
+                "hours_old": hours_old,
+                "points": item.get("points"),
+                "num_comments": item.get("num_comments"),
+                "event_type": event_type,
+                "event_type_gate_passes": item.get("event_type_gate_passes", [1]),
+                "digest_format": item.get("digest_format", False),
+                "resolved_from_digest": item.get("resolved_from_digest"),
+                "best_fit_segment": item.get("best_fit_segment", segment.get("name")),
+                "segment_match": item.get("segment_match", True),
+                "segment_relevance_score": relevance_score,
+                "score": final_score,
+                "freshness_window_extended": is_extended,
+                "fallback_used": False,
+                "score_components": {
+                    "source": item["source"],
+                    "event_type": event_type,
+                    "is_eligible_event": True,
+                    "segment_relevance_score": relevance_score,
+                    "recency_tiebreaker": recency_tiebreaker,
+                    "hn_bonus": hn_bonus,
+                    "formula_used": "100.0 (if eligible) + (segment_relevance * 10.0) + recency_tiebreaker + hn_bonus"
+                },
+                "snippet": item["snippet"]
+            }
+            scored_candidates.append(candidate_entry)
+            
+        scored_candidates.sort(key=lambda c: c["score"], reverse=True)
         
-    duplicate_check = {
-        "excluded_as_repeat": excluded_as_repeat,
-        "excluded_repeat_details": excluded_repeat_details,
-        "history_window_days": history_window_days
-    }
+        # Winner Selection with Duplicate History Exclusion
+        eligible_candidates = [c for c in scored_candidates if c["score"] >= MIN_WINNER_SCORE_THRESHOLD]
+        excluded_as_repeat = []
+        excluded_repeat_details = []
+        winner_cand = None
+        used_url_set = recent_used_urls or set()
+        history_entries = recent_history_entries or []
+        
+        for cand in eligible_candidates:
+            if cand["source"] == "google_news_rss" and not cand["url_resolved"]:
+                resolved_url, is_resolved = resolve_google_news_url(cand["url"])
+                cand["url"] = resolved_url
+                cand["url_resolved"] = is_resolved
+                
+            norm_url = cand["url"].strip().rstrip("/")
+            norm_redirect = (cand.get("google_news_redirect_url") or "").strip().rstrip("/")
+            
+            # Fast First Pass: Exact URL match
+            if norm_url in used_url_set or (norm_redirect and norm_redirect in used_url_set):
+                excluded_as_repeat.append(cand["url"])
+                rep_detail = {
+                    "title": cand["title"],
+                    "reason": "duplicate_by_exact_url",
+                    "matched_url": norm_url
+                }
+                excluded_repeat_details.append(rep_detail)
+                batch_filtered_out.append(rep_detail)
+                continue
+                
+            # Fix 4: Story-Identity Fingerprint Similarity Match
+            cand_fp = compute_title_fingerprint(cand["title"])
+            matched_history_entry = None
+            highest_sim = 0.0
+            
+            for hist_entry in history_entries:
+                hist_fp = hist_entry.get("title_fingerprint_set")
+                if not hist_fp and hist_entry.get("source_title"):
+                    hist_fp = compute_title_fingerprint(hist_entry["source_title"])
+                if not hist_fp:
+                    continue
+                sim = fingerprint_similarity(cand_fp, hist_fp)
+                if sim >= SIMILARITY_THRESHOLD and sim > highest_sim:
+                    highest_sim = sim
+                    matched_history_entry = hist_entry
+                    
+            if matched_history_entry:
+                excluded_as_repeat.append(cand["url"])
+                rep_detail = {
+                    "title": cand["title"],
+                    "reason": "duplicate_by_story_identity",
+                    "matched_against": matched_history_entry.get("source_title"),
+                    "matched_url": matched_history_entry.get("source_url"),
+                    "similarity": round(highest_sim, 3)
+                }
+                excluded_repeat_details.append(rep_detail)
+                batch_filtered_out.append(rep_detail)
+                continue
+                
+            # Pre-publish safety assertion
+            if cand.get("event_type") not in ELIGIBLE_EVENT_TYPES:
+                batch_filtered_out.append({
+                    "title": cand["title"],
+                    "reason": "event_type_ineligible_final_check"
+                })
+                continue
+                
+            winner_cand = cand
+            break
+            
+        dup_check = {
+            "excluded_as_repeat": excluded_as_repeat,
+            "excluded_repeat_details": excluded_repeat_details,
+            "history_window_days": history_window_days
+        }
+        return winner_cand, scored_candidates, batch_filtered_out, batch_to_reroute, dup_check
+
+    standard_pool = [c for c in all_raw if c.get("hours_old", 0.0) <= 48.0]
+    extended_pool = [c for c in all_raw if 48.0 < c.get("hours_old", 0.0) <= 72.0]
+    stale_pool = [c for c in all_raw if c.get("hours_old", 0.0) > 72.0]
     
-    if not winner_candidate:
-        return None, scored_candidates, filtered_out, counts_returned, False, duplicate_check, candidates_to_reroute
+    filtered_out = []
+    for s in stale_pool:
+        filtered_out.append({
+            "title": s["title"],
+            "reason": "stale_exceeds_72h"
+        })
+        
+    # Pass A: Primary 48h window evaluation
+    winner_cand, scored_cands, b_filtered, b_reroute, dup_check = _evaluate_candidate_batch(standard_pool, is_extended=False)
+    filtered_out.extend(b_filtered)
+    candidates_to_reroute = list(b_reroute)
+    all_scored = list(scored_cands)
+    
+    # Pass B: Part 3 Fallback Freshness Extension (72h) - only if Pass A yielded no winner
+    if not winner_cand and extended_pool:
+        w_ext, scored_ext, ext_filtered, ext_reroute, ext_dup = _evaluate_candidate_batch(extended_pool, is_extended=True)
+        filtered_out.extend(ext_filtered)
+        candidates_to_reroute.extend(ext_reroute)
+        all_scored.extend(scored_ext)
+        if w_ext:
+            winner_cand = w_ext
+            dup_check["excluded_as_repeat"].extend(ext_dup["excluded_as_repeat"])
+            dup_check["excluded_repeat_details"].extend(ext_dup["excluded_repeat_details"])
+            sys.stderr.write(
+                f"[FRESHNESS FALLBACK] Segment '{segment.get('name')}' found no eligible candidates in 48h window. "
+                f"Extended freshness window to 72h: selected '{winner_cand['title']}' ({winner_cand['hours_old']}h old)\n"
+            )
+            
+    if not winner_cand:
+        return None, all_scored, filtered_out, counts_returned, False, dup_check, candidates_to_reroute
         
     winner = {
         "segment_id": segment.get("segment_id"),
@@ -938,11 +996,12 @@ def evaluate_segment_candidates(
         "counts_returned": counts_returned,
         "filtered_out": filtered_out,
         "fallback_used": False,
-        "duplicate_check": duplicate_check,
-        "candidates": scored_candidates,
-        "story": winner_candidate
+        "freshness_window_extended": winner_cand.get("freshness_window_extended", False),
+        "duplicate_check": dup_check,
+        "candidates": all_scored,
+        "story": winner_cand
     }
-    return winner, scored_candidates, filtered_out, counts_returned, False, duplicate_check, candidates_to_reroute
+    return winner, all_scored, filtered_out, counts_returned, False, dup_check, candidates_to_reroute
 
 def fetch_all_trending_ai_news(
     config_path: str = CONFIG_PATH,
@@ -964,7 +1023,7 @@ def fetch_all_trending_ai_news(
         is_single_segment = True
 
     now = datetime.now(timezone.utc)
-    since_timestamp = int((now - timedelta(hours=24)).timestamp())
+    since_timestamp = int((now - timedelta(hours=72)).timestamp())
     recent_history_entries, recent_used_urls, _ = get_recent_history_entries(log_path, window_days=history_window_days)
     
     # Two-pass collection for multi-segment runs to handle cross-segment candidate re-routing:
@@ -1053,7 +1112,7 @@ def fetch_all_trending_ai_news(
                 "filtered_out": filtered_out,
                 "duplicate_check": dup_check,
                 "candidates_considered": len(candidates),
-                "reason": f"No candidate surpassed quality, freshness (<=48h), non-repeat, or event-type eligibility requirements in the trailing 24 hours."
+                "reason": "No candidate surpassed quality, freshness (<=72h), non-repeat, or event-type eligibility requirements."
             })
             
     return {

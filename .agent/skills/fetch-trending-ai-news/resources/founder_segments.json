@@ -4,27 +4,83 @@
     "name": "Deep Tech",
     "target_profile": "Founders building foundation models, AI infrastructure, custom architectures, GPU compute, and inference systems.",
     "hn_query": "LLM infrastructure OR GPU OR \"open weights\" OR vLLM OR fine-tuning OR \"transformer architecture\"",
-    "google_news_query": "\"AI infrastructure\" OR \"open source AI\" OR \"GPU cluster\" OR \"LLM inference\" OR \"deep tech AI\""
+    "google_news_query": "\"AI infrastructure\" OR \"open source AI\" OR \"GPU cluster\" OR \"LLM inference\" OR \"deep tech AI\"",
+    "hn_queries": [
+      "LLM infrastructure",
+      "vLLM",
+      "open weights",
+      "GPU cluster",
+      "transformer architecture"
+    ],
+    "google_news_queries": [
+      "\"AI infrastructure\" launches",
+      "\"open source AI\" model",
+      "\"GPU cluster\" OR \"LLM inference\"",
+      "\"deep tech AI\" raises",
+      "\"AI infrastructure\" provider OR partnership"
+    ]
   },
   {
     "segment_id": "saas_b2b",
     "name": "SaaS (B2B)",
     "target_profile": "Founders building B2B software, enterprise AI workflows, automated operations, and production software systems.",
     "hn_query": "\"enterprise AI\" OR \"B2B SaaS\" OR \"AI workflow\" OR \"RAG\" OR \"AI security\"",
-    "google_news_query": "\"enterprise AI\" OR \"B2B SaaS AI\" OR \"generative AI enterprise\" OR \"AI productivity\""
+    "google_news_query": "\"enterprise AI\" OR \"B2B SaaS AI\" OR \"generative AI enterprise\" OR \"AI productivity\"",
+    "hn_queries": [
+      "enterprise AI",
+      "B2B SaaS AI",
+      "AI workflow",
+      "RAG enterprise",
+      "AI security"
+    ],
+    "google_news_queries": [
+      "\"enterprise AI\" raises OR funding",
+      "\"enterprise AI\" launches",
+      "\"enterprise AI\" partnership OR integrates",
+      "\"B2B SaaS\" AI agent",
+      "\"enterprise AI\" acquisition"
+    ]
   },
   {
     "segment_id": "saas_d2c",
     "name": "SaaS (D2C)",
     "target_profile": "Founders creating consumer-facing digital products, micro-apps, creator tools, and direct-to-consumer software.",
     "hn_query": "\"consumer AI\" OR \"AI app\" OR \"creator tool\" OR \"subscription\"",
-    "google_news_query": "consumer AI OR \"AI app\" OR \"AI creator\""
+    "google_news_query": "consumer AI OR \"AI app\" OR \"AI creator\"",
+    "hn_queries": [
+      "consumer AI",
+      "AI app",
+      "creator tool AI",
+      "personal AI",
+      "AI subscription"
+    ],
+    "google_news_queries": [
+      "\"consumer AI\" launches",
+      "\"AI app\" adds OR features",
+      "\"consumer AI\" raises",
+      "\"creator tool\" AI",
+      "\"consumer AI\" agent"
+    ]
   },
   {
     "segment_id": "ai_native_consumer",
     "name": "AI-native / Consumer Tech",
     "target_profile": "Founders creating autonomous agent systems, novel interactive multimodal AI interfaces, and fast-moving AI-native products.",
     "hn_query": "\"AI agents\" OR \"autonomous agents\" OR \"multimodal AI\" OR \"voice AI\"",
-    "google_news_query": "\"AI agents\" OR \"autonomous agents\" OR \"AI-native\" OR \"multimodal generative AI\""
+    "google_news_query": "\"AI agents\" OR \"autonomous agents\" OR \"AI-native\" OR \"multimodal generative AI\"",
+    "hn_queries": [
+      "AI agents",
+      "autonomous agents",
+      "multimodal AI",
+      "voice AI",
+      "AI companion"
+    ],
+    "google_news_queries": [
+      "\"AI agents\" launches OR debuts",
+      "\"autonomous agents\" platform",
+      "\"multimodal AI\" model",
+      "\"voice AI\" agent",
+      "\"AI agent\" startup raises"
+    ]
   }
 ]
