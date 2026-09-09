@@ -251,5 +251,73 @@
       "support",
       "system"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "JD.com's Cao Peng Announces Progress on AI Infrastructure and Plans for a 100,000-GPU Cluster - KuCoin",
+    "source_url": "https://www.kucoin.com/news/flash/jd-com-s-cao-peng-announces-ai-infrastructure-progress-plans-for-100-000-gpu-cluster",
+    "title_fingerprint": [
+      "announces",
+      "cao",
+      "cluster",
+      "com",
+      "gpu",
+      "infrastructure",
+      "peng",
+      "plans",
+      "progress"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Paytm Turns Its Payments Engine Into An Enterprise AI Agent Business - Startup Fortune",
+    "source_url": "https://startupfortune.com/paytm-turns-its-payments-engine-into-an-enterprise-ai-agent-business/",
+    "title_fingerprint": [
+      "agent",
+      "business",
+      "engine",
+      "enterprise",
+      "into",
+      "its",
+      "payments",
+      "paytm",
+      "turns"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta debuts its \u2018secure by design\u2019 personal AI agent Muse - SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/09/08/meta-debuts-its-secure-by-design-personal-ai-agent-muse/",
+    "title_fingerprint": [
+      "agent",
+      "debuts",
+      "design",
+      "its",
+      "meta",
+      "muse",
+      "personal",
+      "secure"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Zayo Launches Agentic Networking, Bringing AI Agents Directly into Network Operations - Business Wire",
+    "source_url": "https://www.businesswire.com/news/home/20260908715990/en/Zayo-Launches-Agentic-Networking-Bringing-AI-Agents-Directly-into-Network-Operations",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "bringing",
+      "directly",
+      "into",
+      "launch",
+      "network",
+      "networking",
+      "operations",
+      "zayo"
+    ]
   }
 ]
