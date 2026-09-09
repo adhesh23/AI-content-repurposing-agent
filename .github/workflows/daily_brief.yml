@@ -2,8 +2,8 @@ name: Daily AI Brief Pipeline
 
 on:
   schedule:
-    # Runs daily at 05:00 UTC (10:30 AM IST)
-    - cron: '0 5 * * *'
+    # TEMPORARY TEST — 10:30 UTC (4:00 PM IST) — revert after test
+    - cron: '30 10 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 permissions:
