@@ -453,5 +453,75 @@
       "sell",
       "without"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "Qualcomm Announces Multi-Generational Product Collaboration with Amazon to Build Next-Generation AI Data Center Infrastructure - Qualcomm",
+    "source_url": "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with",
+    "title_fingerprint": [
+      "amazon",
+      "announces",
+      "build",
+      "center",
+      "collaboration",
+      "data",
+      "generation",
+      "generational",
+      "infrastructure",
+      "multi",
+      "next",
+      "product",
+      "qualcomm"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Google Cloud and Accenture Launch Joint Unit to Accelerate Enterprise AI Adoption - entARABI",
+    "source_url": "https://entarabi.com/en/2026/09/google-cloud-and-accenture-launch-joint-unit-to-accelerate-enterprise-ai-adoption/",
+    "title_fingerprint": [
+      "accelerate",
+      "accenture",
+      "adoption",
+      "cloud",
+      "enterprise",
+      "google",
+      "joint",
+      "launch",
+      "unit"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "META Launches Personal AI Assistant Designed To Handle Everyday Tasks - TradingView",
+    "source_url": "https://www.tradingview.com/news/stocktwits:7a4063758094b:0-meta-launches-personal-ai-assistant-designed-to-handle-everyday-tasks/",
+    "title_fingerprint": [
+      "assistant",
+      "designed",
+      "everyday",
+      "handle",
+      "launch",
+      "meta",
+      "personal",
+      "tasks"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Lightsage raises $4M as AI agents change how users discover and use software - The American Bazaar",
+    "source_url": "https://americanbazaaronline.com/2026/09/08/lightsage-raises-4m-as-ai-agents-change-how-users-discover-and-use-software-487745/",
+    "title_fingerprint": [
+      "agents",
+      "change",
+      "discover",
+      "lightsage",
+      "raise",
+      "software",
+      "use",
+      "users"
+    ]
   }
 ]
