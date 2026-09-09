@@ -384,5 +384,74 @@
       "systems",
       "tools"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "Arm Rallies After New AI Infrastructure Launch Adds to Chip-Sector Strength - Quiver Quantitative",
+    "source_url": "https://www.quiverquant.com/news/Arm+Rallies+After+New+AI+Infrastructure+Launch+Adds+to+Chip-Sector+Strength",
+    "title_fingerprint": [
+      "adds",
+      "after",
+      "arm",
+      "chip",
+      "infrastructure",
+      "launch",
+      "new",
+      "rallies",
+      "sector",
+      "strength"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Frigade Launches Assist API to Give Enterprise AI Agents Product Knowledge - citybiz",
+    "source_url": "https://www.citybiz.co/article/900070/frigade-launches-assist-api-to-give-enterprise-ai-agents-product-knowledge/",
+    "title_fingerprint": [
+      "agents",
+      "api",
+      "assist",
+      "enterprise",
+      "frigade",
+      "give",
+      "knowledge",
+      "launch",
+      "product"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta launches personal AI agent, Muse, emphasizes safety and privacy - San Diego Union-Tribune",
+    "source_url": "https://www.sandiegouniontribune.com/2026/09/08/meta-ai-agent/",
+    "title_fingerprint": [
+      "agent",
+      "emphasizes",
+      "launch",
+      "meta",
+      "muse",
+      "personal",
+      "privacy",
+      "safety"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "AgentCX Labs Launches Agent Builder Studio: Agencies and BPOs Can Now Build, Brand and Sell AI Agents Without Code - EIN Presswire",
+    "source_url": "https://www.einpresswire.com/article/940697126/agentcx-labs-launches-agent-builder-studio-agencies-and-bpos-can-now-build-brand-and-sell-ai-agents-without-code",
+    "title_fingerprint": [
+      "agencies",
+      "agents",
+      "bpos",
+      "brand",
+      "build",
+      "can",
+      "code",
+      "now",
+      "sell",
+      "without"
+    ]
   }
 ]
