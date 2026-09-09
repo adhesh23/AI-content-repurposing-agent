@@ -182,5 +182,74 @@
       "launch",
       "platform"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "AI Agents Under Fire: German Website Attack & Hugging Face Incident Raise New Security Concerns: Expert View by Spherical Insights - Spherical Insights",
+    "source_url": "https://www.sphericalinsights.com/blogs/ai-agents-under-fire-german-website-attack-hugging-face-incident-raise-new-security-concerns",
+    "title_fingerprint": [
+      "attack",
+      "concerns",
+      "expert",
+      "face",
+      "german",
+      "hugging",
+      "incident",
+      "insights",
+      "new",
+      "raise",
+      "security",
+      "spherical",
+      "view",
+      "website"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Taiwan Mobile moves into enterprise AI integration with Systex - digitimes",
+    "source_url": "https://www.digitimes.com/news/a20260908PD243/twm-ai-solutions-governance-infrastructure-2026.html",
+    "title_fingerprint": [
+      "enterprise",
+      "integration",
+      "into",
+      "mobile",
+      "moves",
+      "systex",
+      "taiwan"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta Launches Its First Consumer AI Agent \u2018Muse\u2019 - The Information",
+    "source_url": "https://www.theinformation.com/briefings/meta-launches-first-consumer-ai-agent-muse",
+    "title_fingerprint": [
+      "agent",
+      "first",
+      "its",
+      "launch",
+      "meta",
+      "muse"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Six AI agents, one deskside system: A new model for clinical decision support - BioPharma Dive",
+    "source_url": "https://www.biopharmadive.com/spons/six-ai-agents-one-deskside-system-a-new-model-for-clinical-decision-suppo/829301",
+    "title_fingerprint": [
+      "agents",
+      "clinical",
+      "decision",
+      "deskside",
+      "model",
+      "new",
+      "one",
+      "six",
+      "support",
+      "system"
+    ]
   }
 ]
