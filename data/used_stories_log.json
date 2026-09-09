@@ -523,5 +523,66 @@
       "use",
       "users"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "NVIDIA's Acquisition of Hugging Face: What Impacts on China's Open-Source AI Models? - 36Kr",
+    "source_url": "https://eu.36kr.com/en/p/3975714642571779",
+    "title_fingerprint": [
+      "acquire",
+      "china",
+      "face",
+      "hugging",
+      "impacts",
+      "models",
+      "nvidia",
+      "open",
+      "source"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "FC Bayern and Wonderful Announce Enterprise AI Partnership - FC Bayern",
+    "source_url": "https://fcbayern.com/en/news/2026/09/fc-bayern-and-wonderful-announce-enterprise-ai-partnership",
+    "title_fingerprint": [
+      "announce",
+      "bayern",
+      "enterprise",
+      "partnership",
+      "wonderful"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta launches personal AI agent, Muse, to help with everyday tasks - PBS",
+    "source_url": "https://www.pbs.org/newshour/nation/meta-launches-personal-ai-agent-muse-to-help-with-everyday-tasks",
+    "title_fingerprint": [
+      "agent",
+      "everyday",
+      "help",
+      "launch",
+      "meta",
+      "muse",
+      "personal",
+      "tasks"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Meta launches Muse as AI agents move beyond chatbots - The Eastleigh Voice",
+    "source_url": "https://eastleighvoice.co.ke/news/398670/meta-launches-muse-as-ai-agents-move-beyond-chatbots",
+    "title_fingerprint": [
+      "agents",
+      "beyond",
+      "chatbots",
+      "launch",
+      "meta",
+      "move",
+      "muse"
+    ]
   }
 ]
