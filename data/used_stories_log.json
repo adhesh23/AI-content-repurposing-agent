@@ -319,5 +319,70 @@
       "operations",
       "zayo"
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "Deep Tech",
+    "source_title": "a16z Launches $1.1 Billion Machine Age Fund, Expands AI Hardware Infrastructure Push - bloomingbit",
+    "source_url": "https://en.bloomingbit.io/feed/news/120006",
+    "title_fingerprint": [
+      "a16z",
+      "age",
+      "expands",
+      "fund",
+      "hardware",
+      "infrastructure",
+      "launch",
+      "machine",
+      "push"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Hancom, FuriosaAI team up on NPU-based enterprise AI - \ub9e4\uc77c\uacbd\uc81c",
+    "source_url": "https://pulse.mk.co.kr/news/english/12147865",
+    "title_fingerprint": [
+      "based",
+      "enterprise",
+      "furiosa",
+      "hancom",
+      "npu",
+      "team"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "HealthEx Launches Health Record Connector for Meta\u2019s Personal AI Agent Muse - HIT Consultant",
+    "source_url": "https://hitconsultant.net/2026/09/08/healthex-launches-connector-for-meta-muse-ai-agent-tefca-medical-records/",
+    "title_fingerprint": [
+      "agent",
+      "connector",
+      "health",
+      "launch",
+      "meta",
+      "muse",
+      "personal",
+      "record"
+    ]
+  },
+  {
+    "date": "2026-09-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "CSCO Stock Hits Record Highs, Launches Tools To Protect IT Systems From AI Agents - Stocktwits",
+    "source_url": "https://stocktwits.com/news-articles/markets/equity/csco-stock-hits-record-highs-launches-tools-to-protect-it-systems-from-ai-agents/cZ005CFReDP",
+    "title_fingerprint": [
+      "agents",
+      "csco",
+      "highs",
+      "hits",
+      "launch",
+      "protect",
+      "record",
+      "stock",
+      "systems",
+      "tools"
+    ]
   }
 ]
