@@ -584,5 +584,64 @@
       "move",
       "muse"
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "segment": "Deep Tech",
+    "source_title": "NVIDIA CUDA Toolkit 13.4 Adds Windows on Arm, Rubin GPU Support - blockchain.news",
+    "source_url": "https://blockchain.news/news/nvidia-cuda-toolkit-13-4-windows-arm-rubin-gpu",
+    "title_fingerprint": [
+      "adds",
+      "arm",
+      "cuda",
+      "gpu",
+      "nvidia",
+      "rubin",
+      "support",
+      "toolkit",
+      "windows"
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "segment": "SaaS (B2B)",
+    "source_title": "Euno raises $23M Series A for enterprise AI context platform - Dealroom",
+    "source_url": "https://app.dealroom.co/news/note/euno-raises-23m-series-a-for-enterprise-ai-context-platform",
+    "title_fingerprint": [
+      "context",
+      "enterprise",
+      "euno",
+      "platform",
+      "raise",
+      "series"
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "segment": "SaaS (D2C)",
+    "source_title": "Target adds new AI features to consumer app - Chain Store Age",
+    "source_url": "https://chainstoreage.com/target-adds-new-ai-features-consumer-app",
+    "title_fingerprint": [
+      "adds",
+      "app",
+      "features",
+      "new",
+      "target"
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Euno Raises $23 Million to Help AI Agents Work With Enterprise Data - israeldefense.co.il",
+    "source_url": "https://www.israeldefense.co.il/en/node/70693",
+    "title_fingerprint": [
+      "agents",
+      "data",
+      "enterprise",
+      "euno",
+      "help",
+      "raise",
+      "work"
+    ]
   }
 ]
