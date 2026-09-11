@@ -643,5 +643,55 @@
       "raise",
       "work"
     ]
+  },
+  {
+    "date": "2026-09-11",
+    "segment": "Deep Tech",
+    "source_title": "NVIDIA Expands AI Infrastructure Capacity in Partnership With Australia\u2019s Data Center Ecosystem - NVIDIA Newsroom",
+    "source_url": "https://nvidianews.nvidia.com/news/nvidia-expands-ai-infrastructure-capacity-in-partnership-with-australias-data-center-ecosystem",
+    "title_fingerprint": [
+      "australia",
+      "capacity",
+      "center",
+      "data",
+      "ecosystem",
+      "expands",
+      "infrastructure",
+      "nvidia",
+      "partnership"
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "segment": "SaaS (B2B)",
+    "source_title": "Salesforce introduces Enterprise AI Harness foundation - Tech in Asia",
+    "source_url": "https://www.techinasia.com/news/salesforce-introduces-enterprise-ai-harness-foundation",
+    "title_fingerprint": [
+      "enterprise",
+      "foundation",
+      "harness",
+      "introduces",
+      "salesforce"
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "segment": "SaaS (D2C)",
+    "source_title": "Fable is $10/50. Opus 4.1 launched at $15/75",
+    "source_url": "https://news.ycombinator.com/item?id=49649157",
+    "title_fingerprint": [
+      "fable",
+      "launch",
+      "opus"
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: MySamantha \u2013 a productivity app where the AI is optional",
+    "source_url": "https://news.ycombinator.com/item?id=49645994",
+    "title_fingerprint": [
+      "samantha"
+    ]
   }
 ]
