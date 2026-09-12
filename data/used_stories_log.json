@@ -693,5 +693,66 @@
     "title_fingerprint": [
       "samantha"
     ]
+  },
+  {
+    "date": "2026-09-12",
+    "segment": "Deep Tech",
+    "source_title": "Open-weights world models' parameter size doubles every ~6 months",
+    "source_url": "https://twitter.com/kaarelkaarelson/status/2098472992821199358",
+    "title_fingerprint": [
+      "doubles",
+      "every",
+      "models",
+      "months",
+      "open",
+      "parameter",
+      "size",
+      "weights",
+      "world"
+    ]
+  },
+  {
+    "date": "2026-09-12",
+    "segment": "SaaS (B2B)",
+    "source_title": "Kovrr Launches AI Interaction Data Fabric to Secure Enterprise AI Workflows - AZoRobotics",
+    "source_url": "https://www.azorobotics.com/News.aspx?newsID=16480",
+    "title_fingerprint": [
+      "data",
+      "enterprise",
+      "fabric",
+      "interaction",
+      "kovrr",
+      "launch",
+      "secure",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-09-12",
+    "segment": "SaaS (D2C)",
+    "source_title": "Blayne's Bytes: Consumer Agents, Qualcomm and Amazon Partnership, ADI Acquires Alif - \u5bcc\u9014\u725b\u725b",
+    "source_url": "https://news.futunn.com/en/post/79136466/blayne-s-bytes-consumer-agents-qualcomm-and-amazon-partnership-adi",
+    "title_fingerprint": [
+      "acquire",
+      "adi",
+      "agents",
+      "alif",
+      "amazon",
+      "blayne",
+      "bytes",
+      "partnership",
+      "qualcomm"
+    ]
+  },
+  {
+    "date": "2026-09-12",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Don't Hit Send \u2013 the model answers while you type",
+    "source_url": "https://github.com/scalattice/dont-hit-send",
+    "title_fingerprint": [
+      "don",
+      "hit",
+      "send"
+    ]
   }
 ]
