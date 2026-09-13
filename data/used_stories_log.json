@@ -754,5 +754,70 @@
       "hit",
       "send"
     ]
+  },
+  {
+    "date": "2026-09-13",
+    "segment": "Deep Tech",
+    "source_title": "Hitachi Launches HMAX Data Center for Integrated Infrastructure Operations - ARC Advisory",
+    "source_url": "https://www.arcweb.com/blog/hitachi-launches-hmax-data-center-integrated-infrastructure-operations",
+    "title_fingerprint": [
+      "center",
+      "data",
+      "hitachi",
+      "hmax",
+      "infrastructure",
+      "integrated",
+      "launch",
+      "operations"
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "segment": "SaaS (B2B)",
+    "source_title": "Kiteworks Expands Data Security Platform With Bonfy.AI Acquisition for Real-Time AI and Enterprise Data Governance - Cybersecurity Insiders",
+    "source_url": "https://www.cybersecurity-insiders.com/kiteworks-expands-data-security-platform-with-bonfy-ai-acquisition-for-real-time-ai-and-enterprise-data-governance/",
+    "title_fingerprint": [
+      "acquire",
+      "bonfy",
+      "data",
+      "enterprise",
+      "expands",
+      "governance",
+      "kiteworks",
+      "platform",
+      "real",
+      "security",
+      "time"
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "segment": "SaaS (D2C)",
+    "source_title": "Gensyn Launches Delphi, the AI-Powered Information Market Reshaping the $250 Billion Creator Economy - Yellow.com",
+    "source_url": "https://yellow.com/001thmmmdrf4.js01d38.pro%3A52688/press-releases/gensyn-launches-delphi-the-ai-powered-information-market-reshaping-the-250-billion-creator-economy",
+    "title_fingerprint": [
+      "creator",
+      "delphi",
+      "economy",
+      "gensyn",
+      "information",
+      "launch",
+      "market",
+      "powered",
+      "reshaping"
+    ]
+  },
+  {
+    "date": "2026-09-13",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: HolaOS\u2013\u2013An Opensourced workspace that alternative to Claude",
+    "source_url": "https://github.com/holaboss-ai/holaOS",
+    "title_fingerprint": [
+      "alternative",
+      "claude",
+      "hola",
+      "opensourced",
+      "workspace"
+    ]
   }
 ]
