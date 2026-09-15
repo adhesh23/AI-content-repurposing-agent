@@ -892,5 +892,52 @@
       "time",
       "visibility"
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR \u2013 High accuracy, low latency and cost",
+    "source_url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
+    "title_fingerprint": [
+      "asr",
+      "nari",
+      "qwen3",
+      "tts"
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "segment": "SaaS (B2B)",
+    "source_title": "HCLTech And CrowdStrike Expand Partnership To Secure Enterprise AI - APAC Media",
+    "source_url": "https://apacnewsnetwork.com/2026/09/hcltech-and-crowdstrike-expand-partnership-to-secure-enterprise-ai/",
+    "title_fingerprint": [
+      "crowd",
+      "enterprise",
+      "expand",
+      "hcltech",
+      "partnership",
+      "secure",
+      "strike"
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Akuity Launches Agentic Control Plane for Software Delivery, Bringing Operational Context and Governance to AI Agents - Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/technology/ai/articles/akuity-launches-agentic-control-plane-160000468.html",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "akuity",
+      "bringing",
+      "context",
+      "control",
+      "delivery",
+      "governance",
+      "launch",
+      "operational",
+      "plane",
+      "software"
+    ]
   }
 ]
