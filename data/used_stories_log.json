@@ -939,5 +939,58 @@
       "plane",
       "software"
     ]
+  },
+  {
+    "date": "2026-09-16",
+    "segment": "Deep Tech",
+    "source_title": "KT unveils $4.4 bn AI data center plan to accelerate infrastructure expansion - kedglobal.com",
+    "source_url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202609160002",
+    "title_fingerprint": [
+      "accelerate",
+      "center",
+      "data",
+      "expansion",
+      "infrastructure",
+      "plan",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "segment": "SaaS (B2B)",
+    "source_title": "Alphabet's Google Cloud and Salesforce Expand Partnership to Connect Enterprise AI, Data and Agents - moomoo.com",
+    "source_url": "https://www.moomoo.com/news/post/76286301/alphabet-s-google-cloud-and-salesforce-expand-partnership-to-connect",
+    "title_fingerprint": [
+      "agents",
+      "alphabet",
+      "cloud",
+      "connect",
+      "data",
+      "enterprise",
+      "expand",
+      "google",
+      "partnership",
+      "salesforce"
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "RWS launches Tridion agentic platform, bringing governed AI agents into enterprise content workflows - Yahoo Finance Singapore",
+    "source_url": "https://sg.finance.yahoo.com/news/rws-launches-tridion-agentic-platform-080100249.html",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "bringing",
+      "content",
+      "enterprise",
+      "governed",
+      "into",
+      "launch",
+      "platform",
+      "rws",
+      "tridion",
+      "workflows"
+    ]
   }
 ]
