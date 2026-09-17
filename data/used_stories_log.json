@@ -992,5 +992,68 @@
       "tridion",
       "workflows"
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "segment": "Deep Tech",
+    "source_title": "Open-sourced jev architecture last year with model,paper and dataset",
+    "source_url": "https://news.ycombinator.com/item?id=49736660",
+    "title_fingerprint": [
+      "architecture",
+      "dataset",
+      "jev",
+      "last",
+      "model",
+      "open",
+      "paper",
+      "sourced",
+      "year"
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "segment": "SaaS (B2B)",
+    "source_title": "Barndoor Acquires Diaphora to Bring Governed AI Automation to Enterprise Workflows - Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/technology/ai/articles/barndoor-acquires-diaphora-bring-governed-130000555.html",
+    "title_fingerprint": [
+      "acquire",
+      "automation",
+      "barndoor",
+      "bring",
+      "diaphora",
+      "enterprise",
+      "governed",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "segment": "SaaS (D2C)",
+    "source_title": "Glow AI Launches Device Powered Personal AI Companion Built on Onchain Transparency and Human Sovereign AI - StreetInsider",
+    "source_url": "https://www.streetinsider.com/Newsfile/Glow+AI+Launches+Device+Powered+Personal+AI+Companion+Built+on+Onchain+Transparency+and+Human+Sovereign+AI/27071394.html",
+    "title_fingerprint": [
+      "built",
+      "companion",
+      "device",
+      "glow",
+      "human",
+      "launch",
+      "onchain",
+      "personal",
+      "powered",
+      "sovereign",
+      "transparency"
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Vending Machine Lab \u2013 Build business, leave for 2 wks, see what breaks",
+    "source_url": "https://vending-machine-lab.pages.dev/",
+    "title_fingerprint": [
+      "lab",
+      "machine",
+      "vending"
+    ]
   }
 ]
