@@ -1055,5 +1055,69 @@
       "machine",
       "vending"
     ]
+  },
+  {
+    "date": "2026-09-18",
+    "segment": "Deep Tech",
+    "source_title": "Delta Unveils Energy-to-Compute Infrastructure for NVIDIA DSX AI Factories - Unite.AI",
+    "source_url": "https://www.unite.ai/delta-unveils-energy-to-compute-infrastructure-for-nvidia-dsx-ai-factories/",
+    "title_fingerprint": [
+      "compute",
+      "delta",
+      "dsx",
+      "energy",
+      "factories",
+      "infrastructure",
+      "nvidia",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "segment": "SaaS (B2B)",
+    "source_title": "Opal Security Launches Opal Zero to Make Least Privilege a Reality for Enterprise AI Agents - AiThority",
+    "source_url": "https://aithority.com/it-and-devops/opal-security-launches-opal-zero-to-make-least-privilege-a-reality-for-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "enterprise",
+      "launch",
+      "least",
+      "make",
+      "opal",
+      "privilege",
+      "reality",
+      "security",
+      "zero"
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta Launches Subscription Bundles",
+    "source_url": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
+    "title_fingerprint": [
+      "bundles",
+      "launch",
+      "meta",
+      "subscription"
+    ]
+  },
+  {
+    "date": "2026-09-18",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "ThinkingAI launches Agentic Engine, AI agents that run growth on a company\u2019s own infrastructure - GamesBeat",
+    "source_url": "https://gamesbeat.com/thinkingai-launches-agentic-engine-ai-agents-that-run-growth-on-a-companys-own-infrastructure/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "company",
+      "engine",
+      "growth",
+      "infrastructure",
+      "launch",
+      "own",
+      "run",
+      "thinking"
+    ]
   }
 ]
