@@ -2,8 +2,8 @@ name: Daily AI Brief Pipeline
 
 on:
   schedule:
-    # Runs daily at 05:00 UTC (10:30 AM IST)
-    - cron: '0 5 * * *'
+    # Runs daily at 08:52 UTC (02:22 PM IST)
+    - cron: '52 8 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 permissions:
