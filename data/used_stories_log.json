@@ -1119,5 +1119,63 @@
       "run",
       "thinking"
     ]
+  },
+  {
+    "date": "2026-09-19",
+    "segment": "Deep Tech",
+    "source_title": "Infinidium Power Launches Founding Customer Program For Next-Generation AI Infrastructure Designed To Break Data Center Bottlenecks - financialcontent.com",
+    "source_url": "https://www.financialcontent.com/article/acnnewswire-2026-9-17-infinidium-power-launches-founding-customer-program-for-next-generation-ai-infrastructure-designed-to-break-data-center-bottlenecks",
+    "title_fingerprint": [
+      "bottlenecks",
+      "break",
+      "center",
+      "customer",
+      "data",
+      "designed",
+      "founding",
+      "generation",
+      "infinidium",
+      "infrastructure",
+      "launch",
+      "next",
+      "power",
+      "program"
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "segment": "SaaS (B2B)",
+    "source_title": "Huawei Cloud launches MaaS security whitepaper at GISEC GLOBAL 2026 to support secure large-scale enterprise AI adoption - Zawya",
+    "source_url": "https://www.zawya.com/en/press-release/events-conferences/huawei-cloud-launches-maas-security-whitepaper-at-gisec-global-2026-to-support-secure-large-scale-enterprise-ai-adoption-977199",
+    "title_fingerprint": [
+      "adoption",
+      "cloud",
+      "enterprise",
+      "gisec",
+      "global",
+      "huawei",
+      "large",
+      "launch",
+      "maa",
+      "scale",
+      "secure",
+      "security",
+      "support",
+      "whitepaper"
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Arcjet Launches Runtime Security Product for AI Agents - Security Today",
+    "source_url": "https://securitytoday.com/articles/2026/09/18/arcjet-launches-runtime-security-product-for-ai-agents.aspx?admgarea=ht.analytics",
+    "title_fingerprint": [
+      "agents",
+      "arcjet",
+      "launch",
+      "product",
+      "runtime",
+      "security"
+    ]
   }
 ]
