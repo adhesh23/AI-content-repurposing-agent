@@ -1177,5 +1177,65 @@
       "runtime",
       "security"
     ]
+  },
+  {
+    "date": "2026-09-20",
+    "segment": "Deep Tech",
+    "source_title": "Dutch AI chip startup Euclyd raises US$231 million with Samsung backing - techedt.com",
+    "source_url": "https://www.techedt.com/dutch-ai-chip-startup-euclyd-raises-us231-million-with-samsung-backing",
+    "title_fingerprint": [
+      "backing",
+      "chip",
+      "dutch",
+      "euclyd",
+      "raise",
+      "samsung",
+      "startup"
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "segment": "SaaS (B2B)",
+    "source_title": "Former OpenAI researcher launches Jev for faster AI decision-making - ET Enterprise AI",
+    "source_url": "https://enterpriseai.economictimes.indiatimes.com/news/industry/former-openai-researcher-launches-jev-for-faster-ai-decision-making/134349979",
+    "title_fingerprint": [
+      "decision",
+      "faster",
+      "former",
+      "jev",
+      "launch",
+      "making",
+      "open",
+      "researcher"
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "segment": "SaaS (D2C)",
+    "source_title": "AI Programming Android App Latest Release - H\u1ecdc vi\u1ec7n N\u00f4ng nghi\u1ec7p Vi\u1ec7t Nam",
+    "source_url": "https://vnua.edu.vn/weixin/092081980/",
+    "title_fingerprint": [
+      "android",
+      "app",
+      "latest",
+      "programming",
+      "release"
+    ]
+  },
+  {
+    "date": "2026-09-20",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Open-source free meme generator, friendly for AI agents and humans",
+    "source_url": "https://github.com/terryds/memegenscript",
+    "title_fingerprint": [
+      "agents",
+      "free",
+      "friendly",
+      "generator",
+      "humans",
+      "meme",
+      "open",
+      "source"
+    ]
   }
 ]
