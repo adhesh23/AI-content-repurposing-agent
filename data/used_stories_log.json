@@ -1237,5 +1237,72 @@
       "open",
       "source"
     ]
+  },
+  {
+    "date": "2026-09-21",
+    "segment": "Deep Tech",
+    "source_title": "Microsoft launches fourth India cloud region in Hyderabad, expands AI infrastructure - ET Datacenters",
+    "source_url": "https://datacenters.economictimes.indiatimes.com/news/microsoft-launches-fourth-india-cloud-region-in-hyderabad-expands-ai-infrastructure/134385766?utm_source=top_news&utm_medium=homepage",
+    "title_fingerprint": [
+      "cloud",
+      "expands",
+      "fourth",
+      "hyderabad",
+      "india",
+      "infrastructure",
+      "launch",
+      "microsoft",
+      "region"
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "segment": "SaaS (B2B)",
+    "source_title": "Huawei Cloud launches latest AICS and expands enterprise AI agents - Tech Wire Asia",
+    "source_url": "https://techwireasia.com/2026/09/huawei-cloud-aics-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "aics",
+      "cloud",
+      "enterprise",
+      "expands",
+      "huawei",
+      "latest",
+      "launch"
+    ]
+  },
+  {
+    "date": "2026-09-21",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Experiential is an open-source gateway router that allows you to manage and optimize cloud and local AI models for quality, speed, and cost using a single OpenAI-compatible API, and also allows you to control how much your AI agents can spend. - GIGAZINE",
+    "source_url": "https://gigazine.net/gsc_news/en/20260921-experiential/",
+    "title_fingerprint": [
+      "agents",
+      "allows",
+      "also",
+      "api",
+      "can",
+      "cloud",
+      "compatible",
+      "control",
+      "cost",
+      "experiential",
+      "gateway",
+      "local",
+      "manage",
+      "models",
+      "much",
+      "open",
+      "optimize",
+      "quality",
+      "router",
+      "single",
+      "source",
+      "speed",
+      "spend",
+      "using",
+      "you",
+      "your"
+    ]
   }
 ]
