@@ -1304,5 +1304,57 @@
       "you",
       "your"
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "segment": "Deep Tech",
+    "source_title": "Alibaba Unveils Roadmap on Full-Stack AI Strategy from Chips, Cloud Infrastructure, Models to Agents - Media OutReach Newswire",
+    "source_url": "https://www.media-outreach.com/news/singapore/2026/09/22/489176/alibaba-unveils-roadmap-on-full-stack-ai-strategy-from-chips-cloud-infrastructure-models-to-agents/",
+    "title_fingerprint": [
+      "agents",
+      "alibaba",
+      "chips",
+      "cloud",
+      "full",
+      "infrastructure",
+      "models",
+      "roadmap",
+      "stack",
+      "strategy",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "segment": "SaaS (B2B)",
+    "source_title": "A10 Networks to launch AI gateway for centralized enterprise AI management - Manila Bulletin",
+    "source_url": "https://mb.com.ph/2026/09/22/a10-networks-to-launch-ai-gateway-for-centralized-enterprise-ai-management",
+    "title_fingerprint": [
+      "a10",
+      "centralized",
+      "enterprise",
+      "gateway",
+      "launch",
+      "management",
+      "networks"
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Fintech giant Ant Group restructures Alipay around AI agents to drive growth - South China Morning Post",
+    "source_url": "https://amp.scmp.com/tech/tech-trends/article/3368325/ant-group-consolidates-alipay-operations-big-bet-ai-agentic-commerce",
+    "title_fingerprint": [
+      "agents",
+      "alipay",
+      "ant",
+      "around",
+      "drive",
+      "fintech",
+      "giant",
+      "group",
+      "growth",
+      "restructures"
+    ]
   }
 ]
