@@ -1356,5 +1356,62 @@
       "growth",
       "restructures"
     ]
+  },
+  {
+    "date": "2026-09-23",
+    "segment": "Deep Tech",
+    "source_title": "Gujarat launches GPU-as-a-Service to boost AI infrastructure - The News Mill",
+    "source_url": "https://thenewsmill.com/2026/09/gujarat-launches-gpu-as-a-service-to-boost-ai-infrastructure/",
+    "title_fingerprint": [
+      "boost",
+      "gpu",
+      "gujarat",
+      "infrastructure",
+      "launch",
+      "service"
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "segment": "SaaS (B2B)",
+    "source_title": "Palma Raises $1.8M to Build the Governance Layer for Enterprise AI Agents - Unite.AI",
+    "source_url": "https://www.unite.ai/palma-raises-1-8m-to-build-the-governance-layer-for-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "build",
+      "enterprise",
+      "governance",
+      "layer",
+      "palma",
+      "raise"
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "segment": "SaaS (D2C)",
+    "source_title": "Launch HN: Coverage Cat (YC S22) \u2013 Umbrella insurance via your personal agent",
+    "source_url": "https://www.coveragecat.com/",
+    "title_fingerprint": [
+      "cat",
+      "coverage",
+      "s22"
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Bitdefender Launches Free VPN Designed Specifically For AI Agents In Public Beta - SMBtech",
+    "source_url": "https://smbtech.au/news/bitdefender-launches-free-vpn-designed-specifically-for-ai-agents-in-public-beta/",
+    "title_fingerprint": [
+      "agents",
+      "beta",
+      "bitdefender",
+      "designed",
+      "free",
+      "launch",
+      "public",
+      "specifically",
+      "vpn"
+    ]
   }
 ]
