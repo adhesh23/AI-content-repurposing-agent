@@ -1413,5 +1413,64 @@
       "specifically",
       "vpn"
     ]
+  },
+  {
+    "date": "2026-09-24",
+    "segment": "Deep Tech",
+    "source_title": "Ask HN: Will software still matter when AI write all our programs?",
+    "source_url": "https://news.ycombinator.com/item?id=49818484",
+    "title_fingerprint": [
+      "all",
+      "matter",
+      "our",
+      "programs",
+      "software",
+      "still",
+      "when",
+      "will",
+      "write"
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Ox \u2013 A local agent that uses the internet for you",
+    "source_url": "https://openox.ai/",
+    "title_fingerprint": []
+  },
+  {
+    "date": "2026-09-24",
+    "segment": "SaaS (D2C)",
+    "source_title": "Google Flow Adds Six Creator-Built Tools for Audio, Video, and Spatial Design - pc-tablet.com",
+    "source_url": "https://pc-tablet.com/google-flow-adds-six-creator-built-tools-for-audio-video-and-spatial-design/195172/",
+    "title_fingerprint": [
+      "adds",
+      "audio",
+      "built",
+      "creator",
+      "design",
+      "flow",
+      "google",
+      "six",
+      "spatial",
+      "tools",
+      "video"
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Sundae Bar AI launches monthly subscription for AI agents By Investing.com - Investing.com UK",
+    "source_url": "https://uk.investing.com/news/stock-market-news/sundae-bar-ai-launches-monthly-subscription-for-ai-agents-93CH-4880671",
+    "title_fingerprint": [
+      "agents",
+      "bar",
+      "com",
+      "investing",
+      "launch",
+      "monthly",
+      "subscription",
+      "sundae"
+    ]
   }
 ]
