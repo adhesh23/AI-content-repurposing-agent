@@ -1472,5 +1472,65 @@
       "subscription",
       "sundae"
     ]
+  },
+  {
+    "date": "2026-09-25",
+    "segment": "Deep Tech",
+    "source_title": "Cisco and NVIDIA expand partnership to bring Splunk AI to on-premises customers - FutureCIO",
+    "source_url": "https://futurecio.tech/cisco-and-nvidia-expand-partnership-to-bring-splunk-ai-to-on-premises-customers/",
+    "title_fingerprint": [
+      "bring",
+      "cisco",
+      "customers",
+      "expand",
+      "nvidia",
+      "partnership",
+      "premises",
+      "splunk"
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "segment": "SaaS (B2B)",
+    "source_title": "Island Raises $400 Million Series F At $6.4 Billion Valuation To Expand Enterprise AI Security Platform - Pulse 2.0",
+    "source_url": "https://pulse2.com/island-raises-400-million-series-f-at-6-4-billion-valuation-to-expand-enterprise-ai-security-platform/",
+    "title_fingerprint": [
+      "enterprise",
+      "expand",
+      "island",
+      "platform",
+      "raise",
+      "security",
+      "series",
+      "valuation"
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Blackbear.app \u2013 Thoughtful, Private Collaboration",
+    "source_url": "https://blackbear.app/",
+    "title_fingerprint": [
+      "app",
+      "blackbear"
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "TinyFish launches the Data Partners Alliance, opening the licensed web to AI agents - Supply Chain Digital Magazine",
+    "source_url": "https://supplychaindigital.com/globenewswire/3368649",
+    "title_fingerprint": [
+      "agents",
+      "alliance",
+      "data",
+      "fish",
+      "launch",
+      "licensed",
+      "opening",
+      "partners",
+      "tiny",
+      "web"
+    ]
   }
 ]
