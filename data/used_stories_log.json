@@ -1532,5 +1532,78 @@
       "tiny",
       "web"
     ]
+  },
+  {
+    "date": "2026-09-26",
+    "segment": "Deep Tech",
+    "source_title": "Linux Kernel Developers Consider Adding Agents.md to Help Guide AI/LLM Agents",
+    "source_url": "https://www.phoronix.com/news/Linux-Considers-AGENTS-MD",
+    "title_fingerprint": [
+      "adding",
+      "agents",
+      "consider",
+      "developers",
+      "guide",
+      "help",
+      "kernel",
+      "linux",
+      "llm"
+    ]
+  },
+  {
+    "date": "2026-09-26",
+    "segment": "SaaS (B2B)",
+    "source_title": "Contents acquires fintech Balio to expand enterprise AI in Spain - Beinsure",
+    "source_url": "https://beinsure.com/news/contents-acquires-fintech-balio-to-expand-enterprise-ai-in-spain/",
+    "title_fingerprint": [
+      "acquire",
+      "balio",
+      "contents",
+      "enterprise",
+      "expand",
+      "fintech",
+      "spain"
+    ]
+  },
+  {
+    "date": "2026-09-26",
+    "segment": "SaaS (D2C)",
+    "source_title": "OpenAI and Anthropic Launch New Models on Same Day, Cost-Cutting Focus May Leave Them Behind in Consumer AI Agent Race - finance.biggo.com",
+    "source_url": "https://finance.biggo.com/news/1adc3679-ea4e-4263-aedf-48002c08613c",
+    "title_fingerprint": [
+      "agent",
+      "anthropic",
+      "behind",
+      "cost",
+      "cutting",
+      "day",
+      "focus",
+      "launch",
+      "leave",
+      "may",
+      "models",
+      "new",
+      "open",
+      "race",
+      "same",
+      "them"
+    ]
+  },
+  {
+    "date": "2026-09-26",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Global Vision-Language Models Market to Reach US$41.75 Billion by 2035 as Multimodal AI Adoption Accelerates - Supply Chain Digital Magazine",
+    "source_url": "https://supplychaindigital.com/globenewswire/3369006",
+    "title_fingerprint": [
+      "accelerates",
+      "adoption",
+      "global",
+      "language",
+      "market",
+      "models",
+      "multimodal",
+      "reach",
+      "vision"
+    ]
   }
 ]
