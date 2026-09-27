@@ -1605,5 +1605,54 @@
       "reach",
       "vision"
     ]
+  },
+  {
+    "date": "2026-09-27",
+    "segment": "Deep Tech",
+    "source_title": "Turning GLM-5.3-Flash into a Jev-like decision model",
+    "source_url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+    "title_fingerprint": [
+      "decision",
+      "flash",
+      "glm",
+      "into",
+      "jev",
+      "like",
+      "model",
+      "turning"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "segment": "SaaS (B2B)",
+    "source_title": "OpenAI to launch GPT-6 Cyber for enterprise security automation - TechGig",
+    "source_url": "https://techgig.com/news/ai/openai-to-launch-gpt-6-cyber-for-enterprise-security-automation/134495144",
+    "title_fingerprint": [
+      "automation",
+      "cyber",
+      "enterprise",
+      "gpt",
+      "launch",
+      "open",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-09-27",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Proofpoint Launches Two Agentic Cybersecurity Systems to Secure Data, AI Agents and Communications - Pokde.Net",
+    "source_url": "https://pokde.net/system/security/proofpoint-two-agentic-cybersecurity",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "communications",
+      "cybersecurity",
+      "data",
+      "launch",
+      "proofpoint",
+      "secure",
+      "systems",
+      "two"
+    ]
   }
 ]
