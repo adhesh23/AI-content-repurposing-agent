@@ -1654,5 +1654,62 @@
       "systems",
       "two"
     ]
+  },
+  {
+    "date": "2026-09-28",
+    "segment": "Deep Tech",
+    "source_title": "Nvidia Launches Open Platform To Lock Down AI Agents Across Software And Hardware - SMBtech",
+    "source_url": "https://smbtech.au/news/nvidia-launches-open-platform-to-lock-down-ai-agents-across-software-and-hardware/",
+    "title_fingerprint": [
+      "across",
+      "agents",
+      "down",
+      "hardware",
+      "launch",
+      "lock",
+      "nvidia",
+      "open",
+      "platform",
+      "software"
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "segment": "SaaS (B2B)",
+    "source_title": "MaaseAI Introduces Security AI Model for Enterprise AI Protection and Governance - manilatimes.net",
+    "source_url": "https://www.manilatimes.net/2026/09/28/tmt-newswire/globenewswire/maaseai-introduces-security-ai-model-for-enterprise-ai-protection-and-governance/2433803",
+    "title_fingerprint": [
+      "enterprise",
+      "governance",
+      "introduces",
+      "maase",
+      "model",
+      "protection",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: ParkourNote \u2013 A research workspace, built solo in a month with Claude",
+    "source_url": "https://note.parkourlabs.io/",
+    "title_fingerprint": [
+      "note",
+      "parkour"
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: TinyAIArena watch AI agents battle it out",
+    "source_url": "https://tinyaiarena.com/",
+    "title_fingerprint": [
+      "agents",
+      "aiarena",
+      "battle",
+      "out",
+      "tiny",
+      "watch"
+    ]
   }
 ]
