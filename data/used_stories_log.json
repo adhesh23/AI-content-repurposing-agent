@@ -1711,5 +1711,60 @@
       "tiny",
       "watch"
     ]
+  },
+  {
+    "date": "2026-09-29",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Nibia Fabric \u2013 Turn everyday computers into a shared AI compute cluster",
+    "source_url": "https://github.com/nibia-ai/fabric",
+    "title_fingerprint": [
+      "fabric",
+      "nibia"
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "segment": "SaaS (B2B)",
+    "source_title": "HCLSoftware to acquire Robotiq.ai to strengthen enterprise agentic automation - ET Enterprise AI",
+    "source_url": "https://enterpriseai.economictimes.indiatimes.com/news/industry/hclsoftware-to-acquire-robotiq-ai-to-strengthen-enterprise-agentic-automation/134558300",
+    "title_fingerprint": [
+      "acquire",
+      "agentic",
+      "automation",
+      "enterprise",
+      "hclsoftware",
+      "robotiq",
+      "strengthen"
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Panda, the world's first personal AI computer",
+    "source_url": "https://pandax1.com",
+    "title_fingerprint": [
+      "computer",
+      "first",
+      "panda",
+      "personal",
+      "world"
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Takibi Base Launches Shared Knowledge Base That Gives AI Agents Cited Evidence - The National Law Review",
+    "source_url": "https://natlawreview.com/press-releases/takibi-base-launches-shared-knowledge-base-gives-ai-agents-cited-evidence",
+    "title_fingerprint": [
+      "agents",
+      "base",
+      "cited",
+      "evidence",
+      "gives",
+      "knowledge",
+      "launch",
+      "shared",
+      "takibi"
+    ]
   }
 ]
