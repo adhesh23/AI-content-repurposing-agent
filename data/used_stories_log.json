@@ -1766,5 +1766,72 @@
       "shared",
       "takibi"
     ]
+  },
+  {
+    "date": "2026-09-30",
+    "segment": "Deep Tech",
+    "source_title": "Nvidia Launches Hardware-Backed Safety Platform for Autonomous AI Agents - CXO Digitalpulse",
+    "source_url": "https://www.cxodigitalpulse.com/nvidia-launches-hardware-backed-safety-platform-for-autonomous-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "autonomous",
+      "backed",
+      "hardware",
+      "launch",
+      "nvidia",
+      "platform",
+      "safety"
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "segment": "SaaS (B2B)",
+    "source_title": "Melento, Gnani AI team up to bring voice agents to enterprise workflows - ET Enterprise AI",
+    "source_url": "https://enterpriseai.economictimes.indiatimes.com/news/industry/melento-gnani-ai-team-up-to-bring-voice-agents-to-enterprise-workflows/134564041",
+    "title_fingerprint": [
+      "agents",
+      "bring",
+      "enterprise",
+      "gnani",
+      "melento",
+      "team",
+      "voice",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta launches Muse for Small Business as Zuckerberg pushes beyond consumer AI market - CNBC",
+    "source_url": "https://www.cnbc.com/2026/09/29/meta-launches-muse-for-small-business-zuckerberg-pushes-enterprise-ai.html",
+    "title_fingerprint": [
+      "beyond",
+      "business",
+      "launch",
+      "market",
+      "meta",
+      "muse",
+      "pushes",
+      "small",
+      "zuckerberg"
+    ]
+  },
+  {
+    "date": "2026-09-30",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "OpenAI debuts \"dots\" as industry safety focus shifts to \"What did my AI assistant do now?\" - axios.com",
+    "source_url": "https://www.axios.com/2026/09/30/openai-dots-ai-agent-safety",
+    "title_fingerprint": [
+      "assistant",
+      "debuts",
+      "did",
+      "dots",
+      "focus",
+      "industry",
+      "now",
+      "open",
+      "safety",
+      "shifts"
+    ]
   }
 ]
