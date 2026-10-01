@@ -1833,5 +1833,33 @@
       "safety",
       "shifts"
     ]
+  },
+  {
+    "date": "2026-10-01",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Rhubarb \u2013 build, edit, publish custom JavaScript/D3 data visualizations",
+    "source_url": "https://rhubarbviz.com/try?launch=1",
+    "title_fingerprint": [
+      "rhubarb"
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Paperweight \u2013 local-first, open-source email cleanup and privacy tool",
+    "source_url": "https://github.com/wslyvh/paperweight",
+    "title_fingerprint": [
+      "paperweight"
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Growth.engineer \u2013 Vetted, open-source growth workflows for AI agents",
+    "source_url": "https://www.growth.engineer",
+    "title_fingerprint": [
+      "engineer",
+      "growth"
+    ]
   }
 ]
