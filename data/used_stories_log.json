@@ -1861,5 +1861,58 @@
       "engineer",
       "growth"
     ]
+  },
+  {
+    "date": "2026-10-02",
+    "segment": "Deep Tech",
+    "source_title": "KernelBench: Can LLMs Write GPU Kernels? \u2013 Benchmark and Toolkit, Torch \u2013> CUDA",
+    "source_url": "https://github.com/ScalingIntelligence/KernelBench",
+    "title_fingerprint": [
+      "can",
+      "gpu",
+      "kernels",
+      "llms",
+      "write"
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "segment": "SaaS (B2B)",
+    "source_title": "Emergent expands MongoDB partnership for enterprise AI apps - itbrief.asia",
+    "source_url": "https://itbrief.asia/story/emergent-expands-mongodb-partnership-for-enterprise-ai-apps",
+    "title_fingerprint": [
+      "apps",
+      "emergent",
+      "enterprise",
+      "expands",
+      "mongo",
+      "partnership"
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: I made a technical trivia quiz app graded by AI",
+    "source_url": "https://nadir.dev/",
+    "title_fingerprint": [
+      "app",
+      "graded",
+      "made",
+      "quiz",
+      "technical",
+      "trivia"
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Feedback on Value Concept Paper",
+    "source_url": "https://news.ycombinator.com/item?id=49923140",
+    "title_fingerprint": [
+      "concept",
+      "feedback",
+      "paper",
+      "value"
+    ]
   }
 ]
