@@ -1914,5 +1914,62 @@
       "paper",
       "value"
     ]
+  },
+  {
+    "date": "2026-10-03",
+    "segment": "Deep Tech",
+    "source_title": "Google Launches AI Chips to Orbit in Space Data Center Push - The Tech Buzz",
+    "source_url": "https://www.techbuzz.ai/articles/google-launches-ai-chips-to-orbit-in-space-data-center-push",
+    "title_fingerprint": [
+      "center",
+      "chips",
+      "data",
+      "google",
+      "launch",
+      "orbit",
+      "push",
+      "space"
+    ]
+  },
+  {
+    "date": "2026-10-03",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Breadcrumb, record everything on your mac + context manager for AI",
+    "source_url": "https://innerloop.works/breadcrumb",
+    "title_fingerprint": [
+      "breadcrumb",
+      "context",
+      "everything",
+      "mac",
+      "manager",
+      "record",
+      "your"
+    ]
+  },
+  {
+    "date": "2026-10-03",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Sidekins \u2013 a Mac companion that visits friends and does your work",
+    "source_url": "https://www.sidekins.com",
+    "title_fingerprint": [
+      "sidekins"
+    ]
+  },
+  {
+    "date": "2026-10-03",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Apple Announces 'Full Disk Access' Changes on macOS Due to AI Agents - MacRumors",
+    "source_url": "https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/",
+    "title_fingerprint": [
+      "access",
+      "agents",
+      "announces",
+      "apple",
+      "changes",
+      "disk",
+      "due",
+      "full",
+      "mac"
+    ]
   }
 ]
