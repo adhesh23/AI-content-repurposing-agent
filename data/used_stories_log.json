@@ -1971,5 +1971,63 @@
       "full",
       "mac"
     ]
+  },
+  {
+    "date": "2026-10-04",
+    "segment": "Deep Tech",
+    "source_title": "Japanese partnership links AI infrastructure directly to power generation - Digital Watch Observatory",
+    "source_url": "https://dig.watch/updates/japan-partnership-links-ai-computing-to-power",
+    "title_fingerprint": [
+      "directly",
+      "generation",
+      "infrastructure",
+      "japanese",
+      "links",
+      "partnership",
+      "power"
+    ]
+  },
+  {
+    "date": "2026-10-04",
+    "segment": "SaaS (B2B)",
+    "source_title": "SpaceX Cursor Acquisition Closes: $60B Deal Adds Enterprise AI to Starlink + AI Revenue Boom - TradingKey",
+    "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262114322-spacex-spcx-cursor-acquisition-60-billion-anysphere-starlink-ai-revenue-enterprise-coding-platform-tradingkey",
+    "title_fingerprint": [
+      "adds",
+      "boom",
+      "deal",
+      "enterprise",
+      "revenue",
+      "starlink"
+    ]
+  },
+  {
+    "date": "2026-10-04",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: UseJunction \u2013 Find what your team's AI tools usage",
+    "source_url": "https://github.com/use-junction/usejunction",
+    "title_fingerprint": [
+      "junction",
+      "use"
+    ]
+  },
+  {
+    "date": "2026-10-04",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "MongoDB Launches Atlas Agent Engine to Put AI Agents in Production Without a New Stack - sdtimes.com",
+    "source_url": "https://sdtimes.com/ai-agents/mongodb-launches-atlas-agent-engine-to-put-ai-agents-in-production-without-a-new-stack/",
+    "title_fingerprint": [
+      "agent",
+      "agents",
+      "atlas",
+      "engine",
+      "launch",
+      "mongo",
+      "new",
+      "production",
+      "put",
+      "stack",
+      "without"
+    ]
   }
 ]
