@@ -2029,5 +2029,72 @@
       "stack",
       "without"
     ]
+  },
+  {
+    "date": "2026-10-05",
+    "segment": "Deep Tech",
+    "source_title": "FingerMotion to acquire Alberta infrastructure; Alset AI links investment with Lyken AI collaboration - Pluang",
+    "source_url": "https://pluang.com/en/news-feed/alset-ai-soroti-perjanjian-infrastruktur-fingermotion-alberta-dan-alignment",
+    "title_fingerprint": [
+      "acquire",
+      "alberta",
+      "alset",
+      "collaboration",
+      "finger",
+      "infrastructure",
+      "investment",
+      "links",
+      "lyken",
+      "motion"
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "segment": "SaaS (B2B)",
+    "source_title": "Anthropic commits $100M to launch Claude Frontier Academy for enterprise AI deployment - Adgully.com",
+    "source_url": "https://www.adgully.com/post/21732/anthropic-commits-100m-to-launch-claude-frontier-academy-for-enterprise-ai-deployment",
+    "title_fingerprint": [
+      "academy",
+      "anthropic",
+      "claude",
+      "commits",
+      "deployment",
+      "enterprise",
+      "frontier",
+      "launch"
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "segment": "SaaS (D2C)",
+    "source_title": "Figure Founder and CEO Brett Adcock Announces Personal AI Product Hark Launching This Week - ababnews.com",
+    "source_url": "https://www.ababnews.com/news/37a40376-63bd-4afa-b58d-85fd35dba78e",
+    "title_fingerprint": [
+      "adcock",
+      "announces",
+      "brett",
+      "ceo",
+      "figure",
+      "founder",
+      "hark",
+      "launch",
+      "personal",
+      "product",
+      "week"
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Coforge announces CXNova, an agentic CX orchestration platform - varindia",
+    "source_url": "https://www.varindia.com/news/coforge-announces-cxnova-an-agentic-cx-orchestration-platform",
+    "title_fingerprint": [
+      "agentic",
+      "announces",
+      "coforge",
+      "cxnova",
+      "orchestration",
+      "platform"
+    ]
   }
 ]
