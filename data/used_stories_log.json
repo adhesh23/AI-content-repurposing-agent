@@ -2096,5 +2096,65 @@
       "orchestration",
       "platform"
     ]
+  },
+  {
+    "date": "2026-10-06",
+    "segment": "Deep Tech",
+    "source_title": "Axe Compute Buys 2,304-GPU Georgia Cluster From Duos - FourWeekMBA",
+    "source_url": "https://fourweekmba.com/ai-axe-compute-buys-duos-georgia-gpu-cluster-2304-b300-deferred/",
+    "title_fingerprint": [
+      "acquire",
+      "axe",
+      "cluster",
+      "compute",
+      "duos",
+      "georgia",
+      "gpu"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "segment": "SaaS (B2B)",
+    "source_title": "ServiceNow Launches AI Workflow Factory To Boost Enterprise Efficiency - rediff.com",
+    "source_url": "https://m.rediff.com/amp/business/report/servicenow-launches-ai-workflow-factory-and-autonomous-engineer/20261006.htm",
+    "title_fingerprint": [
+      "boost",
+      "efficiency",
+      "enterprise",
+      "factory",
+      "launch",
+      "now",
+      "service",
+      "workflow"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Halo \u2013 A Personal AI with On-Device Harness, Memory and Browser Agent",
+    "source_url": "https://apps.apple.com/us/app/halo-personal-ai/id6783715054",
+    "title_fingerprint": [
+      "halo"
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Promevo Launches Insights by Promevo for a Total View of AI Agents, Gemini Enterprise Adoption, and Google Cloud Spend - AiThority",
+    "source_url": "https://aithority.com/machine-learning/promevo-launches-insights-by-promevo-for-a-total-view-of-ai-agents-gemini-enterprise-adoption-and-google-cloud-spend/",
+    "title_fingerprint": [
+      "adoption",
+      "agents",
+      "cloud",
+      "enterprise",
+      "gemini",
+      "google",
+      "insights",
+      "launch",
+      "promevo",
+      "spend",
+      "total",
+      "view"
+    ]
   }
 ]
