@@ -2156,5 +2156,73 @@
       "total",
       "view"
     ]
+  },
+  {
+    "date": "2026-10-07",
+    "segment": "Deep Tech",
+    "source_title": "Alpha Compute signs contract for NVIDIA B300 GPU cluster in Sweden - Investing.com",
+    "source_url": "https://www.investing.com/news/company-news/alpha-compute-signs-contract-for-nvidia-b300-gpu-cluster-in-sweden-93CH-4934257",
+    "title_fingerprint": [
+      "alpha",
+      "b300",
+      "cluster",
+      "compute",
+      "contract",
+      "gpu",
+      "nvidia",
+      "signs",
+      "sweden"
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "segment": "SaaS (B2B)",
+    "source_title": "Information Workers Launches Enterprise AI Governance Practice Across US Markets - The Des Moines Register",
+    "source_url": "https://www.desmoinesregister.com/press-release/story/135906/information-workers-launches-enterprise-ai-governance-practice-across-us-markets/",
+    "title_fingerprint": [
+      "across",
+      "enterprise",
+      "governance",
+      "information",
+      "launch",
+      "markets",
+      "practice",
+      "workers"
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "segment": "SaaS (D2C)",
+    "source_title": "Remove revenue tax on Kotlin, Swift, TypeScript and Go based apps",
+    "source_url": "https://news.ycombinator.com/item?id=49979536",
+    "title_fingerprint": [
+      "apps",
+      "based",
+      "kotlin",
+      "remove",
+      "revenue",
+      "script",
+      "swift",
+      "tax",
+      "type"
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Intellias launches Agentic ServiceOps bringing governed AI agents to service desk and infrastructure | Corporate - EQS News",
+    "source_url": "https://www.eqs-news.com/news/corporate/intellias-launches-agentic-serviceops-bringing-governed-ai-agents-to-service-desk-and-infrastructure/62817e31-2724-479b-a5bf-6f17f572d994_en",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "bringing",
+      "desk",
+      "governed",
+      "infrastructure",
+      "intellias",
+      "launch",
+      "ops",
+      "service"
+    ]
   }
 ]
