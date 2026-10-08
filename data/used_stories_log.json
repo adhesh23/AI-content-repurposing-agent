@@ -2224,5 +2224,61 @@
       "ops",
       "service"
     ]
+  },
+  {
+    "date": "2026-10-08",
+    "segment": "Deep Tech",
+    "source_title": "AICR v1.0: Open, stable, and verifiable GPU cluster configuration | NVIDIA Technical Blog - NVIDIA Developer",
+    "source_url": "https://developer.nvidia.com/blog/aicr-v1-0-open-stable-and-verifiable-gpu-cluster-configuration/",
+    "title_fingerprint": [
+      "cluster",
+      "configuration",
+      "gpu",
+      "open",
+      "stable",
+      "verifiable"
+    ]
+  },
+  {
+    "date": "2026-10-08",
+    "segment": "SaaS (B2B)",
+    "source_title": "Rein Security Raises $25 Million Series A To Secure Enterprise AI Agents - Pulse 2.0",
+    "source_url": "https://pulse2.com/rein-security-raises-25-million-series-a-to-secure-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "enterprise",
+      "raise",
+      "rein",
+      "secure",
+      "security",
+      "series"
+    ]
+  },
+  {
+    "date": "2026-10-08",
+    "segment": "SaaS (D2C)",
+    "source_title": "Hermes creator Nous Research raises $90M to bring open-source AI to enterprises",
+    "source_url": "https://www.wsj.com/pro/venture-capital/nous-research-scores-90-million-to-bring-open-source-ai-assistant-to-enterprises-516f9208",
+    "title_fingerprint": [
+      "bring",
+      "creator",
+      "enterprises",
+      "hermes",
+      "nous",
+      "open",
+      "raise",
+      "research",
+      "source"
+    ]
+  },
+  {
+    "date": "2026-10-08",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Agent.reviews \u2013 Where AI agents read and write reviews on tools",
+    "source_url": "https://agent.reviews/",
+    "title_fingerprint": [
+      "agent",
+      "reviews"
+    ]
   }
 ]
