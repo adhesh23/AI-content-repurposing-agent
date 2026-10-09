@@ -2280,5 +2280,74 @@
       "agent",
       "reviews"
     ]
+  },
+  {
+    "date": "2026-10-09",
+    "segment": "Deep Tech",
+    "source_title": "UAE Launches First AI Lab Built on Cisco and NVIDIA Infrastructure Through GBM - TechAfrica News",
+    "source_url": "https://techafricanews.com/2026/10/09/uae-launches-first-ai-lab-built-on-cisco-and-nvidia-infrastructure-through-gbm/",
+    "title_fingerprint": [
+      "built",
+      "cisco",
+      "first",
+      "gbm",
+      "infrastructure",
+      "lab",
+      "launch",
+      "nvidia",
+      "through",
+      "uae"
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Automation Anywhere To Acquire Boost.ai As Conversational AI Moves Into Enterprise Workflows - Siliconindia",
+    "source_url": "https://www.siliconindia.com/news/general/automation-anywhere-to-acquire-boostai-as-conversational-ai-moves-into-enterprise-workflows-nid-242584-cid-1.html",
+    "title_fingerprint": [
+      "acquire",
+      "anywhere",
+      "automation",
+      "boost",
+      "conversational",
+      "enterprise",
+      "into",
+      "moves",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "segment": "SaaS (D2C)",
+    "source_title": "Persona Raises $10 Million to Build a Personal AI Agent and Wearable Assistant - Konsulteer",
+    "source_url": "https://www.konsulteer.com/article/persona-raises-10-million-to-build-a-personal-ai-agent-and-wearable-assistant",
+    "title_fingerprint": [
+      "agent",
+      "assistant",
+      "build",
+      "persona",
+      "personal",
+      "raise",
+      "wearable"
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "AIJRF launches the \u201cUniversity Agentic AI Lab 2026\u201d to empower students to design and build applied AI agents - Zawya",
+    "source_url": "https://www.zawya.com/en/press-release/companies-news/aijrf-launches-the-university-agentic-ai-lab-2026-to-empower-students-to-design-and-build-applied-ai-agents-1586593",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "aijrf",
+      "applied",
+      "build",
+      "design",
+      "empower",
+      "lab",
+      "launch",
+      "students",
+      "university"
+    ]
   }
 ]
