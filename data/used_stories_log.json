@@ -2349,5 +2349,69 @@
       "students",
       "university"
     ]
+  },
+  {
+    "date": "2026-10-10",
+    "segment": "Deep Tech",
+    "source_title": "Ask HN: Are you a subscribed LLM or a locally deployed open-source model?",
+    "source_url": "https://news.ycombinator.com/item?id=50016644",
+    "title_fingerprint": [
+      "deployed",
+      "llm",
+      "locally",
+      "model",
+      "open",
+      "source",
+      "subscribed",
+      "you"
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "segment": "SaaS (B2B)",
+    "source_title": "Google launches enterprise AI agent for workspace automation with multi-platform integrations - Adgully.com",
+    "source_url": "https://www.adgully.com/post/22054/google-launches-enterprise-ai-agent-for-workspace-automation-with-multi-platform-integrations",
+    "title_fingerprint": [
+      "agent",
+      "automation",
+      "enterprise",
+      "google",
+      "integrations",
+      "launch",
+      "multi",
+      "platform",
+      "workspace"
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "segment": "SaaS (D2C)",
+    "source_title": "Personal AI Assistant Race Heats Up: US Startup Tab Hits $300 Million Valuation Six Weeks After Launch - BigGo Finance",
+    "source_url": "https://finance.biggo.com/news/8c05af41-7fd7-4ba8-884c-6a7708fefec9",
+    "title_fingerprint": [
+      "after",
+      "hits",
+      "launch",
+      "six",
+      "startup",
+      "tab",
+      "valuation",
+      "weeks"
+    ]
+  },
+  {
+    "date": "2026-10-10",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Treasure AI Unveils Agentic Marketing Products and Features at Agentic World 2026 - ADWEEK",
+    "source_url": "https://www.adweek.com/sponsored-content/treasure-ai-unveils-agentic-marketing-products-and-features-at-agentic-world-2026/",
+    "title_fingerprint": [
+      "agentic",
+      "features",
+      "marketing",
+      "products",
+      "treasure",
+      "unveil",
+      "world"
+    ]
   }
 ]
