@@ -2413,5 +2413,65 @@
       "unveil",
       "world"
     ]
+  },
+  {
+    "date": "2026-10-11",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Modelship \u2013 an open source ray backed model cluster",
+    "source_url": "https://github.com/modelship-ai/modelship",
+    "title_fingerprint": [
+      "modelship"
+    ]
+  },
+  {
+    "date": "2026-10-11",
+    "segment": "SaaS (B2B)",
+    "source_title": "Digi edZe Launches digiedze.ai, a Dedicated Home for Enterprise AI Services - IndyStar",
+    "source_url": "https://www.indystar.com/press-release/story/135651/digi-edze-launches-digiedze-ai-a-dedicated-home-for-enterprise-ai-services/",
+    "title_fingerprint": [
+      "dedicated",
+      "digi",
+      "digiedze",
+      "enterprise",
+      "home",
+      "launch",
+      "services"
+    ]
+  },
+  {
+    "date": "2026-10-11",
+    "segment": "SaaS (D2C)",
+    "source_title": "Persona raises $10 million as Cal AI founder launches consumer AI assistant startup - Traders Union",
+    "source_url": "https://tradersunion.com/news/financial-news/show/3725249-persona-ai-raises-10m-launch/",
+    "title_fingerprint": [
+      "assistant",
+      "cal",
+      "founder",
+      "launch",
+      "persona",
+      "raise",
+      "startup"
+    ]
+  },
+  {
+    "date": "2026-10-11",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Vannor Launches Agentic Marketing After AI Agents Drive 30-Fold Increase in First-Page Google Rankings - The Daily Tribune News",
+    "source_url": "https://www.daily-tribune.com/online_features/press_releases/vannor-launches-agentic-marketing-after-ai-agents-drive-30-fold-increase-in-first-page-google/article_fde34879-2550-5806-9cda-d62187197aa9.html",
+    "title_fingerprint": [
+      "after",
+      "agentic",
+      "agents",
+      "drive",
+      "first",
+      "fold",
+      "google",
+      "increase",
+      "launch",
+      "marketing",
+      "page",
+      "rankings",
+      "vannor"
+    ]
   }
 ]
