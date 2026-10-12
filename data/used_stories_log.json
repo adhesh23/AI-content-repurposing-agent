@@ -2473,5 +2473,44 @@
       "rankings",
       "vannor"
     ]
+  },
+  {
+    "date": "2026-10-12",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: LoRA over GGUF \u2013 Train Qwen3.8-Flash-Next in 40G VRAM",
+    "source_url": "https://github.com/woct0rdho/transformers5-qwen3.5-recipe",
+    "title_fingerprint": [
+      "gguf",
+      "over"
+    ]
+  },
+  {
+    "date": "2026-10-12",
+    "segment": "SaaS (B2B)",
+    "source_title": "Zeroset Raises $5.2 Million to Give Enterprise AI Agents Workflow Context - Konsulteer",
+    "source_url": "https://www.konsulteer.com/article/zeroset-raises-5-2-million-to-give-enterprise-ai-agents-workflow-context",
+    "title_fingerprint": [
+      "agents",
+      "context",
+      "enterprise",
+      "give",
+      "raise",
+      "workflow",
+      "zeroset"
+    ]
+  },
+  {
+    "date": "2026-10-12",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Caseware launches AI agents for audit risk & disclosure - ChannelLife UK",
+    "source_url": "https://channellife.co.uk/story/caseware-launches-ai-agents-for-audit-risk-disclosure",
+    "title_fingerprint": [
+      "agents",
+      "audit",
+      "caseware",
+      "disclosure",
+      "launch",
+      "risk"
+    ]
   }
 ]
