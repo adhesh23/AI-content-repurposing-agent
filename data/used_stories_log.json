@@ -2512,5 +2512,57 @@
       "launch",
       "risk"
     ]
+  },
+  {
+    "date": "2026-10-13",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Boole-1.7B, a 1-bit LLM that outperforms Bonsai-1.7B",
+    "source_url": "https://precisionnumerics.ai/blog/boole-1p7b",
+    "title_fingerprint": [
+      "bit",
+      "bonsai",
+      "boole",
+      "llm",
+      "outperforms"
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "segment": "SaaS (B2B)",
+    "source_title": "Manulife Launches Enterprise AI Platform to Scale AI Solutions and Deliver Business Value Across Global Operations - TradingView",
+    "source_url": "https://www.tradingview.com/news/prnewswire:491f9fdc9f6f5:0-manulife-launches-enterprise-ai-platform-to-scale-ai-solutions-and-deliver-business-value-across-global-operations/",
+    "title_fingerprint": [
+      "across",
+      "business",
+      "deliver",
+      "enterprise",
+      "global",
+      "launch",
+      "manulife",
+      "operations",
+      "platform",
+      "scale",
+      "solutions",
+      "value"
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Authrot \u2013 extract your story elements out of chapters and graph them",
+    "source_url": "https://authrot.app",
+    "title_fingerprint": [
+      "authrot"
+    ]
+  },
+  {
+    "date": "2026-10-13",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Launch HN: Agent37 (YC F26) \u2013 Low-cost agent sandboxes for running agents",
+    "source_url": "https://news.ycombinator.com/item?id=50059096",
+    "title_fingerprint": [
+      "agent37",
+      "f26"
+    ]
   }
 ]
