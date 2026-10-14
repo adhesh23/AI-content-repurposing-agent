@@ -2564,5 +2564,62 @@
       "agent37",
       "f26"
     ]
+  },
+  {
+    "date": "2026-10-14",
+    "segment": "Deep Tech",
+    "source_title": "Marvell launches connectivity chips for AI infrastructure - Investing.com",
+    "source_url": "https://www.investing.com/news/company-news/marvell-launches-connectivity-chips-for-ai-infrastructure-93CH-4946799",
+    "title_fingerprint": [
+      "chips",
+      "connectivity",
+      "infrastructure",
+      "launch",
+      "marvell"
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "segment": "SaaS (B2B)",
+    "source_title": "Pluto Security raises $42M to address enterprise AI risks - mezha.net",
+    "source_url": "https://mezha.net/eng/news/mezha-51e3d24adc70a0db638852ca_pluto_security_raises/",
+    "title_fingerprint": [
+      "address",
+      "enterprise",
+      "pluto",
+      "raise",
+      "risks",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "segment": "SaaS (D2C)",
+    "source_title": "Gupshup launches AI \u2018Avatar Agent\u2019 to enable video interactions with customers - The Economic Times",
+    "source_url": "https://m.economictimes.com/tech/artificial-intelligence/gupshup-launches-ai-avatar-agent-to-enable-video-interactions-with-customers/articleshow/134932586.cms",
+    "title_fingerprint": [
+      "agent",
+      "avatar",
+      "customers",
+      "enable",
+      "gupshup",
+      "interactions",
+      "launch",
+      "video"
+    ]
+  },
+  {
+    "date": "2026-10-14",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Gupshup Launches Video-Based AI Agents for Businesses - CXOToday.com",
+    "source_url": "https://cxotoday.com/media-coverage/gupshup-launches-video-based-ai-agents-for-businesses/",
+    "title_fingerprint": [
+      "agents",
+      "based",
+      "businesses",
+      "gupshup",
+      "launch",
+      "video"
+    ]
   }
 ]
