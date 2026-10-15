@@ -2621,5 +2621,63 @@
       "launch",
       "video"
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: T0: We trained a 256M SOTA open-weights time-series forecasting model",
+    "source_url": "https://github.com/theforecastingcompany/tfc-t0",
+    "title_fingerprint": [
+      "forecasting",
+      "model",
+      "open",
+      "series",
+      "sota",
+      "time",
+      "trained",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "segment": "SaaS (B2B)",
+    "source_title": "Award Winning Enterprise AI and Automation Provider, Fooyo, Launches FDE-as-a-Service to Get Enterprise AI Deployed to Production - USA Today",
+    "source_url": "https://www.usatoday.com/press-release/story/50656/award-winning-enterprise-ai-and-automation-provider-fooyo-launches-fde-as-a-service-to-get-enterprise-ai-deployed-to-production/",
+    "title_fingerprint": [
+      "automation",
+      "award",
+      "deployed",
+      "enterprise",
+      "fde",
+      "fooyo",
+      "get",
+      "launch",
+      "production",
+      "provider",
+      "service",
+      "winning"
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "segment": "SaaS (D2C)",
+    "source_title": "Inworld Launches Realtime Inference for Consumer AI Applications - Business Wire",
+    "source_url": "https://www.businesswire.com/news/home/20261014101163/en/Inworld-Launches-Realtime-Inference-for-Consumer-AI-Applications",
+    "title_fingerprint": [
+      "applications",
+      "inference",
+      "inworld",
+      "launch",
+      "realtime"
+    ]
+  },
+  {
+    "date": "2026-10-15",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Eevo \u2013 Consequential Decision Model",
+    "source_url": "https://www.uprightproject.com/eevo/",
+    "title_fingerprint": [
+      "eevo"
+    ]
   }
 ]
