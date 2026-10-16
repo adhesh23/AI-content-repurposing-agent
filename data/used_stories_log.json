@@ -2679,5 +2679,54 @@
     "title_fingerprint": [
       "eevo"
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: An improved kokoro distillation in 9MB",
+    "source_url": "https://huggingface.co/spaces/MithrilMan/teacher-in-the-loop",
+    "title_fingerprint": [
+      "9mb",
+      "distillation",
+      "improved",
+      "kokoro"
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "segment": "SaaS (B2B)",
+    "source_title": "ServiceNow Introduces AI Passport to Strengthen Enterprise AI Governance - Express Computer",
+    "source_url": "https://www.expresscomputer.in/news/servicenow-introduces-ai-passport-to-strengthen-enterprise-ai-governance/140049/",
+    "title_fingerprint": [
+      "enterprise",
+      "governance",
+      "introduces",
+      "now",
+      "passport",
+      "service",
+      "strengthen"
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "segment": "SaaS (D2C)",
+    "source_title": "AI as a part of capitalism \u2013 the right way to go",
+    "source_url": "https://news.ycombinator.com/item?id=50115335",
+    "title_fingerprint": [
+      "capitalism",
+      "part"
+    ]
+  },
+  {
+    "date": "2026-10-16",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Beeline Multiplayer Agent Harness",
+    "source_url": "https://usebeeline.app",
+    "title_fingerprint": [
+      "agent",
+      "beeline",
+      "harness",
+      "multiplayer"
+    ]
   }
 ]
