@@ -2728,5 +2728,63 @@
       "harness",
       "multiplayer"
     ]
+  },
+  {
+    "date": "2026-10-17",
+    "segment": "Deep Tech",
+    "source_title": "China to Restrict Open-Weights Model Exports",
+    "source_url": "https://www.reuters.com/world/asia-pacific/china-proposes-adding-40-ai-biotech-solar-technologies-export-control-list-2026-10-16/",
+    "title_fingerprint": [
+      "china",
+      "exports",
+      "model",
+      "open",
+      "restrict",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "segment": "SaaS (B2B)",
+    "source_title": "Parallel Loop Raises $6.6 Million to Scale Enterprise AI Workflows - Konsulteer",
+    "source_url": "https://www.konsulteer.com/article/parallel-loop-raises-6-6-million-to-scale-enterprise-ai-workflows",
+    "title_fingerprint": [
+      "enterprise",
+      "loop",
+      "parallel",
+      "raise",
+      "scale",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "segment": "SaaS (D2C)",
+    "source_title": "Meta Debuts Muse, a Personal AI Agent for Real-World Tasks - TechJuice",
+    "source_url": "https://www.techjuice.pk/meta-muse-personal-ai-agent-launch/",
+    "title_fingerprint": [
+      "agent",
+      "debuts",
+      "meta",
+      "muse",
+      "personal",
+      "real",
+      "tasks",
+      "world"
+    ]
+  },
+  {
+    "date": "2026-10-17",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "NVIDIA Releases Nemotron 3.5 Super VL for Multimodal AI Agents - www.tokenpost.com",
+    "source_url": "https://www.tokenpost.com/news/technology/32808",
+    "title_fingerprint": [
+      "agents",
+      "multimodal",
+      "nemotron",
+      "nvidia",
+      "releases",
+      "super"
+    ]
   }
 ]
