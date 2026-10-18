@@ -2786,5 +2786,55 @@
       "releases",
       "super"
     ]
+  },
+  {
+    "date": "2026-10-18",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Sys2txt \u2013 transcribe system audio to text in the CLI with a local LLM",
+    "source_url": "https://Joe-Heffer.github.io/sys2txt/",
+    "title_fingerprint": [
+      "sys2txt"
+    ]
+  },
+  {
+    "date": "2026-10-18",
+    "segment": "SaaS (B2B)",
+    "source_title": "Uniti Group Stock Eyes Enterprise AI Security Launch - Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/technology/ai/articles/uniti-group-stock-eyes-enterprise-021154972.html",
+    "title_fingerprint": [
+      "enterprise",
+      "eyes",
+      "group",
+      "launch",
+      "security",
+      "stock",
+      "uniti"
+    ]
+  },
+  {
+    "date": "2026-10-18",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Risphai \u2013 picks the AI model, tools and prompt for each request",
+    "source_url": "https://risphai.com",
+    "title_fingerprint": [
+      "risphai"
+    ]
+  },
+  {
+    "date": "2026-10-18",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "We ran 53 open-source AI agents through behavioral tests and filed 37 bugs",
+    "source_url": "https://defuzex.ai/blog/we-ran-53-open-source-ai-agents-through-behavioral-tests-and-filed-37-bugs",
+    "title_fingerprint": [
+      "agents",
+      "behavioral",
+      "bugs",
+      "filed",
+      "open",
+      "ran",
+      "source",
+      "tests",
+      "through"
+    ]
   }
 ]
