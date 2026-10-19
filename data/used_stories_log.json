@@ -2836,5 +2836,46 @@
       "tests",
       "through"
     ]
+  },
+  {
+    "date": "2026-10-19",
+    "segment": "Deep Tech",
+    "source_title": "AnySearch Launches Enterprise Edition: AI Search Infrastructure Accelerates Enterprise Market Expansion - 36Kr",
+    "source_url": "https://eu.36kr.com/en/p/4032296680083841",
+    "title_fingerprint": [
+      "accelerates",
+      "enterprise",
+      "expansion",
+      "infrastructure",
+      "market",
+      "search"
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "segment": "SaaS (B2B)",
+    "source_title": "ZAWYA: FAB launches The Exchange to advance responsible Enterprise AI - TradingView",
+    "source_url": "https://www.tradingview.com/news/reuters.com,2026-10-19:newsml_Zawc9WQsj:0-zawya-fab-launches-the-exchange-to-advance-responsible-enterprise-ai/",
+    "title_fingerprint": [
+      "advance",
+      "enterprise",
+      "exchange",
+      "fab",
+      "launch",
+      "responsible"
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Shopify Launches Personal Shopper AI Agents - SMBtech",
+    "source_url": "https://smbtech.au/news/shopify-launches-personal-shopper-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "launch",
+      "personal",
+      "shopify",
+      "shopper"
+    ]
   }
 ]
