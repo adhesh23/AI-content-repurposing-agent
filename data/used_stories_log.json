@@ -2877,5 +2877,69 @@
       "shopify",
       "shopper"
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "segment": "Deep Tech",
+    "source_title": "Ask HN: What happened to open weights models?",
+    "source_url": "https://news.ycombinator.com/item?id=50158840",
+    "title_fingerprint": [
+      "happened",
+      "models",
+      "open",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "segment": "SaaS (B2B)",
+    "source_title": "Portal26 Launches AI Governance Platform to Help MSPs Monetize Enterprise AI - Konsulteer",
+    "source_url": "https://www.konsulteer.com/article/portal26-launches-ai-governance-platform-to-help-msps-monetize-enterprise-ai",
+    "title_fingerprint": [
+      "enterprise",
+      "governance",
+      "help",
+      "launch",
+      "monetize",
+      "msps",
+      "platform",
+      "portal26"
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "segment": "SaaS (D2C)",
+    "source_title": "Salesforce says personal AI agents will add call center traffic, not cut it - PPC Land",
+    "source_url": "https://ppc.land/salesforce-says-personal-ai-agents-will-add-call-center-traffic-not-cut-it/",
+    "title_fingerprint": [
+      "add",
+      "agents",
+      "call",
+      "center",
+      "cut",
+      "not",
+      "personal",
+      "salesforce",
+      "says",
+      "traffic",
+      "will"
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Workday acquires agentic identity platform C1.ai to secure access for people and AI agents - Portal ERP",
+    "source_url": "https://portalerp.com/news/workday-acquires-agentic-identity-platform-c1-ai-to-secure-access-for-people-and-ai-agents",
+    "title_fingerprint": [
+      "access",
+      "acquire",
+      "agentic",
+      "agents",
+      "identity",
+      "people",
+      "platform",
+      "secure",
+      "workday"
+    ]
   }
 ]
