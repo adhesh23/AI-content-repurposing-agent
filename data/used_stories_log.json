@@ -2941,5 +2941,62 @@
       "secure",
       "workday"
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "segment": "Deep Tech",
+    "source_title": "Meta expands AI infrastructure with a million GPUs in partnership with Nvidia - jawlah.co",
+    "source_url": "https://jawlah.co/en/66838",
+    "title_fingerprint": [
+      "expands",
+      "gpus",
+      "infrastructure",
+      "meta",
+      "nvidia",
+      "partnership"
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "segment": "SaaS (B2B)",
+    "source_title": "Taiwan AI Nexus 2026 Unveils Key Insights into Enterprise AI Governance - \u5929\u4e0b\u96dc\u8a8c",
+    "source_url": "https://english.cw.com.tw/article/article.action?id=5072",
+    "title_fingerprint": [
+      "enterprise",
+      "governance",
+      "insights",
+      "into",
+      "key",
+      "nexus",
+      "taiwan",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Ankita \u2013 an open-source personal AI companion for the desktop",
+    "source_url": "https://github.com/akyourowngames/A.N.K.I.T.A",
+    "title_fingerprint": [
+      "ankita"
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Synaptics Announces Astra SR200 Multimodal Edge AI Processors with Google Coral NPU - TechPowerUp",
+    "source_url": "https://www.techpowerup.com/353957/synaptics-announces-astra-sr200-multimodal-edge-ai-processors-with-google-coral-npu?amp",
+    "title_fingerprint": [
+      "announces",
+      "astra",
+      "coral",
+      "edge",
+      "google",
+      "multimodal",
+      "npu",
+      "processors",
+      "sr200",
+      "synaptics"
+    ]
   }
 ]
