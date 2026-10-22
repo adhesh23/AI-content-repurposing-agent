@@ -2998,5 +2998,79 @@
       "sr200",
       "synaptics"
     ]
+  },
+  {
+    "date": "2026-10-22",
+    "segment": "Deep Tech",
+    "source_title": "Polarise Launches Sovereign AI Cloud at NVIDIA GTC Berlin, Delivering Enterprise AI From Data Center to Application - Macau Business",
+    "source_url": "https://macaubusiness.com/polarise-launches-sovereign-ai-cloud-at-nvidia-gtc-berlin-delivering-enterprise-ai-from-data-center-to-application/",
+    "title_fingerprint": [
+      "application",
+      "berlin",
+      "center",
+      "cloud",
+      "data",
+      "delivering",
+      "enterprise",
+      "gtc",
+      "launch",
+      "nvidia",
+      "polarise",
+      "sovereign"
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "segment": "SaaS (B2B)",
+    "source_title": "Klique Announces Expanded Integrations with NVIDIA to Accelerate Enterprise AI Workflows and Optimize GPU Utilization - Yahoo! Finance Canada",
+    "source_url": "https://ca.finance.yahoo.com/news/klique-announces-expanded-integrations-nvidia-183500244.html",
+    "title_fingerprint": [
+      "accelerate",
+      "announces",
+      "enterprise",
+      "expanded",
+      "gpu",
+      "integrations",
+      "klique",
+      "nvidia",
+      "optimize",
+      "utilization",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: AI-built browser games, collected in one place",
+    "source_url": "https://playgroundarcade.com/",
+    "title_fingerprint": [
+      "browser",
+      "built",
+      "collected",
+      "games",
+      "one",
+      "place"
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "SentinelOne Launches Singularity Agentic Detection and Response to Stop Rogue and Malicious AI Agents at Machine Speed - SentinelOne",
+    "source_url": "https://www.sentinelone.com/press/sentinelone-launches-singularity-agentic-detection-and-response-to-stop-rogue-and-malicious-ai-agents-at-machine-speed/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "detection",
+      "launch",
+      "machine",
+      "malicious",
+      "one",
+      "response",
+      "rogue",
+      "sentinel",
+      "singularity",
+      "speed",
+      "stop"
+    ]
   }
 ]
