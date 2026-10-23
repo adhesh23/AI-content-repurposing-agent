@@ -3072,5 +3072,68 @@
       "speed",
       "stop"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "segment": "Deep Tech",
+    "source_title": "Innovorbs Technologies Launches AI Data Center Infrastructure Practice for Enterprise GPU Deployments - citybiz",
+    "source_url": "https://www.citybiz.co/article/923157/innovorbs-technologies-launches-ai-data-center-infrastructure-practice-for-enterprise-gpu-deployments/",
+    "title_fingerprint": [
+      "center",
+      "data",
+      "deployments",
+      "enterprise",
+      "gpu",
+      "infrastructure",
+      "innovorbs",
+      "launch",
+      "practice",
+      "technologies"
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "segment": "SaaS (B2B)",
+    "source_title": "Will Workday's C1.ai Acquisition Boost Its Enterprise AI Position? - Yahoo Finance",
+    "source_url": "https://finance.yahoo.com/technology/ai/articles/workdays-c1-ai-acquisition-boost-130500537.html",
+    "title_fingerprint": [
+      "acquire",
+      "boost",
+      "enterprise",
+      "its",
+      "position",
+      "will",
+      "workday"
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "segment": "SaaS (D2C)",
+    "source_title": "BitGo Launches Labs Unit With AI-Powered Gokubu Consumer App - TradingView",
+    "source_url": "https://fr.tradingview.com/news/newsbtc:8a649e9cd094b:0-bitgo-launches-labs-unit-with-ai-powered-gokubu-consumer-app/",
+    "title_fingerprint": [
+      "app",
+      "bit",
+      "gokubu",
+      "labs",
+      "launch",
+      "powered",
+      "unit"
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: CATT 0.2.1: Test agents/services against a Muse/Instinct-alike, in CI",
+    "source_url": "https://github.com/Coverage-Cat/consumer-agent-testing-tool",
+    "title_fingerprint": [
+      "against",
+      "agents",
+      "alike",
+      "instinct",
+      "muse",
+      "services",
+      "test"
+    ]
   }
 ]
