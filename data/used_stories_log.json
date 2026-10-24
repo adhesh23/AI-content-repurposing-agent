@@ -3135,5 +3135,73 @@
       "services",
       "test"
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "segment": "Deep Tech",
+    "source_title": "Kimi K3.1 Pro will be leading open-weights model once its weights are published",
+    "source_url": "https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks",
+    "title_fingerprint": [
+      "its",
+      "kimi",
+      "leading",
+      "model",
+      "once",
+      "open",
+      "pro",
+      "published",
+      "weights",
+      "will"
+    ]
+  },
+  {
+    "date": "2026-10-24",
+    "segment": "SaaS (B2B)",
+    "source_title": "Daiahn Launches Agent Intelligence Beta, Bringing Visibility and Accountability to Enterprise AI - AiThority",
+    "source_url": "https://aithority.com/machine-learning/daiahn-launches-agent-intelligence-beta-bringing-visibility-and-accountability-to-enterprise-ai/",
+    "title_fingerprint": [
+      "accountability",
+      "agent",
+      "beta",
+      "bringing",
+      "daiahn",
+      "enterprise",
+      "intelligence",
+      "launch",
+      "visibility"
+    ]
+  },
+  {
+    "date": "2026-10-24",
+    "segment": "SaaS (D2C)",
+    "source_title": "Anthropic debuts Claude Duet personal AI agent. Here's what to know. - CBS News",
+    "source_url": "https://www.cbsnews.com/news/anthropic-claude-duet-personal-ai-agentsuggest-a-e/",
+    "title_fingerprint": [
+      "agent",
+      "anthropic",
+      "claude",
+      "debuts",
+      "duet",
+      "here",
+      "know",
+      "personal"
+    ]
+  },
+  {
+    "date": "2026-10-24",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Daytona raises funding at $1 billion valuation, says AI agents need cloud built for them - \ub514\uc9c0\ud138\ud22c\ub370\uc774",
+    "source_url": "https://www.digitaltoday.co.kr/en/view/119006/daytona-raises-funding-at-1-billion-valuation-ai-agent-cloud-needed",
+    "title_fingerprint": [
+      "agents",
+      "built",
+      "cloud",
+      "daytona",
+      "need",
+      "raise",
+      "says",
+      "them",
+      "valuation"
+    ]
   }
 ]
