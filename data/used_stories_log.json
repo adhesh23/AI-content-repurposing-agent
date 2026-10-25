@@ -3203,5 +3203,61 @@
       "them",
       "valuation"
     ]
+  },
+  {
+    "date": "2026-10-25",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Reusable, spectraly shaped Blue Noise point clouds",
+    "source_url": "https://github.com/For-a-few-DPPs-more/hyperuniform-samplers",
+    "title_fingerprint": [
+      "blue",
+      "clouds",
+      "noise",
+      "point",
+      "reusable",
+      "shaped",
+      "spectraly"
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "segment": "SaaS (B2B)",
+    "source_title": "AI Coding Agent Security Benchmark",
+    "source_url": "https://www.endorlabs.com/research/ai-code-security-benchmark",
+    "title_fingerprint": [
+      "agent",
+      "benchmark",
+      "coding",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: FiscaLLM:open-source per-user AI cost for subscription apps",
+    "source_url": "https://github.com/magna56/fiscallm",
+    "title_fingerprint": [
+      "apps",
+      "cost",
+      "open",
+      "per",
+      "source",
+      "subscription",
+      "user"
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "1Password adds browser login feature for AI agents",
+    "source_url": "https://1password.com/personal-ai-agent-integrations",
+    "title_fingerprint": [
+      "1password",
+      "adds",
+      "agents",
+      "browser",
+      "feature",
+      "login"
+    ]
   }
 ]
