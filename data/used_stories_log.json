@@ -3259,5 +3259,63 @@
       "feature",
       "login"
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "segment": "Deep Tech",
+    "source_title": "Shadeform launches Flex VMs, turning any bare-metal GPU cluster into marketplace-ready cloud capacity - Data Center Dynamics",
+    "source_url": "https://www.datacenterdynamics.com/en/product-news/shadeform-launches-flex-vms-turning-any-bare-metal-gpu-cluster-into-marketplace-ready-cloud-capacity/",
+    "title_fingerprint": [
+      "any",
+      "bare",
+      "capacity",
+      "cloud",
+      "cluster",
+      "flex",
+      "gpu",
+      "into",
+      "launch",
+      "marketplace",
+      "metal",
+      "ready",
+      "shadeform",
+      "turning",
+      "vms"
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "segment": "SaaS (B2B)",
+    "source_title": "AngelBot AI Expands Enterprise AI Portfolio With TeamSync Launch - SMEStreet",
+    "source_url": "https://smestreet.in/technology/angelbot-ai-expands-enterprise-ai-portfolio-with-teamsync-launch-12745964",
+    "title_fingerprint": [
+      "angel",
+      "bot",
+      "enterprise",
+      "expands",
+      "launch",
+      "portfolio",
+      "sync",
+      "team"
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Deepswapp Browser: browser the browser with another browser",
+    "source_url": "https://deepswapp.com",
+    "title_fingerprint": [
+      "another",
+      "browser"
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Tabverse \u2013 a free, open-source, with self-hostable server Workona clone",
+    "source_url": "https://news.ycombinator.com/item?id=50240121",
+    "title_fingerprint": [
+      "tabverse"
+    ]
   }
 ]
