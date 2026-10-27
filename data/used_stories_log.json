@@ -3317,5 +3317,60 @@
     "title_fingerprint": [
       "tabverse"
     ]
+  },
+  {
+    "date": "2026-10-27",
+    "segment": "Deep Tech",
+    "source_title": "SWI Compute Launches with $1B NVIDIA Systems Order for AI Infrastructure - HPCwire",
+    "source_url": "https://www.hpcwire.com/off-the-wire/swi-compute-launches-with-1b-nvidia-systems-order-for-ai-infrastructure/",
+    "title_fingerprint": [
+      "compute",
+      "infrastructure",
+      "launch",
+      "nvidia",
+      "order",
+      "swi",
+      "systems"
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "segment": "SaaS (B2B)",
+    "source_title": "Protectt.ai buys majority stake in Bosch-incubated AIShield to add enterprise AI security - Dealroom",
+    "source_url": "https://app.dealroom.co/news/note/protectt-ai-buys-majority-stake-in-bosch-incubated-aishield-to-add-enterprise-ai-security",
+    "title_fingerprint": [
+      "acquire",
+      "add",
+      "aishield",
+      "bosch",
+      "enterprise",
+      "incubated",
+      "majority",
+      "protectt",
+      "security",
+      "stake"
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Mainplane \u2013 Agent in Go that lives on your old PC, drives your laptop",
+    "source_url": "https://github.com/mainplane-ai/mainplane",
+    "title_fingerprint": [
+      "mainplane"
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "OpenAI Launches Dots: AI Coding Tools Become Personal Assistant - The Tech Buzz",
+    "source_url": "https://www.techbuzz.ai/articles/openai-launches-dots-ai-coding-tools-become-personal-assistant",
+    "title_fingerprint": [
+      "assistant",
+      "become",
+      "coding",
+      "personal",
+      "tools"
+    ]
   }
 ]
