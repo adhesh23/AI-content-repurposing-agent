@@ -3372,5 +3372,66 @@
       "personal",
       "tools"
     ]
+  },
+  {
+    "date": "2026-10-28",
+    "segment": "Deep Tech",
+    "source_title": "Oracle, Nvidia expand cloud AI infrastructure partnership - Investing.com",
+    "source_url": "https://www.investing.com/news/company-news/oracle-nvidia-expand-cloud-ai-infrastructure-partnership-93CH-4976429",
+    "title_fingerprint": [
+      "cloud",
+      "expand",
+      "infrastructure",
+      "nvidia",
+      "oracle",
+      "partnership"
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "segment": "SaaS (B2B)",
+    "source_title": "AvePoint Launches Platform for Enterprise AI Governance and Security - Redmondmag.com",
+    "source_url": "https://redmondmag.com/blogs/redmond-dispatch/2026/10/avepoint-launches-platform.aspx",
+    "title_fingerprint": [
+      "ave",
+      "enterprise",
+      "governance",
+      "launch",
+      "platform",
+      "point",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "segment": "SaaS (D2C)",
+    "source_title": "Apple Creator Studio adds powerful new AI features and even more creative tools - Apple",
+    "source_url": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+    "title_fingerprint": [
+      "adds",
+      "apple",
+      "creative",
+      "creator",
+      "even",
+      "features",
+      "new",
+      "powerful",
+      "studio",
+      "tools"
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "SurrealDB raises $23M, launches update to fuel agentic AI - TechTarget",
+    "source_url": "https://www.techtarget.com/news/SurrealDB-raises-23M-launches-update-to-fuel-agentic-AI/842303/",
+    "title_fingerprint": [
+      "agentic",
+      "fuel",
+      "launch",
+      "raise",
+      "surreal",
+      "update"
+    ]
   }
 ]
