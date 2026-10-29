@@ -3433,5 +3433,89 @@
       "surreal",
       "update"
     ]
+  },
+  {
+    "date": "2026-10-29",
+    "segment": "Deep Tech",
+    "source_title": "AMD, Meta Expand Strategic AI Infrastructure Partnership at Gigawatt Scale - The Fast Mode",
+    "source_url": "https://www.thefastmode.com/technology-solutions/51244-amd-meta-expand-strategic-ai-infrastructure-partnership-at-gigawatt-scale",
+    "title_fingerprint": [
+      "amd",
+      "expand",
+      "gigawatt",
+      "infrastructure",
+      "meta",
+      "partnership",
+      "scale",
+      "strategic"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "segment": "SaaS (B2B)",
+    "source_title": "SentinelOne launches agentic detection and response for enterprise AI security - Express Computer",
+    "source_url": "https://www.expresscomputer.in/amp/news/sentinelone-launches-agentic-detection-and-response-for-enterprise-ai-security/140676/",
+    "title_fingerprint": [
+      "agentic",
+      "detection",
+      "enterprise",
+      "launch",
+      "one",
+      "response",
+      "security",
+      "sentinel"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "segment": "SaaS (D2C)",
+    "source_title": "\u3010HannStar Board FY2026 Q3 Earnings Call\u3011Revenue Surges to NT$32.5 Billion but Falls Into \"Polarized\" Trap; EPS of NT$2.05 Down 23% YoY; President Tao Cheng-Kuo: AI Momentum Strong, Consumer Segment Shows No Visibility - finance.biggo.com",
+    "source_url": "https://finance.biggo.com/news/TW_5469.TW_2026-10-28",
+    "title_fingerprint": [
+      "board",
+      "but",
+      "call",
+      "cheng",
+      "down",
+      "earnings",
+      "eps",
+      "falls",
+      "fy2026",
+      "hann",
+      "into",
+      "kuo",
+      "momentum",
+      "polarized",
+      "president",
+      "revenue",
+      "segment",
+      "shows",
+      "star",
+      "strong",
+      "surges",
+      "tao",
+      "trap",
+      "visibility"
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Virtana Launches Agentic Observability Enterprise Management, Ushering in a New Era of Collaborative AI Agents for Autonomous IT - VMblog",
+    "source_url": "https://vmblog.com/news/virtana-launches-agentic-observability-enterprise-management-ushering-in-a-new-era-of-collaborative-ai-agents-for-autonomous-it/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "autonomous",
+      "collaborative",
+      "enterprise",
+      "era",
+      "launch",
+      "management",
+      "new",
+      "observability",
+      "ushering",
+      "virtana"
+    ]
   }
 ]
