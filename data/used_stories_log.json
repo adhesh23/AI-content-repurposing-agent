@@ -3517,5 +3517,61 @@
       "ushering",
       "virtana"
     ]
+  },
+  {
+    "date": "2026-10-30",
+    "segment": "Deep Tech",
+    "source_title": "PH launches AI masterplan to build regional infrastructure hub - The Manila Times",
+    "source_url": "https://www.manilatimes.net/2026/10/30/regions/ph-launches-ai-masterplan-to-build-regional-infrastructure-hub/2458045",
+    "title_fingerprint": [
+      "build",
+      "hub",
+      "infrastructure",
+      "launch",
+      "masterplan",
+      "regional"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "segment": "SaaS (B2B)",
+    "source_title": "ServiceNow & Google Cloud expand partnership to bring agentic AI to enterprise workflows - ET Enterprise AI",
+    "source_url": "https://enterpriseai.economictimes.indiatimes.com/news/industry/servicenow-google-cloud-expand-partnership-to-bring-agentic-ai-to-enterprise-workflows/135264879",
+    "title_fingerprint": [
+      "agentic",
+      "bring",
+      "cloud",
+      "enterprise",
+      "expand",
+      "google",
+      "now",
+      "partnership",
+      "service",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "segment": "SaaS (D2C)",
+    "source_title": "Wabi Raises $55M to Expand Shared Personal AI Assistant - Ventureburn",
+    "source_url": "https://ventureburn.com/wabi-raises-55m-shared-personal-ai/",
+    "title_fingerprint": [
+      "assistant",
+      "expand",
+      "personal",
+      "raise",
+      "shared",
+      "wabi"
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Launch HN: Simantic (YC F26) \u2013 Firmware Simulation for AI Agents",
+    "source_url": "https://news.ycombinator.com/item?id=50291116",
+    "title_fingerprint": [
+      "f26",
+      "simantic"
+    ]
   }
 ]
