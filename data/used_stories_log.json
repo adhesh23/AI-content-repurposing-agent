@@ -3573,5 +3573,57 @@
       "f26",
       "simantic"
     ]
+  },
+  {
+    "date": "2026-10-31",
+    "segment": "Deep Tech",
+    "source_title": "Chey Tae-won, Sam Altman deepen Korea\u2013OpenAI AI infrastructure partnership - Chosunbiz",
+    "source_url": "https://biz.chosun.com/en/en-industry/2026/10/31/FUWFN4GMG5EAHH4C3TUA3QNUWM/",
+    "title_fingerprint": [
+      "altman",
+      "chey",
+      "deepen",
+      "infrastructure",
+      "korea",
+      "open",
+      "partnership",
+      "sam",
+      "tae",
+      "won"
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "segment": "SaaS (B2B)",
+    "source_title": "Serval Raises $150M to Expand Enterprise AI Automation - Ventureburn",
+    "source_url": "https://ventureburn.com/serval-raises-150m-enterprise-ai-automation/",
+    "title_fingerprint": [
+      "automation",
+      "enterprise",
+      "expand",
+      "raise",
+      "serval"
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Tria Launches Agentic Trading, Allowing AI Agents to Execute Crypto Trades Without Giving Up Control of Funds - Chainwire",
+    "source_url": "https://chainwire.org/2026/10/30/tria-launches-agentic-trading-allowing-ai-agents-to-execute-crypto-trades-without-giving-up-control-of-funds/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "allowing",
+      "control",
+      "crypto",
+      "execute",
+      "funds",
+      "giving",
+      "launch",
+      "trades",
+      "trading",
+      "tria",
+      "without"
+    ]
   }
 ]
