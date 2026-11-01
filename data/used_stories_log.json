@@ -3625,5 +3625,69 @@
       "tria",
       "without"
     ]
+  },
+  {
+    "date": "2026-11-01",
+    "segment": "Deep Tech",
+    "source_title": "IBM launches its first infrastructure innovation centre in India to accelerate enterprise-scale AI - ET Infra",
+    "source_url": "https://infra.economictimes.indiatimes.com/news/urban-infrastructure/ibm-unveils-first-ai-infrastructure-innovation-centre-in-india-to-propel-enterprise-solutions/129133867?next=1",
+    "title_fingerprint": [
+      "accelerate",
+      "centre",
+      "enterprise",
+      "first",
+      "ibm",
+      "india",
+      "infrastructure",
+      "innovation",
+      "its",
+      "launch",
+      "scale"
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "segment": "SaaS (B2B)",
+    "source_title": "GeekyAnts Announces AntFabric Enterprise AI Initiative - The Ithaca Journal",
+    "source_url": "https://www.ithacajournal.com/press-release/story/137264/geekyants-announces-antfabric-enterprise-ai-initiative/",
+    "title_fingerprint": [
+      "announces",
+      "ant",
+      "ants",
+      "enterprise",
+      "fabric",
+      "geeky",
+      "initiative"
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "segment": "SaaS (D2C)",
+    "source_title": "Move over Bing Image Creator! Google announces new AI image generation tool - Mashable",
+    "source_url": "https://mashable.com/article/google-sge-ai-image-generation",
+    "title_fingerprint": [
+      "announces",
+      "bing",
+      "creator",
+      "generation",
+      "google",
+      "image",
+      "move",
+      "new",
+      "over",
+      "tool"
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: OpenProject Agent Engine \u2013 Automated Workflow and Agent Dispatch",
+    "source_url": "https://github.com/310networks/openproject-agent-engine",
+    "title_fingerprint": [
+      "agent",
+      "engine",
+      "open",
+      "project"
+    ]
   }
 ]
