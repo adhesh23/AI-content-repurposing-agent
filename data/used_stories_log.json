@@ -3689,5 +3689,61 @@
       "open",
       "project"
     ]
+  },
+  {
+    "date": "2026-11-02",
+    "segment": "Deep Tech",
+    "source_title": "NVIDIA Releases Auto Ontology: An Open Semantic Layer That Grounds AI Agent SQL - MarkTechPost",
+    "source_url": "https://www.marktechpost.com/2026/11/01/nvidia-auto-ontology-open-source-semantic-layer-ai-agents/",
+    "title_fingerprint": [
+      "agent",
+      "grounds",
+      "layer",
+      "open",
+      "semantic",
+      "sql"
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "segment": "SaaS (B2B)",
+    "source_title": "South Africa\u2019s OCS Partners with Digital Parks Africa to Expand Enterprise AI Infrastructure - TechAfrica News",
+    "source_url": "https://techafricanews.com/2026/11/02/south-africa-ocs-digital-parks-africa-enterprise-ai-infrastructure/",
+    "title_fingerprint": [
+      "africa",
+      "digital",
+      "enterprise",
+      "expand",
+      "infrastructure",
+      "ocs",
+      "parks",
+      "partners",
+      "south"
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "segment": "SaaS (D2C)",
+    "source_title": "EraseAI Firewall \u2013 stop secrets and PII before they reach Public LLMs",
+    "source_url": "https://news.ycombinator.com/item?id=50326183",
+    "title_fingerprint": [
+      "erase",
+      "firewall"
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Celestia Launches Voyager Payment Chain with 21 Million TPS for AI Agents - KuCoin",
+    "source_url": "https://www.kucoin.com/news/flash/celestia-launches-voyager-payment-chain-with-21m-tps-for-ai-agents",
+    "title_fingerprint": [
+      "agents",
+      "celestia",
+      "chain",
+      "launch",
+      "payment",
+      "tps",
+      "voyager"
+    ]
   }
 ]
