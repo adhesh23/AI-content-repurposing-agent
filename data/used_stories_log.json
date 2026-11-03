@@ -3745,5 +3745,72 @@
       "tps",
       "voyager"
     ]
+  },
+  {
+    "date": "2026-11-03",
+    "segment": "Deep Tech",
+    "source_title": "Seldon: Open-weights 0.2B tabular foundation model for tabular classification",
+    "source_url": "https://huggingface.co/Neuralk-AI/seldon",
+    "title_fingerprint": [
+      "classification",
+      "foundation",
+      "model",
+      "open",
+      "tabular",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "segment": "SaaS (B2B)",
+    "source_title": "CrowdStrike to Acquire Dreadnode to Advance AI Trust and Deliver Automated AI Security Testing for the Agentic Enterprise - 01net",
+    "source_url": "https://www.01net.it/crowdstrike-to-acquire-dreadnode-to-advance-ai-trust-and-deliver-automated-ai-security-testing-for-the-agentic-enterprise/",
+    "title_fingerprint": [
+      "acquire",
+      "advance",
+      "agentic",
+      "automated",
+      "crowd",
+      "deliver",
+      "dreadnode",
+      "enterprise",
+      "security",
+      "strike",
+      "testing",
+      "trust"
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Open-source, Lightroom Alternative RAW editor made by photographer",
+    "source_url": "https://github.com/Duecki1/CalibRaw",
+    "title_fingerprint": [
+      "alternative",
+      "editor",
+      "lightroom",
+      "made",
+      "open",
+      "photographer",
+      "raw",
+      "source"
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Eyedaptic launches Eva, an agentic AI visual assistant for patients with retinal disease - Ophthalmology Times",
+    "source_url": "https://www.ophthalmologytimes.com/view/eyedaptic-launches-eva-an-agentic-ai-visual-assistant-for-patients-with-retinal-disease",
+    "title_fingerprint": [
+      "agentic",
+      "assistant",
+      "disease",
+      "eva",
+      "eyedaptic",
+      "launch",
+      "patients",
+      "retinal",
+      "visual"
+    ]
   }
 ]
