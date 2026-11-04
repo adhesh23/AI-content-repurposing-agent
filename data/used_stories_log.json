@@ -3812,5 +3812,73 @@
       "retinal",
       "visual"
     ]
+  },
+  {
+    "date": "2026-11-04",
+    "segment": "Deep Tech",
+    "source_title": "1Finity launches full-stack vRAN suite with Nvidia-powered GPU infrastructure sharing - Telecompaper",
+    "source_url": "https://www.telecompaper.com/news/1finity-launches-full-stack-vran-suite-with-nvidia-powered-gpu-infrastructure-sharing--1587822",
+    "title_fingerprint": [
+      "1finity",
+      "full",
+      "gpu",
+      "infrastructure",
+      "launch",
+      "nvidia",
+      "powered",
+      "ran",
+      "sharing",
+      "stack",
+      "suite"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "segment": "SaaS (B2B)",
+    "source_title": "Sentra Raises $150 Million for Agentic Data Security as Enterprise AI Adoption Accelerates - PR Newswire",
+    "source_url": "https://www.prnewswire.com/news-releases/sentra-raises-150-million-for-agentic-data-security-as-enterprise-ai-adoption-accelerates-302928476.html",
+    "title_fingerprint": [
+      "accelerates",
+      "adoption",
+      "agentic",
+      "data",
+      "enterprise",
+      "raise",
+      "security",
+      "sentra"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "segment": "SaaS (D2C)",
+    "source_title": "EloElo Group raises $80 million led by Hornbill Capital, NBCUniversal to fuel microdrama, consumer AI... - Moneycontrol.com",
+    "source_url": "https://www.moneycontrol.com/news/business/funding/eloelo-group-raises-80-million-led-by-hornbill-capital-nbcuniversal-to-fuel-microdrama-consumer-ai-ambitions-14068748.html",
+    "title_fingerprint": [
+      "capital",
+      "elo",
+      "fuel",
+      "group",
+      "hornbill",
+      "led",
+      "microdrama",
+      "nbcuniversal",
+      "raise"
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Meituan Releases LongCat-2.5, a 1.6-Trillion-Parameter Multimodal Model for AI Agents - Technology Org",
+    "source_url": "https://www.technology.org/2026/11/04/meituan-longcat-2-5-multimodal-ai-agent-model-chinese-chips/",
+    "title_fingerprint": [
+      "agents",
+      "cat",
+      "long",
+      "meituan",
+      "model",
+      "multimodal",
+      "parameter",
+      "releases"
+    ]
   }
 ]
