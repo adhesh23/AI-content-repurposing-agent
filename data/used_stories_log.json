@@ -3880,5 +3880,69 @@
       "parameter",
       "releases"
     ]
+  },
+  {
+    "date": "2026-11-05",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Zero-axiom Lean 4 proof that Yang-Mills on R^4 is a \"round square\"",
+    "source_url": "https://zenodo.org/records/23918639/files/RoundSquare.lean?download=1",
+    "title_fingerprint": [
+      "axiom",
+      "lean",
+      "mills",
+      "proof",
+      "round",
+      "square",
+      "yang",
+      "zero"
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "segment": "SaaS (B2B)",
+    "source_title": "Launch HN: Kino AI (YC S23) \u2013 AI media manager and video editor",
+    "source_url": "https://news.ycombinator.com/item?id=50368804",
+    "title_fingerprint": [
+      "kino",
+      "s23"
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "segment": "SaaS (D2C)",
+    "source_title": "Descope launches Envoy to let consumer apps accept personal AI agents as users - SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/11/04/descope-launches-envoy-to-let-consumer-apps-accept-personal-ai-agents-as-users/",
+    "title_fingerprint": [
+      "accept",
+      "agents",
+      "apps",
+      "descope",
+      "envoy",
+      "launch",
+      "let",
+      "personal",
+      "users"
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Vannor Launches Agentic Marketing After AI Agents Drive 30-Fold Increase in First-Page Google Rankings - Greenville Business Magazine",
+    "source_url": "https://www.greenvillebusinessmag.com/stories/vannor-launches-agentic-marketing-after-ai-agents-drive-30-fold-increase-in-first-page-google,59650",
+    "title_fingerprint": [
+      "after",
+      "agentic",
+      "agents",
+      "drive",
+      "first",
+      "fold",
+      "google",
+      "increase",
+      "launch",
+      "marketing",
+      "page",
+      "rankings",
+      "vannor"
+    ]
   }
 ]
