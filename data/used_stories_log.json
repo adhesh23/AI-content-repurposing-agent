@@ -3944,5 +3944,58 @@
       "rankings",
       "vannor"
     ]
+  },
+  {
+    "date": "2026-11-06",
+    "segment": "Deep Tech",
+    "source_title": "Drax, Brookfield and its AI infrastructure platform launch $27b data center partnership - Institutional Real Estate, Inc.",
+    "source_url": "https://irei.com/news/drax-brookfield-and-its-ai-infrastructure-platform-launch-27b-data-center-partnership/",
+    "title_fingerprint": [
+      "brookfield",
+      "center",
+      "data",
+      "drax",
+      "infrastructure",
+      "its",
+      "launch",
+      "partnership",
+      "platform"
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "segment": "SaaS (B2B)",
+    "source_title": "Salesforce and Anthropic Launch Claudeforce Enterprise AI Partnership - HPCwire",
+    "source_url": "https://www.hpcwire.com/bigdatawire/this-just-in/salesforce-and-anthropic-launch-claudeforce-enterprise-ai-partnership/",
+    "title_fingerprint": [
+      "anthropic",
+      "claudeforce",
+      "enterprise",
+      "launch",
+      "partnership",
+      "salesforce"
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Revline \u2013 An open-source AI-native video editor",
+    "source_url": "https://tryrevline.com",
+    "title_fingerprint": [
+      "revline"
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+    "source_url": "https://www.ricursive.com/ripple",
+    "title_fingerprint": [
+      "agentic",
+      "coding",
+      "open",
+      "sota",
+      "weight"
+    ]
   }
 ]
