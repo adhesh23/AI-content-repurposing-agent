@@ -3997,5 +3997,62 @@
       "sota",
       "weight"
     ]
+  },
+  {
+    "date": "2026-11-07",
+    "segment": "Deep Tech",
+    "source_title": "I tried to connect every GPU on the planet together (kinda)",
+    "source_url": "https://news.ycombinator.com/item?id=50394231",
+    "title_fingerprint": [
+      "connect",
+      "every",
+      "gpu",
+      "kinda",
+      "planet",
+      "together",
+      "tried"
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "segment": "SaaS (B2B)",
+    "source_title": "EXL Strengthens Enterprise AI Services With Aimpoint Acquisition - SMEStreet",
+    "source_url": "https://smestreet.in/technology/exl-strengthens-enterprise-ai-services-with-aimpoint-acquisition-12791064",
+    "title_fingerprint": [
+      "acquire",
+      "aimpoint",
+      "enterprise",
+      "exl",
+      "services",
+      "strengthens"
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: An Open Source Superhuman Email Client Clone",
+    "source_url": "https://github.com/michaelmagan/OpenHuman",
+    "title_fingerprint": [
+      "client",
+      "clone",
+      "email",
+      "open",
+      "source",
+      "superhuman"
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Agentic Identity Broker, OAuth Delegation for AI Agents",
+    "source_url": "https://github.com/zalando-incubator/agentic-identity-broker",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "broker",
+      "delegation",
+      "identity",
+      "oauth"
+    ]
   }
 ]
