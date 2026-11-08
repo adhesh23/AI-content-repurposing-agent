@@ -4054,5 +4054,45 @@
       "identity",
       "oauth"
     ]
+  },
+  {
+    "date": "2026-11-08",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: Goethe \u2013 The infrastructure for self-hosted AI",
+    "source_url": "https://github.com/meshapplied/Goethe",
+    "title_fingerprint": [
+      "goethe"
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "segment": "SaaS (B2B)",
+    "source_title": "Chord Acquires Zenlytic, Doubles Revenue And Expands Enterprise AI Customer Base - Pulse 2.0",
+    "source_url": "https://pulse2.com/chord-acquires-zenlytic-doubles-revenue-and-expands-enterprise-ai-customer-base/",
+    "title_fingerprint": [
+      "acquire",
+      "base",
+      "chord",
+      "customer",
+      "doubles",
+      "enterprise",
+      "expands",
+      "revenue",
+      "zenlytic"
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "AI Co. Launches Agentic Hub as Walmart Opens to AI Agents - Streetwise Reports",
+    "source_url": "https://www.streetwisereports.com/article/2026/11/06/ai-co-launches-agentic-hub-as-walmart-opens-to-ai-agents.html",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "hub",
+      "launch",
+      "opens",
+      "walmart"
+    ]
   }
 ]
