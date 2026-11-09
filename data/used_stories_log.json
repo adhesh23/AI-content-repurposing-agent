@@ -4094,5 +4094,51 @@
       "opens",
       "walmart"
     ]
+  },
+  {
+    "date": "2026-11-09",
+    "segment": "Deep Tech",
+    "source_title": "Dropbox to acquire Tigris and launch AI infrastructure platform - PCR-online.biz",
+    "source_url": "https://pcr-online.biz/2026/11/09/dropbox-to-acquire-tigris-data/",
+    "title_fingerprint": [
+      "acquire",
+      "dropbox",
+      "infrastructure",
+      "launch",
+      "platform",
+      "tigris"
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Open-source customer-facing agents",
+    "source_url": "https://github.com/radioso-ai/radioso",
+    "title_fingerprint": [
+      "agents",
+      "customer",
+      "facing",
+      "open",
+      "source"
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Microsoft-Backed Space and Time Launches Platform to Let AI Agents Verify Private Data - Yahoo Tech",
+    "source_url": "https://tech.yahoo.com/ai/copilot/articles/microsoft-backed-space-time-launches-130102976.html",
+    "title_fingerprint": [
+      "agents",
+      "backed",
+      "data",
+      "launch",
+      "let",
+      "microsoft",
+      "platform",
+      "private",
+      "space",
+      "time",
+      "verify"
+    ]
   }
 ]
