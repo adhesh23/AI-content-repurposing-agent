@@ -4140,5 +4140,50 @@
       "time",
       "verify"
     ]
+  },
+  {
+    "date": "2026-11-10",
+    "segment": "Deep Tech",
+    "source_title": "Google Unveils TPU 8i Max and TPU 8tx: A Dual-Chip TPU and a Confidential TPU - MarkTechPost",
+    "source_url": "https://www.marktechpost.com/2026/11/09/google-tpu-8i-max-tpu-8tx/",
+    "title_fingerprint": [
+      "chip",
+      "confidential",
+      "dual",
+      "tpu"
+    ]
+  },
+  {
+    "date": "2026-11-10",
+    "segment": "SaaS (B2B)",
+    "source_title": "AUR\u00c4I Unveils Enterprise AI Governance Platform Amid Growing Concerns Over Oversight - Independent Newspaper Nigeria",
+    "source_url": "https://independent.ng/aurai-unveils-enterprise-ai-governance-platform-amid-growing-concerns-over-oversight/",
+    "title_fingerprint": [
+      "amid",
+      "aur",
+      "concerns",
+      "enterprise",
+      "governance",
+      "growing",
+      "over",
+      "oversight",
+      "platform",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-11-10",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Stablecoin Card Startup Rain Launches Vaults for AI Agents - The Information",
+    "source_url": "https://www.theinformation.com/briefings/stablecoin-card-startup-rain-launches-vaults-ai-agents",
+    "title_fingerprint": [
+      "agents",
+      "card",
+      "launch",
+      "rain",
+      "stablecoin",
+      "startup",
+      "vaults"
+    ]
   }
 ]
