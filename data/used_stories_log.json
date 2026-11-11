@@ -4185,5 +4185,68 @@
       "startup",
       "vaults"
     ]
+  },
+  {
+    "date": "2026-11-11",
+    "segment": "Deep Tech",
+    "source_title": "Ask HR: Systems Engineering's Senior Pipeline Crisis",
+    "source_url": "https://news.ycombinator.com/item?id=50446617",
+    "title_fingerprint": [
+      "crisis",
+      "engineering",
+      "pipeline",
+      "senior",
+      "systems"
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "segment": "SaaS (B2B)",
+    "source_title": "Bay Raises $37M Series A to Scale Enterprise AI Agent Security - Unite.AI",
+    "source_url": "https://www.unite.ai/bay-raises-37m-series-a-to-scale-enterprise-ai-agent-security/",
+    "title_fingerprint": [
+      "agent",
+      "bay",
+      "enterprise",
+      "raise",
+      "scale",
+      "security",
+      "series"
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "segment": "SaaS (D2C)",
+    "source_title": "Stan Acquires Typefully, Bringing Nearly 10,000 Paying Customers Into Its Creator Commerce Business - Net Influencer",
+    "source_url": "https://www.netinfluencer.com/stan-acquires-typefully/",
+    "title_fingerprint": [
+      "acquire",
+      "bringing",
+      "business",
+      "commerce",
+      "creator",
+      "customers",
+      "into",
+      "its",
+      "nearly",
+      "paying",
+      "stan",
+      "typefully"
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "IBM, Microsoft Launch Agentic AI Platform With Over 6,000 AI Agents - Analytics India Magazine",
+    "source_url": "https://analyticsindiamag.com/ai-news/ibm-microsoft-launch-agentic-ai-platform-with-over-6000-ai-agents",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "ibm",
+      "launch",
+      "microsoft",
+      "over",
+      "platform"
+    ]
   }
 ]
