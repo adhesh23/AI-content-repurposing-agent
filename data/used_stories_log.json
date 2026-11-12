@@ -4248,5 +4248,58 @@
       "over",
       "platform"
     ]
+  },
+  {
+    "date": "2026-11-12",
+    "segment": "Deep Tech",
+    "source_title": "TimeNet: Open-source data infrastructure for Temporal Foundation Models",
+    "source_url": "https://github.com/OpenTSLM/TimeNet",
+    "title_fingerprint": [
+      "data",
+      "foundation",
+      "infrastructure",
+      "models",
+      "open",
+      "source",
+      "temporal"
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Zumungo \u2013 AI-driven home automation",
+    "source_url": "https://zumungo.com/get-started.html",
+    "title_fingerprint": [
+      "zumungo"
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: OpenPocket \u2013 iOS app for running Qwen3.5, LFM and other LLMs offline",
+    "source_url": "https://apps.apple.com/th/app/openpocket/id6833028114",
+    "title_fingerprint": [
+      "open",
+      "pocket"
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "GoodData.AI Launches the Agentic Serving Plane, a New Category of Enterprise Data Infrastructure for AI Agents - Newswire",
+    "source_url": "https://www.newswire.com/news/gooddata-ai-launches-the-agentic-serving-plane-a-new-category-of-22874248",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "category",
+      "data",
+      "enterprise",
+      "good",
+      "infrastructure",
+      "launch",
+      "new",
+      "plane",
+      "serving"
+    ]
   }
 ]
