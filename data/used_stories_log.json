@@ -4301,5 +4301,76 @@
       "plane",
       "serving"
     ]
+  },
+  {
+    "date": "2026-11-13",
+    "segment": "Deep Tech",
+    "source_title": "Hugging Face vows to keep backing open-source AI as Nvidia deal faces leadership questions - Traders Union",
+    "source_url": "https://tradersunion.com/news/companies/show/4219904-hugging-face-nvidia-open-source-ai/",
+    "title_fingerprint": [
+      "backing",
+      "deal",
+      "face",
+      "faces",
+      "hugging",
+      "keep",
+      "leadership",
+      "nvidia",
+      "open",
+      "questions",
+      "source",
+      "vows"
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "segment": "SaaS (B2B)",
+    "source_title": "TO THE NEW Partners With SpaceXSI To Bring AI Coding Platform Cursor Into Enterprise AI Workflows - SMBtech",
+    "source_url": "https://smbtech.au/news/to-the-new-partners-with-spacexsi-to-bring-ai-coding-platform-cursor-into-enterprise-ai-workflows/",
+    "title_fingerprint": [
+      "bring",
+      "coding",
+      "cursor",
+      "enterprise",
+      "into",
+      "new",
+      "partners",
+      "platform",
+      "space",
+      "workflows",
+      "xsi"
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "segment": "SaaS (D2C)",
+    "source_title": "Momentec Brands launches AI Creator tool for custom sportswear - Fashion United",
+    "source_url": "https://fashionunited.com/news/fashion/momentec-brands-launches-ai-creator-tool-for-custom-sportswear/2026111375734",
+    "title_fingerprint": [
+      "brands",
+      "creator",
+      "custom",
+      "launch",
+      "momentec",
+      "sportswear",
+      "tool"
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Lightning Labs launches pi402 so AI agents can pay for inference in bitcoin - Startup Fortune",
+    "source_url": "https://startupfortune.com/lightning-labs-launches-pi402-so-ai-agents-can-pay-for-inference-in-bitcoin/",
+    "title_fingerprint": [
+      "agents",
+      "bitcoin",
+      "can",
+      "inference",
+      "labs",
+      "launch",
+      "lightning",
+      "pay",
+      "pi402"
+    ]
   }
 ]
