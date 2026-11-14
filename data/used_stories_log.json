@@ -4372,5 +4372,62 @@
       "pay",
       "pi402"
     ]
+  },
+  {
+    "date": "2026-11-14",
+    "segment": "Deep Tech",
+    "source_title": "AMD and Meta deepen partnership for AI infrastructure - GadgetMatch",
+    "source_url": "https://www.gadgetmatch.com/amd-meta-expand-partnership-power-ai-infrastructure/",
+    "title_fingerprint": [
+      "amd",
+      "deepen",
+      "infrastructure",
+      "meta",
+      "partnership"
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "segment": "SaaS (B2B)",
+    "source_title": "Insight Launches Agent Store to Accelerate Enterprise AI Adoption - HPCwire",
+    "source_url": "https://www.hpcwire.com/aiwire/2026/11/13/insight-launches-agent-store-to-accelerate-enterprise-ai-adoption/",
+    "title_fingerprint": [
+      "accelerate",
+      "adoption",
+      "agent",
+      "enterprise",
+      "insight",
+      "launch",
+      "store"
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Dodaiso \u2013 Open-source personal AI agent (like Jarvis, dots,duet)",
+    "source_url": "https://github.com/Dodaios/Dodaios",
+    "title_fingerprint": [
+      "dodaiso"
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "OpenAI launches ChatGPT Wallet, lets AI agents shop using your credit card - India Today",
+    "source_url": "https://www.indiatoday.in/technology/news/story/openai-launches-chatgpt-wallet-lets-ai-agents-shop-using-your-credit-card-3038783-2026-11-14",
+    "title_fingerprint": [
+      "agents",
+      "card",
+      "chat",
+      "credit",
+      "gpt",
+      "launch",
+      "lets",
+      "open",
+      "shop",
+      "using",
+      "wallet",
+      "your"
+    ]
   }
 ]
