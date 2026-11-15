@@ -4429,5 +4429,65 @@
       "wallet",
       "your"
     ]
+  },
+  {
+    "date": "2026-11-15",
+    "segment": "Deep Tech",
+    "source_title": "Inkling 2 Small Scores 31 on AAII v5.0.1, best-in-class among \"US\" open weights",
+    "source_url": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
+    "title_fingerprint": [
+      "aaii",
+      "among",
+      "best",
+      "class",
+      "inkling",
+      "open",
+      "scores",
+      "small",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-11-15",
+    "segment": "SaaS (B2B)",
+    "source_title": "Tipalti Launches AP Agent with MCP Links to Enterprise AI Tools - The Fintech Times",
+    "source_url": "https://thefintechtimes.com/tipalti-launches-ap-agent-with-mcp-links-to-enterprise-ai-tools/",
+    "title_fingerprint": [
+      "agent",
+      "enterprise",
+      "launch",
+      "links",
+      "mcp",
+      "tipalti",
+      "tools"
+    ]
+  },
+  {
+    "date": "2026-11-15",
+    "segment": "SaaS (D2C)",
+    "source_title": "Google launches Gemini 4 Hydrogen, its new consumer AI model - Entrevue.fr",
+    "source_url": "https://entrevue.fr/en/sciences-tech/intelligence-artificielle/google-deploie-gemini-4-hydrogen-son-nouveau-modele-dia-grand-public/",
+    "title_fingerprint": [
+      "gemini",
+      "google",
+      "hydrogen",
+      "its",
+      "launch",
+      "model",
+      "new"
+    ]
+  },
+  {
+    "date": "2026-11-15",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Nebuly raises $21 million to measure the value of AI agents - news.lavx.hu",
+    "source_url": "https://news.lavx.hu/article/nebuly-raises-21-million-to-measure-the-value-of-ai-agents",
+    "title_fingerprint": [
+      "agents",
+      "measure",
+      "nebuly",
+      "raise",
+      "value"
+    ]
   }
 ]
