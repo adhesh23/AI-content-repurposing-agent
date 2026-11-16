@@ -4489,5 +4489,61 @@
       "raise",
       "value"
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "segment": "Deep Tech",
+    "source_title": "MugenX AI Lab Launches Global Strategic Partnerships to Expand Global AIDC, NeoCloud and Sovereign AI Infrastructure - greatreporter",
+    "source_url": "https://greatreporter.com/2026/11/16/mugenx-ai-lab-launches-global-strategic-partnerships-to-expand-global-aidc-neocl/",
+    "title_fingerprint": [
+      "aidc",
+      "cloud",
+      "expand",
+      "global",
+      "infrastructure",
+      "lab",
+      "launch",
+      "mugen",
+      "neo",
+      "partnerships",
+      "sovereign",
+      "strategic"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "segment": "SaaS (B2B)",
+    "source_title": "Revefi Launches Closed-Loop AI FinOps to Budget, Track and Enforce Enterprise AI Spend - EIN News",
+    "source_url": "https://www.einnews.com/pr_news/956908983/revefi-launches-closed-loop-ai-finops-to-budget-track-and-enforce-enterprise-ai-spend",
+    "title_fingerprint": [
+      "budget",
+      "closed",
+      "enforce",
+      "enterprise",
+      "fin",
+      "launch",
+      "loop",
+      "ops",
+      "revefi",
+      "spend",
+      "track"
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "OpenAI launches ChatGPT Wallet to enable AI agents to make purchases - marketscreener.com",
+    "source_url": "https://www.marketscreener.com/news/openai-launches-chatgpt-wallet-to-enable-ai-agents-to-make-purchases-ce785eded988f32d",
+    "title_fingerprint": [
+      "agents",
+      "chat",
+      "enable",
+      "gpt",
+      "launch",
+      "make",
+      "open",
+      "purchases",
+      "wallet"
+    ]
   }
 ]
