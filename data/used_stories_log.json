@@ -4545,5 +4545,67 @@
       "purchases",
       "wallet"
     ]
+  },
+  {
+    "date": "2026-11-17",
+    "segment": "Deep Tech",
+    "source_title": "Vertiv Launches ATLAS Lab to Validate AI Infrastructure Before Chip Deployment - KuCoin",
+    "source_url": "https://www.kucoin.com/news/flash/vertiv-launches-atlas-lab-to-validate-ai-infrastructure-before-chip-deployment",
+    "title_fingerprint": [
+      "atlas",
+      "before",
+      "chip",
+      "deployment",
+      "infrastructure",
+      "lab",
+      "launch",
+      "validate",
+      "vertiv"
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Coral \u2013 Open-source gateway where agents write their own tools",
+    "source_url": "https://github.com/withcoral/coral",
+    "title_fingerprint": [
+      "coral"
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "segment": "SaaS (D2C)",
+    "source_title": "Alibaba Launches Qwen 3.5 AI Model and Free Consumer App to Challenge ChatGPT - TechJuice",
+    "source_url": "https://www.techjuice.pk/alibaba-qwen-app-launch-chatgpt-rival/",
+    "title_fingerprint": [
+      "alibaba",
+      "app",
+      "challenge",
+      "chat",
+      "free",
+      "gpt",
+      "launch",
+      "model",
+      "qwen"
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Airlock Digital Launches Agentic Control, Policy-Based Control Over What AI Agents Can Execute - PR Newswire",
+    "source_url": "https://www.prnewswire.com/news-releases/airlock-digital-launches-agentic-control-policy-based-control-over-what-ai-agents-can-execute-302939277.html",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "airlock",
+      "based",
+      "can",
+      "control",
+      "digital",
+      "execute",
+      "launch",
+      "over",
+      "policy"
+    ]
   }
 ]
