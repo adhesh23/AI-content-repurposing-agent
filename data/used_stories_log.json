@@ -4607,5 +4607,52 @@
       "over",
       "policy"
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "segment": "Deep Tech",
+    "source_title": "Show HN: TrnRT \u2013 An open-source LLM inference engine for AWS Trainium",
+    "source_url": "https://github.com/RunanywhereAI/trnrt",
+    "title_fingerprint": [
+      "trn"
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "segment": "SaaS (B2B)",
+    "source_title": "EY Launches ey.ai Academy for Enterprise AI Training in MENA - ITP.net",
+    "source_url": "https://www.itp.net/ai-automation/ey-launches-ey-ai-academy-for-enterprise-ai-training-in-mena",
+    "title_fingerprint": [
+      "academy",
+      "enterprise",
+      "launch",
+      "mena",
+      "training"
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "segment": "SaaS (D2C)",
+    "source_title": "Model ML Raises $250M at $1.5B Valuation for Personal AI Agents in Finance - Wowtale",
+    "source_url": "https://en.wowtale.net/2026/11/18/236073/",
+    "title_fingerprint": [
+      "agents",
+      "finance",
+      "model",
+      "personal",
+      "raise",
+      "valuation"
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Launch HN: StarSling (YC P25) \u2013 Self-improving CI for agent-volume repos",
+    "source_url": "https://news.ycombinator.com/item?id=50536468",
+    "title_fingerprint": [
+      "p25",
+      "sling",
+      "star"
+    ]
   }
 ]
