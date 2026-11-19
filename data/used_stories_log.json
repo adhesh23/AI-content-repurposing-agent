@@ -4654,5 +4654,74 @@
       "sling",
       "star"
     ]
+  },
+  {
+    "date": "2026-11-19",
+    "segment": "Deep Tech",
+    "source_title": "Madras School System and AI Learning Share Similarity",
+    "source_url": "https://news.ycombinator.com/item?id=50556148",
+    "title_fingerprint": [
+      "learning",
+      "madras",
+      "school",
+      "share",
+      "similarity",
+      "system"
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "segment": "SaaS (B2B)",
+    "source_title": "Disseqt AI Raises $8 million to Build the AI Governance and Assurance Layer for Enterprise AI Agents and Workflows - University College Dublin",
+    "source_url": "https://www.ucd.ie/innovation/news-and-events/2026/disseqt-ai-raises-funding-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "assurance",
+      "build",
+      "disseqt",
+      "enterprise",
+      "governance",
+      "layer",
+      "raise",
+      "workflows"
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "segment": "SaaS (D2C)",
+    "source_title": "Linq Raises $90M Led by a16z To Build the Infrastructure for Personal AI Assistants - citybiz",
+    "source_url": "https://www.citybiz.co/article/935989/linq-raises-90m-led-by-a16z-to-build-the-infrastructure-for-personal-ai-assistants/",
+    "title_fingerprint": [
+      "a16z",
+      "assistants",
+      "build",
+      "infrastructure",
+      "led",
+      "linq",
+      "personal",
+      "raise"
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Mercans Launches Agentic Payroll, the World\u2019s First Model Where AI Agents Run Payroll and People Keep Every Decision - USA Today",
+    "source_url": "https://www.usatoday.com/press-release/story/59671/mercans-launches-agentic-payroll-the-worlds-first-model-where-ai-agents-run-payroll-and-people-keep-every-decision/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "decision",
+      "every",
+      "first",
+      "keep",
+      "launch",
+      "mercans",
+      "model",
+      "payroll",
+      "people",
+      "run",
+      "where",
+      "world"
+    ]
   }
 ]
