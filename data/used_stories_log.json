@@ -4723,5 +4723,69 @@
       "where",
       "world"
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "segment": "Deep Tech",
+    "source_title": "Gradiant Refocuses Water Infrastructure Business on AI, Launches Entropy Technology Platform - Data Center Frontier",
+    "source_url": "https://www.datacenterfrontier.com/press-releases/press-release/55420321/gradiant-refocuses-water-infrastructure-business-on-ai-launches-entropy-technology-platform",
+    "title_fingerprint": [
+      "business",
+      "entropy",
+      "gradiant",
+      "infrastructure",
+      "launch",
+      "platform",
+      "refocuses",
+      "technology",
+      "water"
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "segment": "SaaS (B2B)",
+    "source_title": "Mitiga Launches Agentless Security for Enterprise AI Agents - Unite.AI",
+    "source_url": "https://www.unite.ai/mitiga-launches-agentless-security-for-enterprise-ai-agents/",
+    "title_fingerprint": [
+      "agentless",
+      "agents",
+      "enterprise",
+      "launch",
+      "mitiga",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "segment": "SaaS (D2C)",
+    "source_title": "Liberate Launches Argus 1, the First Suite for Insurers Working With Personal AI Agents - Business Wire",
+    "source_url": "https://www.businesswire.com/news/home/20261119608201/en/Liberate-Launches-Argus-1-the-First-Suite-for-Insurers-Working-With-Personal-AI-Agents",
+    "title_fingerprint": [
+      "agents",
+      "argus",
+      "first",
+      "insurers",
+      "launch",
+      "liberate",
+      "personal",
+      "suite",
+      "working"
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Bevado Announces $10M Seed Round to Scale AI Agents for Property Management - AI Insider",
+    "source_url": "https://theaiinsider.tech/2026/11/20/bevado-announces-10m-seed-round-to-scale-ai-agents-for-property-management/",
+    "title_fingerprint": [
+      "agents",
+      "announces",
+      "bevado",
+      "management",
+      "property",
+      "round",
+      "scale",
+      "seed"
+    ]
   }
 ]
