@@ -4787,5 +4787,51 @@
       "scale",
       "seed"
     ]
+  },
+  {
+    "date": "2026-11-21",
+    "segment": "Deep Tech",
+    "source_title": "Arbol introduces GPU value protection as AI infrastructure spending increases - Reinsurance News",
+    "source_url": "https://www.reinsurancene.ws/arbol-introduces-gpu-value-protection-as-ai-infrastructure-spending-increases/",
+    "title_fingerprint": [
+      "arbol",
+      "gpu",
+      "increases",
+      "infrastructure",
+      "introduces",
+      "protection",
+      "spending",
+      "value"
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "segment": "SaaS (B2B)",
+    "source_title": "Google launches Gemini 4 Neon for enterprise AI tasks - Daily Observer",
+    "source_url": "https://observerbd.com/news/607668",
+    "title_fingerprint": [
+      "enterprise",
+      "gemini",
+      "google",
+      "launch",
+      "neon",
+      "tasks"
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Microsoft adds controls for third-party and local AI agents in Agent 365 - Superpower Daily",
+    "source_url": "https://superpowerdaily.com/posts/microsoft-adds-controls-for-third-party-and-local-ai-agents-in-agent-365",
+    "title_fingerprint": [
+      "adds",
+      "agent",
+      "agents",
+      "controls",
+      "local",
+      "microsoft",
+      "party",
+      "third"
+    ]
   }
 ]
