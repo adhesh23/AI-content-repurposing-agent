@@ -4833,5 +4833,56 @@
       "party",
       "third"
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "segment": "Deep Tech",
+    "source_title": "Cursor may stop using Chinese open-weights AI models",
+    "source_url": "https://casrai.org/news/house-committees-cursor-chinese-open-weight-ai-models-report-2026",
+    "title_fingerprint": [
+      "chinese",
+      "cursor",
+      "may",
+      "models",
+      "open",
+      "stop",
+      "using",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "segment": "SaaS (B2B)",
+    "source_title": "TrustHouse Launches Secure AI Gateway, Extending Enterprise AI Risk Management Beyond Model Gateways - The Clarion-Ledger",
+    "source_url": "https://www.clarionledger.com/press-release/story/233614/trusthouse-launches-secure-ai-gateway-extending-enterprise-ai-risk-management-beyond-model-gateways/",
+    "title_fingerprint": [
+      "beyond",
+      "enterprise",
+      "extending",
+      "gateway",
+      "gateways",
+      "house",
+      "launch",
+      "management",
+      "model",
+      "risk",
+      "secure",
+      "trust"
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Gauge raises $500K seed to track how AI agents pick software - Dealroom",
+    "source_url": "https://app.dealroom.co/news/note/gauge-raises-500k-seed-to-track-how-ai-agents-pick-software",
+    "title_fingerprint": [
+      "agents",
+      "gauge",
+      "pick",
+      "raise",
+      "seed",
+      "software",
+      "track"
+    ]
   }
 ]
