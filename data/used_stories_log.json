@@ -4884,5 +4884,72 @@
       "software",
       "track"
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "segment": "Deep Tech",
+    "source_title": "L&T Bags Contract to Deploy NVIDIA B300 GPUs in Chennai Data Centre - Analytics India Magazine",
+    "source_url": "https://analyticsindiamag.com/ai-news/lt-wins-large-order-to-deploy-additional-nvidia-b300-gpus-in-chennai",
+    "title_fingerprint": [
+      "b300",
+      "bags",
+      "centre",
+      "chennai",
+      "contract",
+      "data",
+      "deploy",
+      "gpus",
+      "nvidia"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "segment": "SaaS (B2B)",
+    "source_title": "Levenza Launches Enterprise AI Agents Globally and Adds Voice With Fluid Inference - Unite.AI",
+    "source_url": "https://www.unite.ai/levenza-enterprise-ai-agents-fluid-inference/",
+    "title_fingerprint": [
+      "adds",
+      "agents",
+      "enterprise",
+      "fluid",
+      "globally",
+      "inference",
+      "launch",
+      "levenza",
+      "voice"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "segment": "SaaS (D2C)",
+    "source_title": "Levenza Launches Personal AI Agents for Enterprise With 300 Clients And Zero VC Funding - HackerNoon",
+    "source_url": "https://hackernoon.com/levenza-launches-personal-ai-agents-for-enterprise-with-300-clients-and-zero-vc-funding",
+    "title_fingerprint": [
+      "agents",
+      "clients",
+      "enterprise",
+      "launch",
+      "levenza",
+      "personal",
+      "raise",
+      "zero"
+    ]
+  },
+  {
+    "date": "2026-11-23",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Relaticle, an open-source CRM that Claude and ChatGPT can work in",
+    "source_url": "https://github.com/relaticle/relaticle",
+    "title_fingerprint": [
+      "can",
+      "chat",
+      "claude",
+      "crm",
+      "gpt",
+      "open",
+      "relaticle",
+      "source",
+      "work"
+    ]
   }
 ]
