@@ -4951,5 +4951,65 @@
       "source",
       "work"
     ]
+  },
+  {
+    "date": "2026-11-24",
+    "segment": "Deep Tech",
+    "source_title": "Dell Partners With AMD to Expand AI Infrastructure...Unveils a Solution Featuring 72 GPUs - \ud30c\uc774\ub0b8\uc15c\ub274\uc2a4",
+    "source_url": "https://en.fnnews.com/news/202611240832043102",
+    "title_fingerprint": [
+      "amd",
+      "dell",
+      "expand",
+      "featuring",
+      "gpus",
+      "infrastructure",
+      "partners",
+      "solution",
+      "unveil"
+    ]
+  },
+  {
+    "date": "2026-11-24",
+    "segment": "SaaS (B2B)",
+    "source_title": "Dante Security raises $10M to give enterprise AI agents human owners - Dealroom",
+    "source_url": "https://app.dealroom.co/news/note/dante-security-raises-10m-to-give-enterprise-ai-agents-human-owners",
+    "title_fingerprint": [
+      "agents",
+      "dante",
+      "enterprise",
+      "give",
+      "human",
+      "owners",
+      "raise",
+      "security"
+    ]
+  },
+  {
+    "date": "2026-11-24",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Outloud Reader \u2013 photograph a page and listen to it phrase by phrase",
+    "source_url": "https://outloudreader.app/",
+    "title_fingerprint": [
+      "outloud",
+      "reader"
+    ]
+  },
+  {
+    "date": "2026-11-24",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Couchbase Partners with AWS to Expand Delivery of AI Data Plane for Production AI Agents - HPCwire",
+    "source_url": "https://www.hpcwire.com/bigdatawire/this-just-in/couchbase-partners-with-aws-to-expand-delivery-of-ai-data-plane-for-production-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "aws",
+      "couchbase",
+      "data",
+      "delivery",
+      "expand",
+      "partners",
+      "plane",
+      "production"
+    ]
   }
 ]
