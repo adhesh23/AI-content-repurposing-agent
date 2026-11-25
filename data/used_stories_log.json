@@ -5011,5 +5011,51 @@
       "plane",
       "production"
     ]
+  },
+  {
+    "date": "2026-11-25",
+    "segment": "Deep Tech",
+    "source_title": "Nvidia Nemotron-Labs-Image-30B-A3B: open-weights 30B image generator",
+    "source_url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+    "title_fingerprint": [
+      "generator",
+      "image",
+      "open",
+      "weights"
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Rocketcrab Nova \u2013 vibe code a little game, play with friends instantly",
+    "source_url": "https://rocketcrab.com/",
+    "title_fingerprint": [
+      "nova",
+      "rocketcrab"
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "segment": "SaaS (D2C)",
+    "source_title": "Launch HN: Versine (YC F26) \u2013 MCP to send and receive money",
+    "source_url": "https://news.ycombinator.com/item?id=50634426",
+    "title_fingerprint": [
+      "f26",
+      "versine"
+    ]
+  },
+  {
+    "date": "2026-11-25",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Cloudflare Launches Automatic Website Search for AI Agents - Unite.AI",
+    "source_url": "https://www.unite.ai/cloudflare-launches-automatic-website-search-for-ai-agents/",
+    "title_fingerprint": [
+      "agents",
+      "automatic",
+      "cloudflare",
+      "launch",
+      "search",
+      "website"
+    ]
   }
 ]
