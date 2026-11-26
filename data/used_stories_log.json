@@ -5057,5 +5057,70 @@
       "search",
       "website"
     ]
+  },
+  {
+    "date": "2026-11-26",
+    "segment": "Deep Tech",
+    "source_title": "ESDS details US$1.26 billion Sharon AI deal for Sydney GPU cluster - ET Datacenters",
+    "source_url": "https://datacenters.economictimes.indiatimes.com/news/ai-compute-infrastructure/esds-details-us1-26-billion-sharon-ai-deal-for-sydney-gpu-cluster/136184955",
+    "title_fingerprint": [
+      "cluster",
+      "deal",
+      "details",
+      "esds",
+      "gpu",
+      "sharon",
+      "sydney"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "segment": "SaaS (B2B)",
+    "source_title": "TrustHouse.AI Introduces Enterprise AI-DLC Governance to Bring Trust to AI-Driven Software Development - AiThority",
+    "source_url": "https://aithority.com/machine-learning/trusthouse-ai-introduces-enterprise-ai-dlc-governance-to-bring-trust-to-ai-driven-software-development/",
+    "title_fingerprint": [
+      "bring",
+      "development",
+      "dlc",
+      "driven",
+      "enterprise",
+      "governance",
+      "house",
+      "introduces",
+      "software",
+      "trust"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: Keeping faces and features consistent across 24 AI-driven comic pages",
+    "source_url": "https://joonoo.art/create-comic",
+    "title_fingerprint": [
+      "across",
+      "comic",
+      "consistent",
+      "driven",
+      "faces",
+      "features",
+      "keeping",
+      "pages"
+    ]
+  },
+  {
+    "date": "2026-11-26",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Cloudflare launches Search for Agents to streamline agentic information gathering - SDxCentral",
+    "source_url": "https://www.sdxcentral.com/news/cloudflare-launches-search-for-agents-to-streamline-agentic-information-gathering/",
+    "title_fingerprint": [
+      "agentic",
+      "agents",
+      "cloudflare",
+      "gathering",
+      "information",
+      "launch",
+      "search",
+      "streamline"
+    ]
   }
 ]
