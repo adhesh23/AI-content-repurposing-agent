@@ -5122,5 +5122,50 @@
       "search",
       "streamline"
     ]
+  },
+  {
+    "date": "2026-11-27",
+    "segment": "Deep Tech",
+    "source_title": "Nexent Capital launches $1 billion AI and energy infrastructure fund - Data Center Dynamics",
+    "source_url": "https://www.datacenterdynamics.com/en/news/nexent-capital-launches-1-billion-ai-and-energy-infrastructure-fund/",
+    "title_fingerprint": [
+      "capital",
+      "energy",
+      "fund",
+      "infrastructure",
+      "launch",
+      "nexent"
+    ]
+  },
+  {
+    "date": "2026-11-27",
+    "segment": "SaaS (B2B)",
+    "source_title": "Vero Security raises $11 mn in seed funding for enterprise AI Security Engineering - Beinsure",
+    "source_url": "https://beinsure.com/news/vero-security-raises-11-mn-seed-funding-for-enterprise-ai-security-engineering/",
+    "title_fingerprint": [
+      "engineering",
+      "enterprise",
+      "raise",
+      "security",
+      "seed",
+      "vero"
+    ]
+  },
+  {
+    "date": "2026-11-27",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Open-Sourced Code Mode to Cut ~60% of My Rust Agent's Token Burn",
+    "source_url": "https://github.com/legend-of-alan/ghostmode",
+    "title_fingerprint": [
+      "agent",
+      "burn",
+      "code",
+      "cut",
+      "mode",
+      "open",
+      "rust",
+      "sourced",
+      "token"
+    ]
   }
 ]
