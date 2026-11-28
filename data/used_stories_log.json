@@ -5167,5 +5167,54 @@
       "sourced",
       "token"
     ]
+  },
+  {
+    "date": "2026-11-28",
+    "segment": "Deep Tech",
+    "source_title": "Ask HN: Is Claude Code nerfing AI and agent-harness projects?",
+    "source_url": "https://news.ycombinator.com/item?id=50665232",
+    "title_fingerprint": [
+      "agent",
+      "claude",
+      "code",
+      "harness",
+      "nerfing",
+      "projects"
+    ]
+  },
+  {
+    "date": "2026-11-28",
+    "segment": "SaaS (B2B)",
+    "source_title": "Show HN: Evalkit for Improving Your Agents",
+    "source_url": "https://inferedge-ai.github.io/evalkit/",
+    "title_fingerprint": [
+      "agents",
+      "evalkit",
+      "improving",
+      "your"
+    ]
+  },
+  {
+    "date": "2026-11-28",
+    "segment": "SaaS (D2C)",
+    "source_title": "Show HN: A local-first AI memory for your video footage",
+    "source_url": "https://news.ycombinator.com/item?id=50670468",
+    "title_fingerprint": [
+      "first",
+      "footage",
+      "local",
+      "memory",
+      "video",
+      "your"
+    ]
+  },
+  {
+    "date": "2026-11-28",
+    "segment": "AI-native / Consumer Tech",
+    "source_title": "Show HN: Turbotap \u2013 Open-Source CLI for AI Agents to Drive an iPhone over Wi-Fi",
+    "source_url": "https://github.com/Maxteabag/turbotap",
+    "title_fingerprint": [
+      "turbotap"
+    ]
   }
 ]
